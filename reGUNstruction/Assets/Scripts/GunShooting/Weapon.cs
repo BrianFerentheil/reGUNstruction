@@ -38,6 +38,11 @@ public class Weapon : MonoBehaviour
         {
             isFiring = false;
         }
+
+        if (Input.GetKeyDown(KeyCode.Z))
+        {
+            raycast = !raycast;
+        }
     }
 
     public void Fire()
