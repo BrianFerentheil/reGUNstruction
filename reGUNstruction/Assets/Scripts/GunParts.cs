@@ -10,22 +10,22 @@ public class GunParts : GunStats
     
 }
 
-public class GunPartGrip : GunParts     
-{
-    gunPiece thisPart = gunPiece.grip;
-    gripModel thisGrip = gripModel.one;
+//public class GunPartGrip : GunParts     
+//{
+//    gunPiece thisPart = gunPiece.grip;
+//    gripModel thisGrip = gripModel.one;
           
-}
+//}
 
-public class GunPartAmmo : GunParts
-{
-    gunPiece thisPart = gunPiece.ammo;
-    ammoModel thisAmmo = ammoModel.one;
+//public class GunPartAmmo : GunParts
+//{
+//    gunPiece thisPart = gunPiece.ammo;
+//    ammoModel thisAmmo = ammoModel.one;
 
-}
+//}
 
-public class GunPartBarrel : GunParts
-{
-    gunPiece thisPart = gunPiece.barrel;
-    barrelModel thisBarrel = barrelModel.one;
-}
+//public class GunPartBarrel : GunParts
+//{
+//    gunPiece thisPart = gunPiece.barrel;
+//    barrelModel thisBarrel = barrelModel.one;
+//}

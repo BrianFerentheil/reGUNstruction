@@ -46,6 +46,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 8433f8332aaf66842abe1f4c0b8c8422, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  myGrip: {fileID: 3649908758884974557}
+  myBarrel: {fileID: 1914585287783950839}
+  myAmmo: {fileID: 8024445234929643951}
 --- !u!114 &1914585287783950839
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -58,6 +61,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 24377af0379f4c84b929ce5b57574dd9, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentBarrel: 5
 --- !u!114 &3649908758884974557
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -70,6 +74,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: c4fad8a274453324d961b5fcbf966dd4, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentGrip: 5
 --- !u!114 &8024445234929643951
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -82,6 +87,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 4c2e4868a933f004da618f37e5ebcb46, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  currentAmmo: 5
 --- !u!1001 &2144203776982074630
 PrefabInstance:
   m_ObjectHideFlags: 0
