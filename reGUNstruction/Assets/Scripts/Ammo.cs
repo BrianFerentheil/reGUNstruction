@@ -9,11 +9,10 @@ public class Ammo : MonoBehaviour
 
     private int indexLength;
     private int curPos = 0;
-
-
+    
     private void Start()
     {
-        indexLength = System.Enum.GetValues(typeof(ammoModel)).Length;
+        indexLength = System.Enum.GetValues(typeof(ammoModel)).Length -1;
     }
 
     public ammoModel NextPart()
@@ -31,12 +30,29 @@ public class Ammo : MonoBehaviour
     public ammoModel LastPart()
     {
         curPos--;
-        if (curPos <= 0)
+        if (curPos < 0)
         {
-            curPos = indexLength;
+            curPos = indexLength - 1;
         }
 
         currentAmmo = (ammoModel)curPos;
         return currentAmmo;
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            LastPart();
+            Debug.Log(indexLength + " " + curPos);
+            Debug.Log((ammoModel)curPos);
+        }
+
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            NextPart();
+            Debug.Log(indexLength + " " + curPos);
+            Debug.Log((ammoModel)curPos);
+        }
     }
 }

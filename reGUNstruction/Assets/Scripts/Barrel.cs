@@ -13,7 +13,7 @@ public class Barrel : MonoBehaviour
 
     private void Start()
     {
-        indexLength = System.Enum.GetValues(typeof(barrelModel)).Length;
+        indexLength = System.Enum.GetValues(typeof(barrelModel)).Length -1;
     }
 
     public barrelModel NextPart()
@@ -33,10 +33,28 @@ public class Barrel : MonoBehaviour
         curPos--;
         if (curPos <= 0)
         {
-            curPos = indexLength;
+            curPos = indexLength - 1;
         }
 
         currentBarrel = (barrelModel)curPos;
         return currentBarrel;
     }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            LastPart();
+            Debug.Log(indexLength + " " + curPos);
+            Debug.Log((barrelModel)curPos);
+        }
+
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            NextPart();
+            Debug.Log(indexLength + " " + curPos);
+            Debug.Log((barrelModel)curPos);
+        }
+    }
 }
+

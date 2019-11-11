@@ -12,7 +12,7 @@ public class Grip : MonoBehaviour
 
     private void Start()
     {
-        indexLength = System.Enum.GetValues(typeof(gripModel)).Length;
+        indexLength = System.Enum.GetValues(typeof(gripModel)).Length -1;
     }
 
     public gripModel NextPart()
@@ -32,11 +32,28 @@ public class Grip : MonoBehaviour
         curPos--;
         if (curPos <= 0)
         {
-            curPos = indexLength;
+            curPos = indexLength -1;
         }
 
         currentGrip = (gripModel)curPos;
         return currentGrip;
+    }
+
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.LeftArrow))
+        {
+            LastPart();
+            Debug.Log(indexLength + " " + curPos);
+            Debug.Log((gripModel)curPos);
+        }
+
+        if (Input.GetKeyDown(KeyCode.RightArrow))
+        {
+            NextPart();
+            Debug.Log(indexLength + " " + curPos);
+            Debug.Log((gripModel)curPos);
+        }
     }
 
 }
