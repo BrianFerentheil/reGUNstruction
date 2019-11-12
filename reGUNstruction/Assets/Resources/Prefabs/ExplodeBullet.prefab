@@ -125,6 +125,6 @@ MonoBehaviour:
   destroyTime: 5
   explotion: {fileID: 4172521473793848820, guid: 270f5e2f7406b6e46a5d5e3b50f45b53,
     type: 3}
-  explotionForce: 50
-  radius: 15
-  upForce: 25
+  explotionForce: 1000
+  radius: 200
+  upForce: 1000
