@@ -8,6 +8,9 @@ public class ExplodeBullet : MonoBehaviour
     public float speed;
     public float destroyTime;
     public GameObject explotion;
+    public float explotionForce;
+    public float radius;
+    public float upForce;
 
     void Start()
     {
@@ -19,16 +22,25 @@ public class ExplodeBullet : MonoBehaviour
         this.GetComponent<Rigidbody>().AddForce(transform.forward * speed);
     }
 
-    void OnTriggerEnter(Collider other)
+    //void OnCollisionEnter(Collider other)
+    //{
+    //    
+    //    
+    //}
+
+    void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.tag == "Destroy")
         {
-            
+            Instantiate(explotion, other.transform);
+            this.GetComponent<Rigidbody>().AddExplosionForce(explotionForce, other.transform.position, radius, upForce, ForceMode.Impulse);
             Destroy(other.gameObject);
         }
         else
         {
+            
             Instantiate(explotion, other.transform);
+            this.GetComponent<Rigidbody>().AddExplosionForce(explotionForce, other.transform.position, radius, upForce, ForceMode.Impulse);
         }
     }
 }
