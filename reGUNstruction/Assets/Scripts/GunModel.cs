@@ -10,7 +10,7 @@ public class GunModel : MonoBehaviour
     public Barrel myBarrel;
     public Ammo myAmmo;
 
-    GunStats myStats;
+    public GunStats myStats;
 
     string[] myElements;
 
