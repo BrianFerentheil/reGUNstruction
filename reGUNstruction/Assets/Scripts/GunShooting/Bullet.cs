@@ -18,7 +18,7 @@ public class Bullet : MonoBehaviour
         this.GetComponent<Rigidbody>().AddForce(transform.forward * speed);
     }
 
-    void OnTriggerEnter(Collider other)
+    void OnCollisionEnter(Collision other)
     {
         if (other.gameObject.tag == "Destroy")
         { Destroy(other.gameObject); }
