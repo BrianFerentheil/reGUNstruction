@@ -2,13 +2,14 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Bullet : MonoBehaviour
+public class ExplodeBullet : MonoBehaviour
 {
 
     public float speed;
     public float destroyTime;
+    public GameObject explotion;
 
-    private void Start()
+    void Start()
     {
         Destroy(gameObject, destroyTime);
     }
@@ -21,6 +22,13 @@ public class Bullet : MonoBehaviour
     void OnTriggerEnter(Collider other)
     {
         if (other.gameObject.tag == "Destroy")
-        { Destroy(other.gameObject); }
+        {
+            
+            Destroy(other.gameObject);
+        }
+        else
+        {
+            Instantiate(explotion, other.transform);
+        }
     }
 }

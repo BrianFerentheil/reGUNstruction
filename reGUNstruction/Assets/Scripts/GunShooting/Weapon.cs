@@ -5,6 +5,7 @@ using UnityEngine;
 public class Weapon : MonoBehaviour
 {
     public GameObject bullet;
+    public GameObject explodeBullet;
     public float fireRate;
     public Transform spawnTransform;
     public bool isFiring;
@@ -88,11 +89,17 @@ public class Weapon : MonoBehaviour
         }
         else
         {
-            RaycastHit hit;
-            Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit);
-            Instantiate(explosion, hit.point, Quaternion.identity);
-            Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
-            
+            //RaycastHit hit;
+            //Physics.Raycast(transform.position, transform.TransformDirection(Vector3.forward), out hit);
+            //Instantiate(explosion, hit.point, Quaternion.identity);
+            //Debug.DrawRay(transform.position, transform.TransformDirection(Vector3.forward) * hit.distance, Color.yellow);
+            if (timer >= fireRate)
+            {
+                timer = 0;
+                Instantiate(explodeBullet, spawnTransform);
+                //Instantiate(lighting, spawnTransform);
+
+            }
 
         }
     }
