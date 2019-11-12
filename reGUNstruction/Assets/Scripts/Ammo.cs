@@ -45,18 +45,63 @@ public class Ammo : GunStats
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
-        {
-            LastPart();
-            //Debug.Log(indexLength + " " + curPos);
-            Debug.Log((ammoModel)curPos);
-        }
+        //if (Input.GetKeyDown(KeyCode.LeftArrow))
+        //{
+        //    LastPart();
+        //    //Debug.Log(indexLength + " " + curPos);
+        //    Debug.Log((ammoModel)curPos);
+        //}
 
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+        //if (Input.GetKeyDown(KeyCode.RightArrow))
+        //{
+        //    NextPart();
+        //    //Debug.Log(indexLength + " " + curPos);
+        //    Debug.Log((ammoModel)curPos);
+        //}
+    }
+
+    public void UpdateMyStats()
+    {
+        switch (currentAmmo)
         {
-            NextPart();
-            //Debug.Log(indexLength + " " + curPos);
-            Debug.Log((ammoModel)curPos);
+            case ammoModel.one:
+                damage += 0;
+                accuracy += 0;
+                recoil += 7;
+                durability += 3;
+                fireRate += 4;
+                extraStatOne = " ";
+                extraStatTwo = " ";
+                myElementA = element.none;
+                break;
+            case ammoModel.two:
+                damage += 2;
+                accuracy += 0;
+                recoil += 4;
+                durability += 3;
+                fireRate += 3;
+                extraStatOne = " ";
+                extraStatTwo = " ";
+                myElementA = element.fire;
+                break;
+            case ammoModel.three:
+                damage += 3;
+                accuracy += 0;
+                recoil += 3;
+                durability += 2;
+                fireRate += 4;
+                extraStatOne = " ";
+                extraStatTwo = " ";
+                myElementA = element.explosive;
+                break;
+            //case gripModel.four:
+            //    break;
+            //case gripModel.five:
+            //    break;
+            case ammoModel.none:
+                break;
+            default:
+                break;
         }
     }
 
@@ -72,7 +117,7 @@ public class Ammo : GunStats
                 stats.fireRate += 8;
                 stats.extraStatOne = " ";
                 stats.extraStatTwo = " ";
-                stats.myElement = element.none;
+                stats.myElementA = element.none;
                 break;
             case ammoModel.two:
                 stats.damage += 5;
@@ -82,7 +127,7 @@ public class Ammo : GunStats
                 stats.fireRate += 3;
                 stats.extraStatOne = " ";
                 stats.extraStatTwo = " ";
-                stats.myElement = element.fire;
+                stats.myElementA = element.fire;
                 break;
             case ammoModel.three:
                 stats.damage += 8;
@@ -92,7 +137,7 @@ public class Ammo : GunStats
                 stats.fireRate += 2;
                 stats.extraStatOne = " ";
                 stats.extraStatTwo = " ";
-                stats.myElement = element.explosive;
+                stats.myElementA = element.explosive;
                 break;
             //case ammoModel.four:
             //    break;
@@ -116,8 +161,13 @@ public class Ammo : GunStats
         extraStatOne = " ";
         extraStatTwo = " ";
 
-        myElement = element.none;
+        myElementA = element.none;
 
+    }
+
+    public int GetCurPos()
+    {
+        return curPos;
     }
 
 }

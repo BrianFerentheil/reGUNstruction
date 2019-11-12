@@ -9,8 +9,7 @@ public class Barrel : GunStats
 
     private int indexLength;
     private int curPos = 0;
-
-
+    
     private void Start()
     {
         indexLength = System.Enum.GetValues(typeof(barrelModel)).Length -1;
@@ -46,18 +45,63 @@ public class Barrel : GunStats
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
-        {
-            LastPart();
-            //Debug.Log(indexLength + " " + curPos);
-            Debug.Log((barrelModel)curPos);
-        }
+        //if (Input.GetKeyDown(KeyCode.LeftArrow))
+        //{
+        //    LastPart();
+        //    //Debug.Log(indexLength + " " + curPos);
+        //    Debug.Log((barrelModel)curPos);
+        //}
 
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+        //if (Input.GetKeyDown(KeyCode.RightArrow))
+        //{
+        //    NextPart();
+        //    //Debug.Log(indexLength + " " + curPos);
+        //    Debug.Log((barrelModel)curPos);
+        //}
+    }
+
+    public void UpdateMyStats()
+    {
+        switch (currentBarrel)
         {
-            NextPart();
-            //Debug.Log(indexLength + " " + curPos);
-            Debug.Log((barrelModel)curPos);
+            case barrelModel.one:
+                damage += 0;
+                accuracy += 0;
+                recoil += 7;
+                durability += 3;
+                fireRate += 4;
+                extraStatOne = " ";
+                extraStatTwo = " ";
+                myElementB = element.none;
+                break;
+            case barrelModel.two:
+                damage += 2;
+                accuracy += 0;
+                recoil += 4;
+                durability += 3;
+                fireRate += 3;
+                extraStatOne = " ";
+                extraStatTwo = " ";
+                myElementB = element.fire;
+                break;
+            case barrelModel.three:
+                damage += 3;
+                accuracy += 0;
+                recoil += 3;
+                durability += 2;
+                fireRate += 4;
+                extraStatOne = " ";
+                extraStatTwo = " ";
+                myElementB = element.explosive;
+                break;
+            //case gripModel.four:
+            //    break;
+            //case gripModel.five:
+            //    break;
+            case barrelModel.none:
+                break;
+            default:
+                break;
         }
     }
 
@@ -73,7 +117,7 @@ public class Barrel : GunStats
                 stats.fireRate += 0;
                 stats.extraStatOne = " ";
                 stats.extraStatTwo = " ";
-                stats.myElement = element.none;
+                stats.myElementB = element.none;
                 break;
             case barrelModel.two:
                 stats.damage += 3;
@@ -83,7 +127,7 @@ public class Barrel : GunStats
                 stats.fireRate += 2;
                 stats.extraStatOne = " ";
                 stats.extraStatTwo = " ";
-                stats.myElement = element.fire;
+                stats.myElementB = element.fire;
                 break;
             case barrelModel.three:
                 stats.damage += 5;
@@ -93,7 +137,7 @@ public class Barrel : GunStats
                 stats.fireRate += 1;
                 stats.extraStatOne = " ";
                 stats.extraStatTwo = " ";
-                stats.myElement = element.explosive;
+                stats.myElementB = element.explosive;
                 break;
             //case barrelModel.four:
             //    break;
@@ -117,8 +161,13 @@ public class Barrel : GunStats
         extraStatOne = " ";
         extraStatTwo = " ";
 
-        myElement = element.none;
+        myElementB = element.none;
 
+    }
+
+    public int GetCurPos()
+    {
+        return curPos;
     }
 
 }

@@ -14,7 +14,12 @@ public class GunStats : MonoBehaviour
     public string extraStatTwo = " ";
 
     public enum element { fire, ice, electric, plasma, acid, explosive, subatomic, none }
-    public element myElement = element.none;
+    public element myElementA = element.none;
+    public element myElementB = element.none;
+    public element myElementG = element.none;
+
+
+
 
     //protected enum gripModel { one, two, three, four, five, none }
     //protected enum ammoModel { one, two, three, four, five, none }
@@ -42,7 +47,10 @@ public class GunStats : MonoBehaviour
         extraStatOne = " ";
         extraStatTwo = " ";
 
-        myElement = element.none;
+        myElementA = element.none;
+        myElementB = element.none;
+        myElementG = element.none;
+
     }
 
 

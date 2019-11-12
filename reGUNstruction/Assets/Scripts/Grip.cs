@@ -6,8 +6,8 @@ public class Grip : GunStats
 {
     public enum gripModel { one, two, three, none }
     public gripModel currentGrip = gripModel.none;
-    private int indexLength;
-    private int curPos = 0;
+    public int indexLength;
+    public int curPos = 0;
 
 
     private void Start()
@@ -45,18 +45,63 @@ public class Grip : GunStats
 
     private void Update()
     {
-        if (Input.GetKeyDown(KeyCode.LeftArrow))
-        {
-            LastPart();
-            //Debug.Log(indexLength + " " + curPos);
-            Debug.Log((gripModel)curPos);
-        }
+        //if (Input.GetKeyDown(KeyCode.LeftArrow))
+        //{
+        //    LastPart();
+        //    //Debug.Log(indexLength + " " + curPos);
+        //    Debug.Log((gripModel)curPos);
+        //}
 
-        if (Input.GetKeyDown(KeyCode.RightArrow))
+        //if (Input.GetKeyDown(KeyCode.RightArrow))
+        //{
+        //    NextPart();
+        //    //Debug.Log(indexLength + " " + curPos);
+        //    Debug.Log((gripModel)curPos);
+        //}
+    }
+
+    public void UpdateMyStats()
+    {
+        switch (currentGrip)
         {
-            NextPart();
-            //Debug.Log(indexLength + " " + curPos);
-            Debug.Log((gripModel)curPos);
+            case gripModel.one:
+                damage += 0;
+                accuracy += 0;
+                recoil += 7;
+                durability += 3;
+                fireRate += 4;
+                extraStatOne = " ";
+                extraStatTwo = " ";
+                myElementG = element.none;
+                break;
+            case gripModel.two:
+                damage += 2;
+                accuracy += 0;
+                recoil += 4;
+                durability += 3;
+                fireRate += 3;
+                extraStatOne = " ";
+                extraStatTwo = " ";
+                myElementG = element.fire;
+                break;
+            case gripModel.three:
+                damage += 3;
+                accuracy += 0;
+                recoil += 3;
+                durability += 2;
+                fireRate += 4;
+                extraStatOne = " ";
+                extraStatTwo = " ";
+                myElementG = element.explosive;
+                break;
+            //case gripModel.four:
+            //    break;
+            //case gripModel.five:
+            //    break;
+            case gripModel.none:
+                break;
+            default:
+                break;
         }
     }
 
@@ -72,7 +117,7 @@ public class Grip : GunStats
                 stats.fireRate += 4;
                 stats.extraStatOne = " ";
                 stats.extraStatTwo = " ";
-                stats.myElement = element.none;
+                stats.myElementG = element.none;
                 break;
             case gripModel.two:
                 stats.damage += 2;
@@ -82,7 +127,7 @@ public class Grip : GunStats
                 stats.fireRate += 3;
                 stats.extraStatOne = " ";
                 stats.extraStatTwo = " ";
-                stats.myElement = element.fire;
+                stats.myElementG = element.fire;
                 break;
             case gripModel.three:
                 stats.damage += 3;
@@ -92,7 +137,7 @@ public class Grip : GunStats
                 stats.fireRate += 4;
                 stats.extraStatOne = " ";
                 stats.extraStatTwo = " ";
-                stats.myElement = element.explosive;
+                stats.myElementG = element.explosive;
                 break;
             //case gripModel.four:
             //    break;
@@ -117,7 +162,12 @@ public class Grip : GunStats
         extraStatOne = " ";
         extraStatTwo = " ";
 
-        myElement = element.none;
+        myElementG = element.none;
+    }
+
+    public int GetCurPos()
+    {
+        return curPos;
     }
 
 }
