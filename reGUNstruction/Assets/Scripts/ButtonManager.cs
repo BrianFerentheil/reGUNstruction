@@ -14,6 +14,8 @@ public class ButtonManager : MonoBehaviour
 
     TheMachine theMachine;
 
+
+
     private void Start()
     {
         theMachine = FindObjectOfType<TheMachine>();
@@ -25,7 +27,7 @@ public class ButtonManager : MonoBehaviour
         crafting.SetActive(false);
         option.SetActive(false);
         pause.SetActive(false);
-        inGameCanvas.SetActive(true);
+        inGameCanvas.SetActive(false);
         theMachine.stateMachine.ChangeState(new Walking());
         
     }
@@ -33,10 +35,10 @@ public class ButtonManager : MonoBehaviour
     public void OpenCrafting()
     {
         mainMenu.SetActive(false);
-        crafting.SetActive(true);
+        crafting.SetActive(false);
         option.SetActive(false);
         pause.SetActive(false);
-        inGameCanvas.SetActive(false);
+        inGameCanvas.SetActive(true);
     }
 
     public void CloseCrafting()
@@ -45,7 +47,7 @@ public class ButtonManager : MonoBehaviour
         crafting.SetActive(false);
         option.SetActive(false);
         pause.SetActive(false);
-        inGameCanvas.SetActive(true);
+        inGameCanvas.SetActive(false);
     }
 
     public void OpenOption()

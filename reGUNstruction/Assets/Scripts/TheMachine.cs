@@ -8,11 +8,19 @@ public class TheMachine : MonoBehaviour
     public StateMachine stateMachine = new StateMachine();
 
     public static FirstPersonController fpc;
+    public static CharacterController cc;
+    public static Camera bC;
+
+    public ButtonManager uiMan;
+
 
     private void Start()
     {
         stateMachine.ChangeState(new MainMenu());
         fpc = FindObjectOfType<FirstPersonController>();
+        cc = FindObjectOfType<CharacterController>();
+        bC = FindObjectOfType<BenchCam>().gameObject.GetComponent<Camera>();
+        uiMan = FindObjectOfType<ButtonManager>();
     }
 
     private void Update()
@@ -64,6 +72,7 @@ public class MainMenu : GameState
     {
         TheMachine.fpc = TheMachine.FindObjectOfType<FirstPersonController>();
         TheMachine.fpc.enabled = false;
+        
     }
 
     public void ActiveState()
@@ -82,6 +91,7 @@ public class Walking : GameState
     public void EnterState()
     {
         TheMachine.fpc.enabled = true;
+        Cursor.visible = false;
     }
 
     public void ActiveState()
@@ -100,6 +110,10 @@ public class GunBuildingMenu : GameState
     public void EnterState()
     {
         TheMachine.fpc.enabled = false;
+        TheMachine.cc.enabled = false;
+        TheMachine.bC.depth = 1;
+        GameObject.FindObjectOfType<ButtonManager>().OpenCrafting();
+        Cursor.visible = true;
     }
 
     public void ActiveState()
@@ -109,6 +123,12 @@ public class GunBuildingMenu : GameState
 
     public void ExitState()
     {
+        GameObject.FindObjectOfType<ButtonManager>().CloseCrafting();
+        Cursor.visible = false;
+        TheMachine.fpc.enabled = true;
+        TheMachine.cc.enabled = true;
+        TheMachine.bC.depth = -1;
+
 
     }
 }

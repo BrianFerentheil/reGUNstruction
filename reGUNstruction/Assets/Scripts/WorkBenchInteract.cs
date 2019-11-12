@@ -22,7 +22,7 @@ public class WorkBenchInteract : MonoBehaviour
             if (Input.GetKeyDown(KeyCode.E))
             {
                 inBench = true;
-                sM.stateMachine.ChangeState(new Walking());
+                sM.stateMachine.ChangeState(new GunBuildingMenu());
             }
         }
         

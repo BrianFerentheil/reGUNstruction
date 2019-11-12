@@ -16,6 +16,8 @@ public class GunModel : MonoBehaviour
 
     public Material[] colors;
 
+    public Text[] sliderTexts;
+
     //public TMP_Text tmproTx;
 
     // Start is called before the first frame update
@@ -36,6 +38,16 @@ public class GunModel : MonoBehaviour
         colors[2] = Resources.Load<Material>("Materials/Gold");
         colors[3] = Resources.Load<Material>("Materials/Purple");
         colors[4] = Resources.Load<Material>("Materials/LimeGreen");
+
+    }
+
+    void Slidertexts()
+    {
+        sliderTexts[0].text = myStats.damage.ToString();
+        sliderTexts[1].text = myStats.accuracy.ToString();
+        sliderTexts[2].text = myStats.recoil.ToString();
+        sliderTexts[3].text = myStats.durability.ToString();
+        sliderTexts[4].text = myStats.fireRate.ToString();
 
     }
 
@@ -89,6 +101,7 @@ public class GunModel : MonoBehaviour
         myGrip.LastPart();
         SetColors();
         RunStats();
+
     }
     public void PreviousPartBarrel()
     {
@@ -127,6 +140,7 @@ public class GunModel : MonoBehaviour
         myGrip.GetComponent<Renderer>().material = colors[myGrip.GetCurPos()];
         myBarrel.GetComponent<Renderer>().material = colors[myBarrel.GetCurPos()];
         myAmmo.GetComponent<Renderer>().material = colors[myAmmo.GetCurPos()];
+        Slidertexts();
 
     }
 
