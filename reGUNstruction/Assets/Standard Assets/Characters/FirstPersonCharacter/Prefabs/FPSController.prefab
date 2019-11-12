@@ -82,7 +82,7 @@ MonoBehaviour:
     MaximumX: 90
     smooth: 0
     smoothTime: 5
-    lockCursor: 1
+    lockCursor: 0
   m_UseFovKick: 1
   m_FovKick:
     Camera: {fileID: 0}
@@ -490,7 +490,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   bullet: {fileID: 3499379053741175736, guid: dbee0f279a906ab45b2d8a0de4665646, type: 3}
-  explodeBullet: {fileID: 0}
+  explodeBullet: {fileID: 5596451301403384052, guid: 4cd5b6ea62b2de74e895b453df1ef4bd,
+    type: 3}
   fireRate: 0.1
   spawnTransform: {fileID: 1809490044}
   isFiring: 0
@@ -543,9 +544,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   models:
-  - {fileID: 3300000, guid: 96349eee66ccc944285a06754cc3aa49, type: 3}
-  - {fileID: 3300000, guid: 9fbccad3271611c42a3abf9579b9e194, type: 3}
-  - {fileID: 3300000, guid: 88fdcf9914b4011428607cdb6041e382, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &5899148876417642670
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -559,9 +560,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   models:
-  - {fileID: 3300000, guid: 87dc353b4f8c878408f721d8cfa2e8cb, type: 3}
-  - {fileID: 3300000, guid: bc94fc1903ca0d4469b9311a5f23b9d7, type: 3}
-  - {fileID: 3300000, guid: 8deb94f5a8a9e63438b5fcf6891e47b3, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!114 &6353243397731847006
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -575,9 +576,9 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   models:
-  - {fileID: 3300000, guid: 2af6e93e6823c8e45887756ed717dcc3, type: 3}
-  - {fileID: 3300000, guid: 0c61197f6763aef4f92280b329d35363, type: 3}
-  - {fileID: 3300000, guid: 476b07ea424e9414282eba23dcccf6a8, type: 3}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
 --- !u!1001 &1554038647
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -660,10 +661,45 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 1.9860975
       objectReference: {fileID: 0}
+    - target: {fileID: 7459361829940215232, guid: 888b91f2cdee12d41b73fd3e36c3a960,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.5903
+      objectReference: {fileID: 0}
+    - target: {fileID: 7459361829940215232, guid: 888b91f2cdee12d41b73fd3e36c3a960,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.5903
+      objectReference: {fileID: 0}
+    - target: {fileID: 7459361829940215232, guid: 888b91f2cdee12d41b73fd3e36c3a960,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.5903
+      objectReference: {fileID: 0}
+    - target: {fileID: 2144203776982474630, guid: 888b91f2cdee12d41b73fd3e36c3a960,
+        type: 3}
+      propertyPath: m_LocalScale.x
+      value: 1.6349
+      objectReference: {fileID: 0}
+    - target: {fileID: 2144203776982474630, guid: 888b91f2cdee12d41b73fd3e36c3a960,
+        type: 3}
+      propertyPath: m_LocalScale.y
+      value: 1.6349
+      objectReference: {fileID: 0}
+    - target: {fileID: 2144203776982474630, guid: 888b91f2cdee12d41b73fd3e36c3a960,
+        type: 3}
+      propertyPath: m_LocalScale.z
+      value: 1.6349
+      objectReference: {fileID: 0}
     - target: {fileID: 1470603667792757873, guid: 888b91f2cdee12d41b73fd3e36c3a960,
         type: 3}
       propertyPath: colors.Array.size
       value: 6
+      objectReference: {fileID: 0}
+    - target: {fileID: 1470603667792757873, guid: 888b91f2cdee12d41b73fd3e36c3a960,
+        type: 3}
+      propertyPath: sliderTexts.Array.size
+      value: 5
       objectReference: {fileID: 0}
     - target: {fileID: 1470603667792757873, guid: 888b91f2cdee12d41b73fd3e36c3a960,
         type: 3}
