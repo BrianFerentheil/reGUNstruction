@@ -5,7 +5,7 @@ using UnityStandardAssets.Characters.FirstPerson;
 
 public class TheMachine : MonoBehaviour
 {
-    StateMachine stateMachine = new StateMachine();
+    public StateMachine stateMachine = new StateMachine();
 
     public static FirstPersonController fpc;
 
@@ -19,6 +19,12 @@ public class TheMachine : MonoBehaviour
     {
         stateMachine.Update();
     }
+
+    public void ExitWorkBench()
+    {
+        FindObjectOfType<WorkBenchInteract>().inBench = false;
+        stateMachine.ChangeState(new Walking());
+    }
 }
 
 public interface GameState
@@ -30,7 +36,7 @@ public interface GameState
 
 public class StateMachine
 {
-    GameState currentState;
+    public GameState currentState;
 
     public void ChangeState(GameState newState)
     {
