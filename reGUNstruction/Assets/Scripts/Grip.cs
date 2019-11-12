@@ -9,11 +9,14 @@ public class Grip : GunStats
     public int indexLength;
     public int curPos = 0;
 
+    public SwitchModel swiMod;
+
 
     private void Start()
     {
         indexLength = System.Enum.GetValues(typeof(gripModel)).Length -1;
         currentGrip = (gripModel)curPos;
+        swiMod = GetComponent<SwitchModel>();
 
     }
 

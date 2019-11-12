@@ -137,10 +137,15 @@ public class GunModel : MonoBehaviour
 
     public void SetColors()
     {
-        myGrip.GetComponent<Renderer>().material = colors[myGrip.GetCurPos()];
-        myBarrel.GetComponent<Renderer>().material = colors[myBarrel.GetCurPos()];
-        myAmmo.GetComponent<Renderer>().material = colors[myAmmo.GetCurPos()];
+        //myGrip.GetComponent<Renderer>().material = colors[myGrip.GetCurPos()];
+        //myBarrel.GetComponent<Renderer>().material = colors[myBarrel.GetCurPos()];
+        //myAmmo.GetComponent<Renderer>().material = colors[myAmmo.GetCurPos()];
         Slidertexts();
+
+        myGrip.swiMod.SetModel(myGrip.GetCurPos());
+        myBarrel.swiMod.SetModel(myBarrel.GetCurPos());
+        myAmmo.swiMod.SetModel(myAmmo.GetCurPos());
+
 
     }
 

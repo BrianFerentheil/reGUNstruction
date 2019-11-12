@@ -9,12 +9,14 @@ public class Barrel : GunStats
 
     public int indexLength;
     public int curPos = 0;
+
+    public SwitchModel swiMod;
     
     private void Start()
     {
         indexLength = System.Enum.GetValues(typeof(barrelModel)).Length -1;
         currentBarrel = (barrelModel)curPos;
-
+        swiMod = GetComponent<SwitchModel>();
     }
 
     public barrelModel NextPart()

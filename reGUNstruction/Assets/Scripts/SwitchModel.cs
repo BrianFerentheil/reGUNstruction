@@ -24,4 +24,9 @@ public class SwitchModel : MonoBehaviour
         gameObject.GetComponent<MeshFilter>().mesh = models[currentIndex].mesh;
     }
 
+    public void SetModel(int num)
+    {
+        gameObject.GetComponent<MeshFilter>().sharedMesh = models[num].mesh;
+    }
+
 }
