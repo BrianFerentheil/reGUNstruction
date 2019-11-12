@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using TMPro;
+using UnityEngine.UI;
 
 public class GunModel : MonoBehaviour
 {
@@ -14,11 +16,16 @@ public class GunModel : MonoBehaviour
 
     public Material[] colors;
 
+    //public TMP_Text tmproTx;
+
     // Start is called before the first frame update
     void Start()
     {
         myStats = new GunStats();
         FillColors();
+        RunStats();
+        SetColors();
+        //tmproTx = GameObject.Find("TMPRO").GetComponent<TextMeshProUGUI>();
     }
 
     void FillColors()
@@ -35,6 +42,8 @@ public class GunModel : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        //tmproTx.text = myStats.damage + "\n" + myStats.accuracy + "\n" + myStats.recoil + "\n" + myStats.durability + "\n" + myStats.fireRate;
+
         if (Input.GetKeyDown(KeyCode.LeftArrow))
         {
             LastPartAll();
@@ -57,8 +66,8 @@ public class GunModel : MonoBehaviour
         ElementArray();
 
         //myStats.SetStats(myGrip.currentGrip,myAmmo.currentAmmo, myBarrel.currentBarrel);
-        Debug.Log(myStats.damage + "-Damage,  " + myStats.accuracy + "-Accuracy,  " + myStats.recoil + " -Recoil,  " + myStats.durability + " -Durability,  " + myStats.fireRate + " -FireRate");
-        Debug.Log(myElements[0]+ myElements[1] +myElements[2]);
+        //Debug.Log(myStats.damage + "-Damage,  " + myStats.accuracy + "-Accuracy,  " + myStats.recoil + " -Recoil,  " + myStats.durability + " -Durability,  " + myStats.fireRate + " -FireRate");
+        //Debug.Log(myElements[0]+ myElements[1] +myElements[2]);
     }
 
     private void LastPartAll()
@@ -79,37 +88,38 @@ public class GunModel : MonoBehaviour
     {
         myGrip.LastPart();
         SetColors();
+        RunStats();
     }
     public void PreviousPartBarrel()
     {
         myBarrel.LastPart();
         SetColors();
-
+        RunStats();
     }
     public void PreviousPartAmmo()
     {
         myAmmo.LastPart();
         SetColors();
-
+        RunStats();
     }
 
     public void NextPartGrip()
     {
         myGrip.NextPart();
         SetColors();
-
+        RunStats();
     }
     public void NextPartBarrel()
     {
         myBarrel.NextPart();
         SetColors();
-
+        RunStats();
     }
     public void NextPartAmmo()
     {
         myAmmo.NextPart();
         SetColors();
-
+        RunStats();
     }
 
     public void SetColors()

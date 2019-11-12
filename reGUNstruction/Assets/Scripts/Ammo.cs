@@ -7,12 +7,14 @@ public class Ammo : GunStats
     public enum ammoModel { one, two, three,  none }
     public ammoModel currentAmmo = ammoModel.none;
 
-    private int indexLength;
-    private int curPos = 0;
+    public int indexLength;
+    public int curPos = 0;
     
     private void Start()
     {
         indexLength = System.Enum.GetValues(typeof(ammoModel)).Length -1;
+        currentAmmo = (ammoModel)curPos;
+
     }
 
     public ammoModel NextPart()
