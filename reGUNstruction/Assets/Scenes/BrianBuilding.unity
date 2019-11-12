@@ -1752,7 +1752,7 @@ PrefabInstance:
     - target: {fileID: 4467071290109297720, guid: ef751df5761df984bb1260da2faaed11,
         type: 3}
       propertyPath: m_Name
-      value: ButtonManager
+      value: SliderManager
       objectReference: {fileID: 0}
     - target: {fileID: 4125878691461902219, guid: ef751df5761df984bb1260da2faaed11,
         type: 3}
