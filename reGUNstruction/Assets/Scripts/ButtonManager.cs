@@ -13,35 +13,56 @@ public class ButtonManager : MonoBehaviour
     public void StartGame()
     {
         mainMenu.SetActive(false);
+        crafting.SetActive(false);
+        option.SetActive(false);
+        pause.SetActive(false);
     }
 
     public void OpenCrafting()
     {
+        mainMenu.SetActive(false);
         crafting.SetActive(true);
+        option.SetActive(false);
+        pause.SetActive(false);
     }
 
     public void CloseCrafting()
     {
+        mainMenu.SetActive(false);
         crafting.SetActive(false);
+        option.SetActive(false);
+        pause.SetActive(false);
     }
 
     public void OpenOption()
     {
+        mainMenu.SetActive(false);
+        crafting.SetActive(false);
         option.SetActive(true);
+        pause.SetActive(false);
     }
 
     public void CloseOption()
     {
+        mainMenu.SetActive(true);
+        crafting.SetActive(false);
         option.SetActive(false);
+        pause.SetActive(false);
     }
     
     public void OpenPause()
     {
+        mainMenu.SetActive(false);
+        crafting.SetActive(false);
+        option.SetActive(false);
         pause.SetActive(true);
     }
 
     public void ClosePause()
     {
+        mainMenu.SetActive(false);
+        crafting.SetActive(false);
+        option.SetActive(false);
         pause.SetActive(false);
     }
 
