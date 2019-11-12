@@ -18,6 +18,18 @@ public class GunModel : MonoBehaviour
     void Start()
     {
         myStats = new GunStats();
+        FillColors();
+    }
+
+    void FillColors()
+    {
+        colors = new Material[5];
+        colors[0] = Resources.Load<Material>("Materials/Red");
+        colors[1] = Resources.Load<Material>("Materials/Blue");
+        colors[2] = Resources.Load<Material>("Materials/Gold");
+        colors[3] = Resources.Load<Material>("Materials/Purple");
+        colors[4] = Resources.Load<Material>("Materials/LimeGreen");
+
     }
 
     // Update is called once per frame
