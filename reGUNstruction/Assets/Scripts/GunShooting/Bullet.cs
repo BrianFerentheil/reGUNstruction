@@ -6,11 +6,11 @@ public class Bullet : MonoBehaviour
 {
 
     public float speed;
-
+    public float destroyTime;
 
     private void Start()
     {
-        Destroy(gameObject, 5f);
+        Destroy(gameObject, destroyTime);
     }
 
     void Update()

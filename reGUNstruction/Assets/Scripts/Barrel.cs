@@ -7,12 +7,14 @@ public class Barrel : GunStats
     public enum barrelModel { one, two, three,  none }
     public barrelModel currentBarrel = barrelModel.none;
 
-    private int indexLength;
-    private int curPos = 0;
+    public int indexLength;
+    public int curPos = 0;
     
     private void Start()
     {
         indexLength = System.Enum.GetValues(typeof(barrelModel)).Length -1;
+        currentBarrel = (barrelModel)curPos;
+
     }
 
     public barrelModel NextPart()
@@ -34,7 +36,7 @@ public class Barrel : GunStats
         ClearMods();
 
         curPos--;
-        if (curPos <= 0)
+        if (curPos < 0)
         {
             curPos = indexLength - 1;
         }

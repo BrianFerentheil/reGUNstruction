@@ -13,6 +13,8 @@ public class Grip : GunStats
     private void Start()
     {
         indexLength = System.Enum.GetValues(typeof(gripModel)).Length -1;
+        currentGrip = (gripModel)curPos;
+
     }
 
     public gripModel NextPart()
@@ -34,7 +36,7 @@ public class Grip : GunStats
         ClearMods();
 
         curPos--;
-        if (curPos <= 0)
+        if (curPos < 0)
         {
             curPos = indexLength -1;
         }
