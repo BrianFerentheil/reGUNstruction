@@ -22,5 +22,6 @@ public class Bullet : MonoBehaviour
     {
         if (other.gameObject.tag == "Destroy")
         { Destroy(other.gameObject); }
+        other.collider.gameObject.SendMessage("Damage", 1f, SendMessageOptions.DontRequireReceiver);
     }
 }

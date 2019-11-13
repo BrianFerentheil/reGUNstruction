@@ -42,5 +42,6 @@ public class ExplodeBullet : MonoBehaviour
             Instantiate(explotion, other.transform);
             this.GetComponent<Rigidbody>().AddExplosionForce(explotionForce, other.transform.position, radius, upForce, ForceMode.Impulse);
         }
+        other.collider.gameObject.SendMessage("Damage", 1f, SendMessageOptions.DontRequireReceiver);
     }
 }
