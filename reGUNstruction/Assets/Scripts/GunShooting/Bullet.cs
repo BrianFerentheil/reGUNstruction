@@ -23,6 +23,7 @@ public class Bullet : MonoBehaviour
     private void Start()
     {
         Destroy(gameObject, destroyTime);
+        
         //transform.LookAt(CamRaycast.rayHit);
     }
 
@@ -44,6 +45,11 @@ public class Bullet : MonoBehaviour
         if (other.gameObject.tag == "Destroy")
         {
             Destroy(other.gameObject);
+        }
+
+        if(other.collider.GetComponent<Bullet>())
+        {
+            Physics.IgnoreCollision(other.collider.GetComponent<BoxCollider>(), this.GetComponent<BoxCollider>());
         }
 
         Collider[] colliders = Physics.OverlapSphere(transform.position, radius);
