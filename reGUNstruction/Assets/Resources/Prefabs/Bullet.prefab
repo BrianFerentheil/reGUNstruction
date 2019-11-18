@@ -109,6 +109,12 @@ MonoBehaviour:
   damage: 1
   speed: 100
   destroyTime: 3
+  explosiveForce: 0
+  radius: 0
+  upForce: 0
+  bulletEffect: {fileID: 0}
+  parent: {fileID: 0}
+  bulletAfterEffect: {fileID: 0}
 --- !u!54 &3499379053741175742
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -124,7 +130,7 @@ Rigidbody:
   m_IsKinematic: 0
   m_Interpolate: 0
   m_Constraints: 0
-  m_CollisionDetection: 0
+  m_CollisionDetection: 1
 --- !u!82 &-4033319285807316170
 AudioSource:
   m_ObjectHideFlags: 0

@@ -22,7 +22,18 @@ public class Weapon : MonoBehaviour
     public GameObject lightningCloud;
     public GameObject plasma;
 
+    public GameObject aeFire;
+    public GameObject aeLightningCloud;
+    public GameObject aePurpleEnergy;
+    public GameObject aeGreenEnergy;
+    public GameObject aeIce;
+    public GameObject aePlasma;
+
+
+
+
     public GameObject bulletEffect;
+    public GameObject bulletAE;
 
 
     //public GameObject target;
@@ -99,7 +110,7 @@ public class Weapon : MonoBehaviour
                 //tempBullet = Instantiate(bullet, spawnTransform).GetComponent<Bullet>();
                 tempBullet = Instantiate(bullet, spawnTransform.position, spawnTransform.rotation).GetComponent<Bullet>();
 
-                tempBullet.SetBullet(gStats, dRng, bSpd, spawnTransform.gameObject, bulletEffect);               
+                tempBullet.SetBullet(gStats, dRng, bSpd, spawnTransform.gameObject, bulletEffect ,bulletAE);               
             }
         }
     }
@@ -141,10 +152,10 @@ public class Weapon : MonoBehaviour
         switch (bSpd)
         {
             case GunModel.bulletSpeed.low:
-                fireRate = .75f;
+                fireRate = .5f;
                 break;
             case GunModel.bulletSpeed.med:
-                fireRate = .4f;
+                fireRate = .3f;
                 break;
             case GunModel.bulletSpeed.fast:
                 fireRate = .15f;
@@ -162,31 +173,32 @@ public class Weapon : MonoBehaviour
         {
             case GunStats.element.fire:
                 bulletEffect = fire;
+                bulletAE = aeFire;
                 break;
 
             case GunStats.element.ice:
                 bulletEffect = ice;
-
+                bulletAE = aeIce;
                 break;
             case GunStats.element.electric:
                 bulletEffect = lightningCloud;
-
+                bulletAE = aeLightningCloud;
                 break;
             case GunStats.element.plasma:
                 bulletEffect = plasma;
-
+                bulletAE = aePlasma;
                 break;
             case GunStats.element.acid:
                 bulletEffect = greenEnergy;
-                
+                bulletAE = aeGreenEnergy;
                 break;
             case GunStats.element.explosive:
                 bulletEffect = explosion;
-
+                
                 break;
             case GunStats.element.subatomic:
                 bulletEffect = purpleEnergy;
-
+                bulletAE = aePurpleEnergy; 
                 break;
             case GunStats.element.none:
                 break;

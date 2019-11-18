@@ -11194,7 +11194,14 @@ MonoBehaviour:
   ice: {fileID: 100006, guid: b26161bd088b9ef4992538643ba979ba, type: 3}
   lightningCloud: {fileID: 100000, guid: a4af0d82b00381c48bc30b65c57ba3f8, type: 3}
   plasma: {fileID: 100008, guid: 958065eadd2de834cba095e936840ab9, type: 3}
+  aeFire: {fileID: 100008, guid: 6972eec62fb788c4ea171f58de2e07bf, type: 3}
+  aeLightningCloud: {fileID: 100000, guid: d8a8bed4504d19c44a86037c05cc3763, type: 3}
+  aePurpleEnergy: {fileID: 100004, guid: 0db8ff98cd01a3347ad754b71fa52ee0, type: 3}
+  aeGreenEnergy: {fileID: 100006, guid: f68c9536a3b862d4e8a374948b491a0e, type: 3}
+  aeIce: {fileID: 100006, guid: 8bdee0caa6c55aa4596b553293189707, type: 3}
+  aePlasma: {fileID: 100008, guid: c30e98ee6b0b24141bb2f19a2a033e83, type: 3}
   bulletEffect: {fileID: 0}
+  bulletAE: {fileID: 0}
   tempBullet: {fileID: 0}
   gStats: {fileID: 0}
   dRng: 0
@@ -18482,6 +18489,24 @@ Mesh:
     offset: 0
     size: 0
     path: 
+--- !u!1 &865394227 stripped
+GameObject:
+  m_CorrespondingSourceObject: {fileID: 100002, guid: 5e9e851c0e142814dac026a256ba2ac0,
+    type: 3}
+  m_PrefabInstance: {fileID: 420769279}
+  m_PrefabAsset: {fileID: 0}
+--- !u!114 &865394232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 865394227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 1c8a4d0757bc7cf45a4d3bcb79b05ac5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &879159600
 GameObject:
   m_ObjectHideFlags: 0
