@@ -13,6 +13,8 @@ public class TheMachine : MonoBehaviour
 
     public ButtonManager uiMan;
 
+    public static Weapon weapon;
+
 
     private void Start()
     {
@@ -32,6 +34,12 @@ public class TheMachine : MonoBehaviour
     {
         FindObjectOfType<WorkBenchInteract>().inBench = false;
         stateMachine.ChangeState(new Walking());
+    }
+
+    public static void SetWeaponRef()
+    {
+        weapon = FindObjectOfType<SwappingGunModel>().gameObject.transform.GetComponent<Weapon>();
+
     }
 }
 
@@ -72,7 +80,11 @@ public class MainMenu : GameState
     {
         TheMachine.fpc = TheMachine.FindObjectOfType<FirstPersonController>();
         TheMachine.fpc.enabled = false;
-        
+        if(TheMachine.weapon == null)
+        {
+            TheMachine.SetWeaponRef();
+        }
+        TheMachine.weapon.enabled = false;
     }
 
     public void ActiveState()
@@ -82,7 +94,7 @@ public class MainMenu : GameState
 
     public void ExitState()
     {
-
+        TheMachine.weapon.enabled = true;
     }
 }
 
@@ -114,6 +126,7 @@ public class GunBuildingMenu : GameState
         TheMachine.bC.depth = 1;
         GameObject.FindObjectOfType<ButtonManager>().OpenCrafting();
         Cursor.visible = true;
+        TheMachine.weapon.enabled = false;
     }
 
     public void ActiveState()
@@ -128,7 +141,7 @@ public class GunBuildingMenu : GameState
         TheMachine.fpc.enabled = true;
         TheMachine.cc.enabled = true;
         TheMachine.bC.depth = -1;
-
+        TheMachine.weapon.enabled = true;
 
     }
 }

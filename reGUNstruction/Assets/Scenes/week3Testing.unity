@@ -130,7 +130,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: bc94fc1903ca0d4469b9311a5f23b9d7, type: 3}
       propertyPath: m_Name
-      value: SM_Wep_Mod_Body_18
+      value: GripModelTwo
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: bc94fc1903ca0d4469b9311a5f23b9d7, type: 3}
       propertyPath: m_LocalPosition.x
@@ -1404,7 +1404,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: fa3670b931fdfb64182e619bb2aaca7b, type: 3}
       propertyPath: m_Name
-      value: SM_Wep_Mod_Loader_12
+      value: AmmoModelFour
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: fa3670b931fdfb64182e619bb2aaca7b, type: 3}
       propertyPath: m_LocalPosition.x
@@ -5972,7 +5972,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 247bb64968d85654e892b1ea1b4fe53c, type: 3}
       propertyPath: m_Name
-      value: SM_Wep_Mod_Loader_07
+      value: AmmoModelSix
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 247bb64968d85654e892b1ea1b4fe53c, type: 3}
       propertyPath: m_LocalPosition.x
@@ -9237,7 +9237,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 9fbccad3271611c42a3abf9579b9e194, type: 3}
       propertyPath: m_Name
-      value: SM_Wep_Mod_Barrel_20
+      value: BarrelModelTwo
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 9fbccad3271611c42a3abf9579b9e194, type: 3}
       propertyPath: m_LocalPosition.x
@@ -11199,6 +11199,18 @@ MonoBehaviour:
   gStats: {fileID: 0}
   dRng: 0
   bSpd: 0
+--- !u!114 &651825803
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 651825800}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: cac28a568b4023543b47ffa6937d03b6, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1001 &655578568
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -11640,7 +11652,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: a06724636fb9b4446a6ecb53068e02c6, type: 3}
       propertyPath: m_Name
-      value: SM_Wep_Mod_Loader_15
+      value: AmmoModelFive
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: a06724636fb9b4446a6ecb53068e02c6, type: 3}
       propertyPath: m_LocalPosition.x
@@ -17357,7 +17369,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: c65c5095b29216240bad2f93ac3c91f5, type: 3}
       propertyPath: m_Name
-      value: SM_Wep_Mod_Loader_05
+      value: AmmoModelOne
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: c65c5095b29216240bad2f93ac3c91f5, type: 3}
       propertyPath: m_LocalPosition.x
@@ -21685,11 +21697,11 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 8deb94f5a8a9e63438b5fcf6891e47b3, type: 3}
       propertyPath: m_Name
-      value: SM_Wep_Mod_Body_14
+      value: GripModelOne
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8deb94f5a8a9e63438b5fcf6891e47b3, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 7.5344925
+      value: 7.831
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 8deb94f5a8a9e63438b5fcf6891e47b3, type: 3}
       propertyPath: m_LocalPosition.y
@@ -22019,7 +22031,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 0c61197f6763aef4f92280b329d35363, type: 3}
       propertyPath: m_Name
-      value: SM_Wep_Mod_Attach_Handle_02
+      value: AmmoModelTwo
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0c61197f6763aef4f92280b329d35363, type: 3}
       propertyPath: m_LocalPosition.x
@@ -24853,7 +24865,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 2af6e93e6823c8e45887756ed717dcc3, type: 3}
       propertyPath: m_Name
-      value: SM_Wep_Mod_Attach_Ammo_01 (1)
+      value: AmmoModelThree
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 2af6e93e6823c8e45887756ed717dcc3, type: 3}
       propertyPath: m_LocalPosition.x
@@ -32080,7 +32092,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 88fdcf9914b4011428607cdb6041e382, type: 3}
       propertyPath: m_Name
-      value: SM_Wep_Mod_Barrel_25
+      value: BarrelModelOne
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 88fdcf9914b4011428607cdb6041e382, type: 3}
       propertyPath: m_LocalPosition.x
@@ -32308,7 +32320,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 87dc353b4f8c878408f721d8cfa2e8cb, type: 3}
       propertyPath: m_Name
-      value: SM_Wep_Mod_Body_07
+      value: GripModelThree
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 87dc353b4f8c878408f721d8cfa2e8cb, type: 3}
       propertyPath: m_LocalPosition.x
@@ -32371,7 +32383,7 @@ PrefabInstance:
     m_Modifications:
     - target: {fileID: 100000, guid: 96349eee66ccc944285a06754cc3aa49, type: 3}
       propertyPath: m_Name
-      value: SM_Wep_Mod_Barrel_18
+      value: BarrelModelThree
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 96349eee66ccc944285a06754cc3aa49, type: 3}
       propertyPath: m_LocalPosition.x
