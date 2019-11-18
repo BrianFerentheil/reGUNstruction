@@ -28,7 +28,10 @@ public class FraggedChild:MonoBehaviour{
     bool checkToggle = true;
     
     public Rigidbody cacheRB;
-    
+
+
+    AudioSource am;
+
     //// USE THIS FUNCTION TO DAMAGE THE FRAGMENTS SO THEY FALL OFF //// gameObject.SendMessage("Damage", 1f, SendMessageOptions.DontRequireReceiver);
     public void Damage(float damage) {
     		fragMe(fragControl.hitPointDecrease * damage);		
@@ -49,7 +52,7 @@ public class FraggedChild:MonoBehaviour{
     	sPos = transform.position;
     	sScale = transform.localScale;
     	cacheRB.mass = fragControl.fragMass;
-    	
+        am = GetComponent<AudioSource>();
     }
     
     
@@ -74,8 +77,17 @@ public class FraggedChild:MonoBehaviour{
     		}
     	}
     	//frags fracture fragments on Collisions
-    public void OnCollisionEnter(Collision collision) {
-    	if((fragControl.collideMask.value & 1<<collision.gameObject.layer) == 1<<collision.gameObject.layer){
+    public void OnCollisionEnter(Collision collision)
+    {
+        if (collision.collider.tag == "Ground")
+        {
+            if (am != null)
+            {
+                am.pitch = UnityEngine.Random.Range(0.5f, 1);
+                am.Play();
+            }
+        }
+        if ((fragControl.collideMask.value & 1<<collision.gameObject.layer) == 1<<collision.gameObject.layer){
     		if (this.fragControl.collidefragMagnitude > 0 && collision.relativeVelocity.magnitude > this.fragControl.collidefragMagnitude) {
     		fragMe(collision.relativeVelocity.magnitude * .2f * fragControl.hitPointDecrease);
     		}
@@ -89,6 +101,7 @@ public class FraggedChild:MonoBehaviour{
     	if(fragControl.disableDelay > 0 && (fragControl.disableMask.value & 1<<collision.gameObject.layer) == 1<<collision.gameObject.layer){
     		Invoke("Disable", fragControl.disableDelay);
     	}
+        
     }
     
     
