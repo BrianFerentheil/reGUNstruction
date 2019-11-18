@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Ammo : GunStats
 {
-    public enum ammoModel { one, two, three,  none }
+    public enum ammoModel { one, two, three, four, five, six, none }
     public ammoModel currentAmmo = ammoModel.none;
 
     public int indexLength;
@@ -78,7 +78,7 @@ public class Ammo : GunStats
                 fireRate += 4;
                 extraStatOne = " ";
                 extraStatTwo = " ";
-                myElementA = element.none;
+                myElementA = element.plasma;
                 break;
             case ammoModel.two:
                 damage += 2;
@@ -88,7 +88,7 @@ public class Ammo : GunStats
                 fireRate += 3;
                 extraStatOne = " ";
                 extraStatTwo = " ";
-                myElementA = element.fire;
+                myElementA = element.electric;
                 break;
             case ammoModel.three:
                 damage += 3;
@@ -98,7 +98,7 @@ public class Ammo : GunStats
                 fireRate += 4;
                 extraStatOne = " ";
                 extraStatTwo = " ";
-                myElementA = element.explosive;
+                myElementA = element.acid;
                 break;
             //case gripModel.four:
             //    break;
@@ -118,37 +118,63 @@ public class Ammo : GunStats
             case ammoModel.one:
                 stats.damage += 1;
                 stats.accuracy += 0;
-                stats.recoil += 1;
+                stats.recoil += 5;
                 stats.durability += 0;
                 stats.fireRate += 8;
                 stats.extraStatOne = " ";
                 stats.extraStatTwo = " ";
-                stats.myElementA = element.none;
+                stats.myElementA = element.subatomic;
                 break;
             case ammoModel.two:
                 stats.damage += 5;
                 stats.accuracy += 0;
-                stats.recoil += -2;
+                stats.recoil += 2;
                 stats.durability += 0;
                 stats.fireRate += 3;
                 stats.extraStatOne = " ";
                 stats.extraStatTwo = " ";
-                stats.myElementA = element.fire;
+                stats.myElementA = element.plasma;
                 break;
             case ammoModel.three:
                 stats.damage += 8;
                 stats.accuracy += 0;
-                stats.recoil += 0;
+                stats.recoil += -3;
                 stats.durability += 0;
-                stats.fireRate += 2;
+                stats.fireRate += 0;
                 stats.extraStatOne = " ";
                 stats.extraStatTwo = " ";
-                stats.myElementA = element.explosive;
+                stats.myElementA = element.fire;
                 break;
-            //case ammoModel.four:
-            //    break;
-            //case ammoModel.five:
-            //    break;
+            case ammoModel.four:
+                stats.damage += 10;
+                stats.accuracy += 0;
+                stats.recoil += 0;
+                stats.durability += 0;
+                stats.fireRate += -5;
+                stats.extraStatOne = " ";
+                stats.extraStatTwo = " ";
+                stats.myElementA = element.ice;
+                break;
+            case ammoModel.five:
+                stats.damage += 3;
+                stats.accuracy += 0;
+                stats.recoil += 0;
+                stats.durability += 0;
+                stats.fireRate += 8;
+                stats.extraStatOne = " ";
+                stats.extraStatTwo = " ";
+                stats.myElementA = element.electric;
+                break;
+            case ammoModel.six:
+                stats.damage += 2;
+                stats.accuracy += 0;
+                stats.recoil += 0;
+                stats.durability += 0;
+                stats.fireRate += 9;
+                stats.extraStatOne = " ";
+                stats.extraStatTwo = " ";
+                stats.myElementA = element.acid;
+                break;
             case ammoModel.none:
                 break;
             default:

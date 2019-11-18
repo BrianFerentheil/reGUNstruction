@@ -18,6 +18,11 @@ public class GunModel : MonoBehaviour
 
     public Text[] sliderTexts;
 
+    public enum damageRange { low, med, high, none}
+    public damageRange dRange = damageRange.none;
+    public enum bulletSpeed { low, med, fast, none }
+    public bulletSpeed bSpeed = bulletSpeed.none;
+
     //public TMP_Text tmproTx;
 
     // Start is called before the first frame update
@@ -71,12 +76,15 @@ public class GunModel : MonoBehaviour
 
     public void RunStats()
     {
+
         myStats.SetBaseParams();
         myGrip.RunStatMods(myGrip.currentGrip, myStats);
         myBarrel.RunStatMods(myBarrel.currentBarrel, myStats);
         myAmmo.RunStatMods(myAmmo.currentAmmo, myStats);
         ElementArray();
-
+        SetRanges();
+        Weapon wep = GetComponent<Weapon>();
+        wep.GetGunStats(myStats,bSpeed, dRange);
         //myStats.SetStats(myGrip.currentGrip,myAmmo.currentAmmo, myBarrel.currentBarrel);
         //Debug.Log(myStats.damage + "-Damage,  " + myStats.accuracy + "-Accuracy,  " + myStats.recoil + " -Recoil,  " + myStats.durability + " -Durability,  " + myStats.fireRate + " -FireRate");
         //Debug.Log(myElements[0]+ myElements[1] +myElements[2]);
@@ -157,4 +165,34 @@ public class GunModel : MonoBehaviour
         myElements[1] = myStats.myElementB.ToString();
         myElements[2] = myStats.myElementG.ToString();               
     }
+
+    private void SetRanges()
+    {
+        if(myStats.damage < 10)
+        {
+            dRange = damageRange.low;
+        }
+        else if(9 < myStats.damage && myStats.damage < 15)
+        {
+            dRange = damageRange.med;
+        }
+        else if(14 < myStats.damage)
+        {
+            dRange = damageRange.high;
+        }
+
+        if(myStats.fireRate < 10)
+        {
+            bSpeed = bulletSpeed.low;
+        }
+        else if(9 < myStats.fireRate && myStats.fireRate < 15)
+        {
+            bSpeed = bulletSpeed.med;
+        }
+        else if(14 < myStats.fireRate)
+        {
+            bSpeed = bulletSpeed.fast;
+        }
+    }
 }
+

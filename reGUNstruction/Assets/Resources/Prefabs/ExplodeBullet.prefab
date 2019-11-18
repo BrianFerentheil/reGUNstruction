@@ -121,10 +121,10 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 990c736a8b4ddf64d971dc3ae7ad52d1, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  speed: 400
-  destroyTime: 5
+  speed: 100
+  destroyTime: 3
   explotion: {fileID: 4172521473793848820, guid: 270f5e2f7406b6e46a5d5e3b50f45b53,
     type: 3}
-  explotionForce: 1000
+  explotionForce: 2000
   radius: 200
-  upForce: 1000
+  upForce: 2000
