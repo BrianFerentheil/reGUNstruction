@@ -28,23 +28,15 @@ public class EnemyController : MonoBehaviour
     [ContextMenu("ToggleDead")]
     public void die()
     {
-        _dead = !_dead;
-
-        if (_dead)
+        if (!_dead)
         {
+            _dead = true; ;
+
             CopyTransformData(_animatedModel.transform, _ragdoll.transform, _navmeshAgent.velocity);
             _ragdoll.gameObject.SetActive(true);
             _animatedModel.gameObject.SetActive(false);
             _navmeshAgent.enabled = false;
         }
-        else
-        {
-            // Switch back to the model and disable the ragdoll
-            _ragdoll.gameObject.SetActive(false);
-            _animatedModel.gameObject.SetActive(true);
-            _navmeshAgent.enabled = true;
-        }
-
     }
 
     private void CopyTransformData(Transform sourceTransform, Transform destinationTransform, Vector3 velocity)

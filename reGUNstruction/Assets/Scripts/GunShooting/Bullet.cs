@@ -85,7 +85,11 @@ public class Bullet : MonoBehaviour
 
         var temp = Instantiate(bulletAfterEffect, transform.position, transform.rotation);
         temp.GetComponent<csDestroyEffect>().AEToggle(true);
-        Destroy(gameObject);
+
+        if (speed > 0.5f)
+        {
+            Destroy(gameObject);
+        }
 
     }
 

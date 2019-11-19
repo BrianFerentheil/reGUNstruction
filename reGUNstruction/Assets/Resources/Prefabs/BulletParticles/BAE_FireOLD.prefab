@@ -4625,7 +4625,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &400002
 Transform:
   m_ObjectHideFlags: 0
@@ -18506,7 +18506,7 @@ GameObject:
   - component: {fileID: 400008}
   - component: {fileID: 114000013433460820}
   m_Layer: 0
-  m_Name: BAE_Fire
+  m_Name: BAE_FireOLD
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
