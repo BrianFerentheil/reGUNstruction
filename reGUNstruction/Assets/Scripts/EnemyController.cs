@@ -1,49 +1,71 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.AI;
 using UnityEngine;
 
 public class EnemyController : MonoBehaviour
 {
-    // Start is called before the first frame update
-    void Start()
+
+    [SerializeField] private GameObject _ragdoll;
+    [SerializeField] private GameObject _animatedModel;
+    [SerializeField] private NavMeshAgent _navmeshAgent;
+
+    private bool _dead;
+
+    private void Awake()
     {
-        setRigidbodyState(true);
-        setColliderState(false);
+        _ragdoll.gameObject.SetActive(false);
     }
 
-    // Update is called once per frame
-    void Update()
+    private void Update()
     {
-        
+        if (Input.GetButtonDown("Fire2"))
+        {
+            die();
+        }
     }
 
+    [ContextMenu("ToggleDead")]
     public void die()
     {
-        Destroy(gameObject, 3f);
-        GetComponent<Animator>().enabled = false;
-        setRigidbodyState(false);
-        setColliderState(true);
-    }
+        _dead = !_dead;
 
-    void setRigidbodyState(bool state)
-    {
-        Rigidbody[] rigidbodies = GetComponentsInChildren<Rigidbody>();
-
-        foreach (Rigidbody rigidbody in rigidbodies)
+        if (_dead)
         {
-            rigidbody.isKinematic = state;
+            CopyTransformData(_animatedModel.transform, _ragdoll.transform, _navmeshAgent.velocity);
+            _ragdoll.gameObject.SetActive(true);
+            _animatedModel.gameObject.SetActive(false);
+            _navmeshAgent.enabled = false;
+        }
+        else
+        {
+            // Switch back to the model and disable the ragdoll
+            _ragdoll.gameObject.SetActive(false);
+            _animatedModel.gameObject.SetActive(true);
+            _navmeshAgent.enabled = true;
         }
 
-        GetComponent<Rigidbody>().isKinematic = !state;
     }
 
-    void setColliderState(bool state)
+    private void CopyTransformData(Transform sourceTransform, Transform destinationTransform, Vector3 velocity)
     {
-        Collider[] colliders = GetComponentsInChildren<Collider>();
-
-        foreach (Collider collider in colliders)
+        if (sourceTransform.childCount != destinationTransform.childCount)
         {
-            collider.enabled = state;
+            Debug.LogWarning("Invalid transform copy, they need to match transform hierarchies");
+            return;
+        }
+
+        for (int i = 0; i < sourceTransform.childCount; i++)
+        {
+            var source = sourceTransform.GetChild(i);
+            var destination = destinationTransform.GetChild(i);
+            destination.position = source.position;
+            destination.rotation = source.rotation;
+            var rb = destination.GetComponent<Rigidbody>();
+            if (rb != null)
+                rb.velocity = velocity;
+
+            CopyTransformData(source, destination, velocity);
         }
     }
 }
