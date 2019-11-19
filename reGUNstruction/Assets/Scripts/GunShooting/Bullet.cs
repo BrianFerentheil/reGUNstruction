@@ -86,20 +86,20 @@ public class Bullet : MonoBehaviour
                 damage = 100f;
                 explosiveForce = 5f;
                 upForce = 5f;
-                radius = 10;
+                radius = 6;
                 break;
             case GunModel.damageRange.med:
                 damage = 200f;
                 explosiveForce = 10f;
                 upForce = 10f;
-                radius = 20;
+                radius = 10;
 
                 break;
             case GunModel.damageRange.high:
                 damage = 500f;
                 explosiveForce = 20f;
                 upForce = 20f;
-                radius = 50;
+                radius = 18;
 
                 break;
             case GunModel.damageRange.none:
