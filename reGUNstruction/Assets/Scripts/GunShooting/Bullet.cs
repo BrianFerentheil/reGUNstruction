@@ -20,13 +20,15 @@ public class Bullet : MonoBehaviour
 
     public GameObject bulletAfterEffect;
 
+    public GameObject bulletAudio;
+
     private void Start()
     {
         Destroy(gameObject, destroyTime);
-        
+        bulletAudio = Resources.Load<GameObject>("Prefabs/BulletAudio");
+        Instantiate(bulletAudio).GetComponent<BulletAudioFollow>().myBullet = gameObject;
         //transform.LookAt(CamRaycast.rayHit);
     }
-
     void Update()
     {
         GetComponent<Rigidbody>().AddForce(transform.forward * speed, ForceMode.Impulse);
@@ -36,18 +38,21 @@ public class Bullet : MonoBehaviour
     void OnCollisionEnter(Collision other)
     {
 
-        EnemyController enemy = other.transform.GetComponent<EnemyController>();
+        EnemyController enemy = other.transform.GetComponentInParent<EnemyController>();
         if (enemy != null)
         {
             enemy.die();
+            Destroy(gameObject);
+
         }
+
 
         if (other.gameObject.tag == "Destroy")
         {
             Destroy(other.gameObject);
         }
 
-        if(other.collider.GetComponent<Bullet>())
+        if (other.collider.GetComponent<Bullet>())
         {
             Physics.IgnoreCollision(other.collider.GetComponent<BoxCollider>(), this.GetComponent<BoxCollider>());
         }
@@ -61,7 +66,12 @@ public class Bullet : MonoBehaviour
             {
                 //rigidbody.AddExplosionForce(500f, transform.position, 50f);
                 rigidbody.AddExplosionForce(explosiveForce, transform.position, radius, upForce, ForceMode.Impulse);
+                if (enemy != null)
+                {
+                    enemy.die();
+                    Destroy(gameObject);
 
+                }
             }
         }
 
@@ -76,6 +86,7 @@ public class Bullet : MonoBehaviour
         var temp = Instantiate(bulletAfterEffect, transform.position, transform.rotation);
         temp.GetComponent<csDestroyEffect>().AEToggle(true);
         Destroy(gameObject);
+
     }
 
     public void SetBullet(GunStats gStats, GunModel.damageRange dRng, GunModel.bulletSpeed bSpd, GameObject gO, GameObject bEf, GameObject bAE )

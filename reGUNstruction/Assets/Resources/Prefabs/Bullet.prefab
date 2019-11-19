@@ -116,6 +116,7 @@ MonoBehaviour:
   bulletEffect: {fileID: 0}
   parent: {fileID: 0}
   bulletAfterEffect: {fileID: 0}
+  bulletAudio: {fileID: 0}
 --- !u!54 &3499379053741175742
 Rigidbody:
   m_ObjectHideFlags: 0
@@ -139,7 +140,7 @@ AudioSource:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3499379053741175736}
-  m_Enabled: 1
+  m_Enabled: 0
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 8300000, guid: 5976ece6416bd294cbe1439bb69f3557, type: 3}
