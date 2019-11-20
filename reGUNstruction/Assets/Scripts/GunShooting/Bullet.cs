@@ -22,6 +22,13 @@ public class Bullet : MonoBehaviour
 
     public GameObject bulletAudio;
 
+    ScoreManager sm;
+
+    private void Awake()
+    {
+        sm = FindObjectOfType<ScoreManager>();
+    }
+
     private void Start()
     {
         Destroy(gameObject, destroyTime);
@@ -49,6 +56,9 @@ public class Bullet : MonoBehaviour
 
         if (other.gameObject.tag == "Destroy")
         {
+            int objectScore;
+            objectScore = other.collider.GetComponent<Score>().score;
+            sm.currentScore = sm.currentScore + objectScore;
             Destroy(other.gameObject);
         }
 
