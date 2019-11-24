@@ -11,20 +11,29 @@ public class GunStatsSlider : MonoBehaviour
     public GameObject damageFill;
     public Slider fireRate;
     public GameObject fireRateFill;
+    public Test scoreTest;
 
     Weapon weapon;
     Color damageColor;
+    ScoreManager scoreManager;
 
     void Start()
     {
         gunModel = FindObjectOfType<GunModel>();
         weapon = FindObjectOfType<Weapon>();
+        scoreManager = FindObjectOfType<ScoreManager>();
+        scoreTest.test = "";
     }
 
     
     void Update()
     {
         UpdateSlider();
+    }
+
+    public void UpdateScore()
+    {
+        scoreTest.test = "Score: " + scoreManager.currentScore.ToString;
     }
 
     public void UpdateSlider()
