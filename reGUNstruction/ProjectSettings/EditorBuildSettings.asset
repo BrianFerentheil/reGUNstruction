@@ -5,7 +5,10 @@ EditorBuildSettings:
   m_ObjectHideFlags: 0
   serializedVersion: 2
   m_Scenes:
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/Master.unity
     guid: 26feacd11f19a66408f7adadead04845
+  - enabled: 1
+    path: Assets/Scenes/NukeTown.unity
+    guid: 26010d7d3cb9b7f4fa0e9747721c27df
   m_configObjects: {}
