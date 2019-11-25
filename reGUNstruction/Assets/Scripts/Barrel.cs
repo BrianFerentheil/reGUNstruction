@@ -11,6 +11,7 @@ public class Barrel : GunStats
     public int curPos = 0;
 
     public SwitchModel swiMod;
+    public bool modelsSET;
 
     protected override void Start()
     {
@@ -18,6 +19,24 @@ public class Barrel : GunStats
         indexLength = System.Enum.GetValues(typeof(barrelModel)).Length -1;
         currentBarrel = (barrelModel)curPos;
         swiMod = GetComponent<SwitchModel>();
+        SetModels();
+    }
+
+    public void SetModels()
+    {
+        if (!modelsSET)
+        {
+            if (swiMod == null)
+            {
+                swiMod = GetComponent<SwitchModel>();
+            }
+
+            swiMod.models = new MeshFilter[3];
+            swiMod.models[0] = FindObjectOfType<BMONE>().GetComponent<MeshFilter>();
+            swiMod.models[1] = FindObjectOfType<BMTWO>().GetComponent<MeshFilter>();
+            swiMod.models[2] = FindObjectOfType<BMTHREE>().GetComponent<MeshFilter>();
+            modelsSET = true;
+        }
     }
 
     public barrelModel NextPart()

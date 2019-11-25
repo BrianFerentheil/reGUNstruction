@@ -20,7 +20,7 @@ public class GunStats : MonoBehaviour
     public element myElementB = element.none;
     public element myElementG = element.none;
 
-    public bool worldModel = false;
+    public bool worldModel;
 
     public GameObject weaponUI;
 

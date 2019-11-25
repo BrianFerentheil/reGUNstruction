@@ -10,6 +10,7 @@ public class Grip : GunStats
     public int curPos = 0;
 
     public SwitchModel swiMod;
+    bool modelsSET;
 
 
     protected override void Start()
@@ -18,7 +19,24 @@ public class Grip : GunStats
         indexLength = System.Enum.GetValues(typeof(gripModel)).Length -1;
         currentGrip = (gripModel)curPos;
         swiMod = GetComponent<SwitchModel>();
+        SetModels();
+    }
 
+    public void SetModels()
+    {
+        if (!modelsSET)
+        {
+            if (swiMod == null)
+            {
+                swiMod = GetComponent<SwitchModel>();
+            }
+
+            swiMod.models = new MeshFilter[3];
+            swiMod.models[0] = FindObjectOfType<GMONE>().GetComponent<MeshFilter>();
+            swiMod.models[1] = FindObjectOfType<GMTWO>().GetComponent<MeshFilter>();
+            swiMod.models[2] = FindObjectOfType<GMTHREE>().GetComponent<MeshFilter>();
+            modelsSET = true;
+        }
     }
 
     public gripModel NextPart()
