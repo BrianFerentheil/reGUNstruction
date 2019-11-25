@@ -11,9 +11,10 @@ public class Barrel : GunStats
     public int curPos = 0;
 
     public SwitchModel swiMod;
-    
-    private void Start()
+
+    protected override void Start()
     {
+        base.Start();
         indexLength = System.Enum.GetValues(typeof(barrelModel)).Length -1;
         currentBarrel = (barrelModel)curPos;
         swiMod = GetComponent<SwitchModel>();
@@ -119,16 +120,19 @@ public class Barrel : GunStats
                 stats.recoil += 2;
                 stats.durability += 4;
                 stats.fireRate += 0;
+                stats.ammo += 0;
                 stats.extraStatOne = " ";
                 stats.extraStatTwo = " ";
                 stats.myElementB = element.none;
                 break;
             case barrelModel.two:
-                stats.damage += 3;
+                stats.damage += -3;
                 stats.accuracy += 5;
                 stats.recoil += 0;
                 stats.durability += 0;
                 stats.fireRate += 2;
+                stats.ammo += 3;
+
                 stats.extraStatOne = " ";
                 stats.extraStatTwo = " ";
                 stats.myElementB = element.fire;
@@ -138,7 +142,9 @@ public class Barrel : GunStats
                 stats.accuracy += 4;
                 stats.recoil += 1;
                 stats.durability += 0;
-                stats.fireRate += 1;
+                stats.fireRate += -3;
+                stats.ammo += 5;
+
                 stats.extraStatOne = " ";
                 stats.extraStatTwo = " ";
                 stats.myElementB = element.explosive;

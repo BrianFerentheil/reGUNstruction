@@ -12,8 +12,9 @@ public class Grip : GunStats
     public SwitchModel swiMod;
 
 
-    private void Start()
+    protected override void Start()
     {
+        base.Start();
         indexLength = System.Enum.GetValues(typeof(gripModel)).Length -1;
         currentGrip = (gripModel)curPos;
         swiMod = GetComponent<SwitchModel>();
@@ -115,31 +116,37 @@ public class Grip : GunStats
         switch (grip)
         {
             case gripModel.one:
-                stats.damage += 0;
+                stats.damage += 4;
                 stats.accuracy += 0;
                 stats.recoil += 7;
                 stats.durability += 3;
-                stats.fireRate += 4;
+                stats.fireRate += 2;
+                stats.ammo += -2;
+
                 stats.extraStatOne = " ";
                 stats.extraStatTwo = " ";
                 stats.myElementG = element.none;
                 break;
             case gripModel.two:
-                stats.damage += 2;
+                stats.damage += 9;
                 stats.accuracy += 0;
                 stats.recoil += 4;
                 stats.durability += 3;
+                stats.ammo += 3;
+
                 stats.fireRate += 3;
                 stats.extraStatOne = " ";
                 stats.extraStatTwo = " ";
                 stats.myElementG = element.fire;
                 break;
             case gripModel.three:
-                stats.damage += 3;
+                stats.damage += -3;
                 stats.accuracy += 0;
-                stats.recoil += 3;
+                stats.recoil += 7;
                 stats.durability += 2;
-                stats.fireRate += 4;
+                stats.fireRate += 8;
+                stats.ammo += 0;
+
                 stats.extraStatOne = " ";
                 stats.extraStatTwo = " ";
                 stats.myElementG = element.explosive;

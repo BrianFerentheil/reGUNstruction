@@ -12,6 +12,8 @@ public class GunModel : MonoBehaviour
 
     public GunStats myStats;
 
+    public GunStats tempStats;
+
     string[] myElements;
 
     public Material[] colors;
@@ -29,6 +31,7 @@ public class GunModel : MonoBehaviour
     void Start()
     {
         myStats = new GunStats();
+        tempStats = new GunStats();
         FillColors();
         RunStats();
         SetColors();
@@ -46,15 +49,15 @@ public class GunModel : MonoBehaviour
 
     }
 
-    void Slidertexts()
-    {
-        sliderTexts[0].text = myStats.damage.ToString();
-        sliderTexts[1].text = myStats.accuracy.ToString();
-        sliderTexts[2].text = myStats.recoil.ToString();
-        sliderTexts[3].text = myStats.durability.ToString();
-        sliderTexts[4].text = myStats.fireRate.ToString();
+    //void Slidertexts()
+    //{
+    //    sliderTexts[0].text = myStats.damage.ToString();
+    //    sliderTexts[1].text = myStats.accuracy.ToString();
+    //    sliderTexts[2].text = myStats.recoil.ToString();
+    //    sliderTexts[3].text = myStats.durability.ToString();
+    //    sliderTexts[4].text = myStats.fireRate.ToString();
 
-    }
+    //}
 
     // Update is called once per frame
     void Update()
@@ -89,6 +92,18 @@ public class GunModel : MonoBehaviour
         //Debug.Log(myStats.damage + "-Damage,  " + myStats.accuracy + "-Accuracy,  " + myStats.recoil + " -Recoil,  " + myStats.durability + " -Durability,  " + myStats.fireRate + " -FireRate");
         //Debug.Log(myElements[0]+ myElements[1] +myElements[2]);
     }
+
+    //public void DisplayStats()
+    //{
+    //    tempStats.SetBaseParams();
+    //    myGrip.RunStatMods(myGrip.currentGrip, tempStats);
+    //    myBarrel.RunStatMods(myBarrel.currentBarrel, tempStats);
+    //    myAmmo.RunStatMods(myAmmo.currentAmmo, tempStats);
+    //    ElementArray();
+    //    SetRanges();
+    //    Weapon wep = GetComponent<Weapon>();
+    //    wep.GetGunStats(tempStats, bSpeed, dRange);
+    //}
 
     private void LastPartAll()
     {
@@ -143,12 +158,30 @@ public class GunModel : MonoBehaviour
         RunStats();
     }
 
+    public void SetPiece(GunStats gunPart)
+    {
+        if (gunPart.GetType() == typeof(Grip))
+        {
+
+        }
+
+        else if (gunPart.GetType() == typeof(Barrel))
+        {
+ 
+
+        }
+        else if (gunPart.GetType() == typeof(Ammo))
+        {
+
+        }
+    }
+
     public void SetColors()
     {
         //myGrip.GetComponent<Renderer>().material = colors[myGrip.GetCurPos()];
         //myBarrel.GetComponent<Renderer>().material = colors[myBarrel.GetCurPos()];
         //myAmmo.GetComponent<Renderer>().material = colors[myAmmo.GetCurPos()];
-        Slidertexts();
+        //Slidertexts();
 
         myGrip.swiMod.SetModel(myGrip.GetCurPos());
         myBarrel.swiMod.SetModel(myBarrel.GetCurPos());

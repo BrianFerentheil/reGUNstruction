@@ -18,6 +18,7 @@ public class Bullet : MonoBehaviour
     public GameObject bulletEffect;
     public GameObject parent;
 
+    public GameObject bulletDestroyEffect;
     public GameObject bulletAfterEffect;
 
     public GameObject bulletAudio;
@@ -54,13 +55,13 @@ public class Bullet : MonoBehaviour
         }
 
 
-        if (other.gameObject.tag == "Destroy")
-        {
-            int objectScore;
-            objectScore = other.collider.GetComponent<Score>().score;
-            sm.currentScore = sm.currentScore + objectScore;
-            Destroy(other.gameObject);
-        }
+        //if (other.gameObject.tag == "Destroy")
+        //{
+        //    int objectScore;
+        //    objectScore = other.collider.GetComponent<Score>().score;
+        //    sm.currentScore = sm.currentScore + objectScore;
+        //    Destroy(other.gameObject);
+        //}
 
         if (other.collider.GetComponent<Bullet>())
         {
@@ -72,6 +73,7 @@ public class Bullet : MonoBehaviour
         {
             Rigidbody rigidbody = closeObjects.GetComponent<Rigidbody>();
             Bullet bullet = closeObjects.GetComponent<Bullet>();
+            Score score = closeObjects.GetComponent<Score>();
             if (rigidbody != null && bullet == null)
             {
                 //rigidbody.AddExplosionForce(500f, transform.position, 50f);
@@ -82,6 +84,14 @@ public class Bullet : MonoBehaviour
                     Destroy(gameObject);
 
                 }
+            }
+            if(score != null)
+            {
+                int objectScore;
+                objectScore = score.CallScore();
+                sm.currentScore += objectScore;
+                score.DoTheParticle(bulletDestroyEffect);
+                score.StartCoroutine(score.DestroyMe());
             }
         }
 
@@ -95,37 +105,42 @@ public class Bullet : MonoBehaviour
 
         var temp = Instantiate(bulletAfterEffect, transform.position, transform.rotation);
         temp.GetComponent<csDestroyEffect>().AEToggle(true);
-
-        if (speed > 0.5f)
-        {
-            Destroy(gameObject);
-        }
+        
+        Destroy(gameObject);
+        
 
     }
 
-    public void SetBullet(GunStats gStats, GunModel.damageRange dRng, GunModel.bulletSpeed bSpd, GameObject gO, GameObject bEf, GameObject bAE )
+    public void SetBullet(GunStats gStats, GunModel.damageRange dRng, GunModel.bulletSpeed bSpd, GameObject gO, ParticlePack pP )
     {
         switch (dRng)
         {
             case GunModel.damageRange.low:
                 damage = 100f;
                 explosiveForce = 5f;
-                upForce = 5f;
-                radius = 6;
+                upForce = 4f;
+                radius = 1;
+                bulletEffect = pP.beSmall;
+                bulletAfterEffect = pP.beSmall;
+                bulletDestroyEffect = pP.baeMedium;
                 break;
             case GunModel.damageRange.med:
                 damage = 200f;
                 explosiveForce = 10f;
-                upForce = 10f;
-                radius = 10;
-
+                upForce = 7.5f;
+                radius = 2;
+                bulletEffect = pP.beMedium;
+                bulletAfterEffect = pP.baeMedium;
+                bulletDestroyEffect = pP.baeMedium;
                 break;
             case GunModel.damageRange.high:
                 damage = 500f;
                 explosiveForce = 20f;
-                upForce = 20f;
-                radius = 18;
-
+                upForce = 12.5f;
+                radius = 3;
+                bulletEffect = pP.beLarge;
+                bulletAfterEffect = pP.baeLarge;
+                bulletDestroyEffect = pP.baeMedium;
                 break;
             case GunModel.damageRange.none:
                 Debug.Log("SetBullet Damage Error");
@@ -152,8 +167,6 @@ public class Bullet : MonoBehaviour
 
         myEl = (element)gStats.myElementA;
         parent = gO;
-        bulletEffect = bEf;
-        bulletAfterEffect = bAE;
         Instantiate(bulletEffect, transform);
         
 

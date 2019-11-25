@@ -13,8 +13,9 @@ public class Ammo : GunStats
     public SwitchModel swiMod;
 
 
-    private void Start()
+    protected override void Start()
     {
+        base.Start();
         indexLength = System.Enum.GetValues(typeof(ammoModel)).Length -1;
         currentAmmo = (ammoModel)curPos;
         swiMod = GetComponent<SwitchModel>();
@@ -136,7 +137,7 @@ public class Ammo : GunStats
                 stats.myElementA = element.plasma;
                 break;
             case ammoModel.three:
-                stats.damage += 8;
+                stats.damage += 6;
                 stats.accuracy += 0;
                 stats.recoil += -3;
                 stats.durability += 0;
@@ -146,7 +147,7 @@ public class Ammo : GunStats
                 stats.myElementA = element.fire;
                 break;
             case ammoModel.four:
-                stats.damage += 10;
+                stats.damage += 6;
                 stats.accuracy += 0;
                 stats.recoil += 0;
                 stats.durability += 0;

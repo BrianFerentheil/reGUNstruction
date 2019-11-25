@@ -11,6 +11,9 @@ public class ButtonManager : MonoBehaviour
     public GameObject pause;
     public GameObject inGameCanvas;
     public GameObject player;
+    public GameObject gunStatCanvas;
+    public GameObject ammoCanvas;
+    public GameObject scoreCanvas;
 
     TheMachine theMachine;
 
@@ -29,7 +32,9 @@ public class ButtonManager : MonoBehaviour
         pause.SetActive(false);
         inGameCanvas.SetActive(false);
         theMachine.stateMachine.ChangeState(new Walking());
-        
+        gunStatCanvas.SetActive(false);
+        ammoCanvas.SetActive(true);
+        scoreCanvas.SetActive(true);
     }
 
     public void OpenCrafting()
@@ -39,6 +44,9 @@ public class ButtonManager : MonoBehaviour
         option.SetActive(false);
         pause.SetActive(false);
         inGameCanvas.SetActive(true);
+        gunStatCanvas.SetActive(true);
+        ammoCanvas.SetActive(false);
+        scoreCanvas.SetActive(false);
     }
 
     public void CloseCrafting()
@@ -48,6 +56,10 @@ public class ButtonManager : MonoBehaviour
         option.SetActive(false);
         pause.SetActive(false);
         inGameCanvas.SetActive(false);
+        gunStatCanvas.SetActive(false);
+        ammoCanvas.SetActive(true);
+        scoreCanvas.SetActive(true);
+
     }
 
     public void OpenOption()
@@ -57,6 +69,10 @@ public class ButtonManager : MonoBehaviour
         option.SetActive(true);
         pause.SetActive(false);
         inGameCanvas.SetActive(false);
+        gunStatCanvas.SetActive(false);
+        ammoCanvas.SetActive(false);
+        scoreCanvas.SetActive(false);
+
     }
 
     public void CloseOption()
@@ -66,14 +82,22 @@ public class ButtonManager : MonoBehaviour
         option.SetActive(false);
         pause.SetActive(false);
         inGameCanvas.SetActive(false);
+        gunStatCanvas.SetActive(false);
+        ammoCanvas.SetActive(false);
+        scoreCanvas.SetActive(false);
+
     }
-    
+
     public void OpenPause()
     {
         mainMenu.SetActive(false);
         crafting.SetActive(false);
         option.SetActive(false);
         pause.SetActive(true);
+        gunStatCanvas.SetActive(false);
+        ammoCanvas.SetActive(false);
+        scoreCanvas.SetActive(false);
+
     }
 
     public void ClosePause()
@@ -82,6 +106,10 @@ public class ButtonManager : MonoBehaviour
         crafting.SetActive(false);
         option.SetActive(false);
         pause.SetActive(false);
+        gunStatCanvas.SetActive(false);
+        ammoCanvas.SetActive(true);
+        scoreCanvas.SetActive(true);
+
     }
 
     public void BackToMainMenu()
@@ -90,6 +118,9 @@ public class ButtonManager : MonoBehaviour
         crafting.SetActive(false);
         option.SetActive(false);
         pause.SetActive(false);
+        gunStatCanvas.SetActive(false);
+        ammoCanvas.SetActive(false);
+        scoreCanvas.SetActive(false);
     }
 
     private void Update()
