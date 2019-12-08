@@ -10,6 +10,7 @@ public class Weapon : MonoBehaviour
     public GameObject bulletL;
     public float fireRate;
     public Transform spawnTransform;
+    public Transform bulletShellSpawn;
     public bool isFiring;
     public float timer;
     public bool raycast;
