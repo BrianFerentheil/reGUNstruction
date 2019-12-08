@@ -93,8 +93,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 22.01, y: 14.21, z: 1.15}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 22.01, y: 14.21, z: 6.2961082}
+  m_Center: {x: 0, y: 0, z: -2.5730548}
 --- !u!114 &3499379053741175739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -115,6 +115,7 @@ MonoBehaviour:
   upForce: 0
   bulletEffect: {fileID: 0}
   parent: {fileID: 0}
+  bulletDestroyEffect: {fileID: 0}
   bulletAfterEffect: {fileID: 0}
   bulletAudio: {fileID: 0}
 --- !u!54 &3499379053741175742

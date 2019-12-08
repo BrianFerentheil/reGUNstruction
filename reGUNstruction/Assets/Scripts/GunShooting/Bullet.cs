@@ -46,10 +46,6 @@ public class Bullet : MonoBehaviour
     void OnCollisionEnter(Collision other)
     {
 
-        if (other.gameObject.name.Contains("BulletShell"))
-        {
-            return;
-        }
         EnemyController enemy = other.transform.GetComponentInParent<EnemyController>();
         if (enemy != null)
         {
@@ -224,19 +220,19 @@ public class Bullet : MonoBehaviour
         switch (bSpd)
         {
             case GunModel.bulletSpeed.vLow:
-                speed = 1;
-                break;
-            case GunModel.bulletSpeed.low:
-                speed = 2;
-                break;
-            case GunModel.bulletSpeed.med:
-                speed = 3;
-                break;
-            case GunModel.bulletSpeed.fast:
                 speed = 4;
                 break;
+            case GunModel.bulletSpeed.low:
+                speed = 6;
+                break;
+            case GunModel.bulletSpeed.med:
+                speed = 8;
+                break;
+            case GunModel.bulletSpeed.fast:
+                speed = 10;
+                break;
             case GunModel.bulletSpeed.vFast:
-                speed = 5;
+                speed = 12;
                 break;
             case GunModel.bulletSpeed.none:
                 break;

@@ -55,7 +55,7 @@ ParticleSystem:
   startDelay:
     serializedVersion: 2
     minMaxState: 0
-    scalar: 0
+    scalar: 0.25
     minScalar: 0
     maxCurve:
       serializedVersion: 2
@@ -613,7 +613,7 @@ ParticleSystem:
     donutRadius: 0.2
     m_Position: {x: 0, y: 0, z: 0}
     m_Rotation: {x: -0, y: 0, z: 0}
-    m_Scale: {x: 1, y: 1, z: 1}
+    m_Scale: {x: 0.1, y: 0.1, z: 0.1}
     placementMode: 0
     m_MeshMaterialIndex: 0
     m_MeshNormalOffset: 0
@@ -4634,7 +4634,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &400002
 Transform:
   m_ObjectHideFlags: 0
@@ -4658,7 +4658,7 @@ ParticleSystem:
   m_GameObject: {fileID: 100002}
   serializedVersion: 6
   lengthInSec: 0.5
-  simulationSpeed: 0.22
+  simulationSpeed: 0.83
   stopAction: 0
   cullingMode: 3
   ringBufferMode: 0
@@ -4672,7 +4672,7 @@ ParticleSystem:
   startDelay:
     serializedVersion: 2
     minMaxState: 0
-    scalar: 0
+    scalar: 0.25
     minScalar: 0
     maxCurve:
       serializedVersion: 2
@@ -4732,7 +4732,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.06
+      scalar: 0.3
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -4882,9 +4882,9 @@ ParticleSystem:
         m_NumAlphaKeys: 2
     startSize:
       serializedVersion: 2
-      minMaxState: 0
-      scalar: 0.25
-      minScalar: 1
+      minMaxState: 3
+      scalar: 0.5
+      minScalar: 0.19
       maxCurve:
         serializedVersion: 2
         m_Curve:
@@ -4917,7 +4917,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startSizeY:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 1
       minScalar: 1
       maxCurve:
@@ -4970,7 +4970,7 @@ ParticleSystem:
         m_RotationOrder: 4
     startSizeZ:
       serializedVersion: 2
-      minMaxState: 0
+      minMaxState: 3
       scalar: 1
       minScalar: 1
       maxCurve:
@@ -5428,7 +5428,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 100
+      scalar: 25
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -9245,7 +9245,7 @@ GameObject:
   - component: {fileID: 400004}
   - component: {fileID: 114000010987648822}
   m_Layer: 0
-  m_Name: BE_FireS
+  m_Name: beSFire
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -9322,8 +9322,8 @@ Light:
   serializedVersion: 9
   m_Type: 2
   m_Color: {r: 0.9705882, g: 0.52181417, b: 0.27833042, a: 1}
-  m_Intensity: 1
-  m_Range: 2
+  m_Intensity: 0.5
+  m_Range: 1
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10

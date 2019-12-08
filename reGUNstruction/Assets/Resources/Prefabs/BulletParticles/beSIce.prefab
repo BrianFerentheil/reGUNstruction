@@ -41,7 +41,7 @@ ParticleSystem:
   m_GameObject: {fileID: 100000}
   serializedVersion: 6
   lengthInSec: 3
-  simulationSpeed: 0.12
+  simulationSpeed: 0.43
   stopAction: 0
   cullingMode: 3
   ringBufferMode: 0
@@ -55,7 +55,7 @@ ParticleSystem:
   startDelay:
     serializedVersion: 2
     minMaxState: 0
-    scalar: 0
+    scalar: 0.1
     minScalar: 0
     maxCurve:
       serializedVersion: 2
@@ -115,7 +115,7 @@ ParticleSystem:
     startLifetime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 0.04
+      scalar: 0.23
       minScalar: 5
       maxCurve:
         serializedVersion: 2
@@ -811,7 +811,7 @@ ParticleSystem:
     rateOverTime:
       serializedVersion: 2
       minMaxState: 0
-      scalar: 300
+      scalar: 75
       minScalar: 10
       maxCurve:
         serializedVersion: 2
@@ -13844,7 +13844,7 @@ GameObject:
   - component: {fileID: 400006}
   - component: {fileID: 114000012188249634}
   m_Layer: 0
-  m_Name: BE_IceS
+  m_Name: beSIce
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -13923,8 +13923,8 @@ Light:
   serializedVersion: 9
   m_Type: 2
   m_Color: {r: 0.43533736, g: 0.7712532, b: 0.9705882, a: 1}
-  m_Intensity: 1
-  m_Range: 2
+  m_Intensity: 0.5
+  m_Range: 1
   m_SpotAngle: 30
   m_InnerSpotAngle: 21.80208
   m_CookieSize: 10

@@ -16,7 +16,7 @@ GameObject:
   - component: {fileID: 3499379053741175742}
   - component: {fileID: -4033319285807316170}
   m_Layer: 0
-  m_Name: Bullet
+  m_Name: BulletS
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -93,8 +93,8 @@ BoxCollider:
   m_IsTrigger: 0
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 10.84, y: 6.98, z: 1.15}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 10.84, y: 6.98, z: 6.1183376}
+  m_Center: {x: 0, y: 0, z: -2.4841688}
 --- !u!114 &3499379053741175739
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -115,6 +115,7 @@ MonoBehaviour:
   upForce: 0
   bulletEffect: {fileID: 0}
   parent: {fileID: 0}
+  bulletDestroyEffect: {fileID: 0}
   bulletAfterEffect: {fileID: 0}
   bulletAudio: {fileID: 0}
 --- !u!54 &3499379053741175742
