@@ -20,9 +20,9 @@ public class GunModel : MonoBehaviour
 
     public Text[] sliderTexts;
 
-    public enum damageRange { low, med, high, none}
+    public enum damageRange { vLow, low, med, high, vHigh, none}
     public damageRange dRange = damageRange.none;
-    public enum bulletSpeed { low, med, fast, none }
+    public enum bulletSpeed { vLow, low, med, fast, vFast, none }
     public bulletSpeed bSpeed = bulletSpeed.none;
 
     //public TMP_Text tmproTx;
@@ -92,18 +92,6 @@ public class GunModel : MonoBehaviour
         //Debug.Log(myStats.damage + "-Damage,  " + myStats.accuracy + "-Accuracy,  " + myStats.recoil + " -Recoil,  " + myStats.durability + " -Durability,  " + myStats.fireRate + " -FireRate");
         //Debug.Log(myElements[0]+ myElements[1] +myElements[2]);
     }
-
-    //public void DisplayStats()
-    //{
-    //    tempStats.SetBaseParams();
-    //    myGrip.RunStatMods(myGrip.currentGrip, tempStats);
-    //    myBarrel.RunStatMods(myBarrel.currentBarrel, tempStats);
-    //    myAmmo.RunStatMods(myAmmo.currentAmmo, tempStats);
-    //    ElementArray();
-    //    SetRanges();
-    //    Weapon wep = GetComponent<Weapon>();
-    //    wep.GetGunStats(tempStats, bSpeed, dRange);
-    //}
 
     private void LastPartAll()
     {
@@ -214,30 +202,46 @@ public class GunModel : MonoBehaviour
 
     private void SetRanges()
     {
-        if(myStats.damage < 10)
+        if(myStats.damage <= 10)
+        {
+            dRange = damageRange.vLow;
+        }
+        else if(10 < myStats.damage && myStats.damage <= 15)
         {
             dRange = damageRange.low;
         }
-        else if(9 < myStats.damage && myStats.damage < 15)
+        else if(15 < myStats.damage && myStats.damage <= 19)
         {
             dRange = damageRange.med;
         }
-        else if(14 < myStats.damage)
+        else if (19 < myStats.damage && myStats.damage <= 24)
         {
             dRange = damageRange.high;
         }
+        else if (24 < myStats.damage)
+        {
+            dRange = damageRange.vHigh;
+        }
 
-        if(myStats.fireRate < 10)
+        if (myStats.fireRate <= 10)
+        {
+            bSpeed = bulletSpeed.vLow;
+        }
+        else if(10 < myStats.fireRate && myStats.fireRate <= 15)
         {
             bSpeed = bulletSpeed.low;
         }
-        else if(9 < myStats.fireRate && myStats.fireRate < 15)
+        else if(15 < myStats.fireRate && myStats.fireRate <= 19)
         {
             bSpeed = bulletSpeed.med;
         }
-        else if(14 < myStats.fireRate)
+        else if (19 < myStats.fireRate && myStats.fireRate <= 24)
         {
             bSpeed = bulletSpeed.fast;
+        }
+        else if (24 < myStats.fireRate)
+        {
+            bSpeed = bulletSpeed.vFast;
         }
     }
 }

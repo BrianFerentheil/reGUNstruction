@@ -5,17 +5,17 @@ using UnityEngine.UI;
 
 public class GunStats : MonoBehaviour
 {
-    public float damage =5;
-    public float accuracy =5;
-    public float recoil =5;
-    public float durability =5;
-    public float fireRate =5;
-    public int ammo = 8;
+    public float damage =0;
+    public float accuracy =0;
+    public float durability =0;
+    public float fireRate =0;
+    public int ammo = 0;
+    public int stability = 0;
 
     public string extraStatOne = " ";
     public string extraStatTwo = " ";
 
-    public enum element { fire, ice, electric, plasma, acid, explosive, subatomic, none }
+    public enum element { fire, ice, electric, plasma, acid, subatomic, nova, hydro, quantum, mystic, nuclear, none }
     public element myElementA = element.none;
     public element myElementB = element.none;
     public element myElementG = element.none;
@@ -66,12 +66,12 @@ public class GunStats : MonoBehaviour
 
     public void SetBaseParams()
     {
-        damage = 5;
-        accuracy = 5;
-        recoil = 5;
-        durability = 5;
-        fireRate = 5;
-        ammo = 8;
+        damage = 0;
+        accuracy = 0;
+        durability = 0;
+        fireRate = 0;
+        ammo = 0;
+        stability = 0;
 
         extraStatOne = " ";
         extraStatTwo = " ";

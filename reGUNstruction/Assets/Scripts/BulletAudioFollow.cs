@@ -19,5 +19,9 @@ public class BulletAudioFollow : MonoBehaviour
         {
             transform.position = myBullet.transform.position;
         }
+        else
+        {
+            Destroy(gameObject);
+        }
     }
 }

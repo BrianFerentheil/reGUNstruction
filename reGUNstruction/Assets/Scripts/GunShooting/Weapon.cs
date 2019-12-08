@@ -53,6 +53,18 @@ public class Weapon : MonoBehaviour
     public GameObject baeSIce;
     public GameObject baeSPlasma;
 
+    //New Particle Additions - 12/07/2019
+    public GameObject beNova;
+    public GameObject baeNova;
+    public GameObject beHydro;
+    public GameObject baeHydro;
+    public GameObject beQuantum;
+    public GameObject baeQuantum;
+    public GameObject beMystic;
+    public GameObject baeMystic;
+    public GameObject beNuclear;
+    public GameObject baeNuclear;
+
     public GameObject[] gunParticles;
     public GameObject bES;
     public GameObject bEM;
@@ -136,6 +148,18 @@ public class Weapon : MonoBehaviour
         bulletS = (GameObject)Resources.Load("Prefabs/BulletS");
         bulletL = (GameObject)Resources.Load("Prefabs/BulletL");
         bulletShell = (GameObject)Resources.Load("Prefabs/BulletShell");
+
+        //Particle Name Need Updating When Folder Reference is Renames
+        beNova = (GameObject)Resources.Load("Prefabs/BulletParticles/Buff2");
+        baeNova = (GameObject)Resources.Load("Prefabs/BulletParticles/Buff2");
+        beHydro = (GameObject)Resources.Load("Prefabs/BulletParticles/Buff3");
+        baeHydro = (GameObject)Resources.Load("Prefabs/BulletParticles/Buff3");
+        beQuantum = (GameObject)Resources.Load("Prefabs/BulletParticles/DarkBall");
+        baeQuantum = (GameObject)Resources.Load("Prefabs/BulletParticles/DarkBall");
+        beMystic = (GameObject)Resources.Load("Prefabs/BulletParticles/Explosion2");
+        baeMystic = (GameObject)Resources.Load("Prefabs/BulletParticles/Explosion2");
+        beNuclear = (GameObject)Resources.Load("Prefabs/BulletParticles/Sparking");
+        baeNuclear = (GameObject)Resources.Load("Prefabs/BulletParticles/Sparking");
 
     }
 
@@ -281,19 +305,42 @@ public class Weapon : MonoBehaviour
         SetBulletEffect();
     }
 
-    public void GetTempStats(GunStats tempStats, GunModel.bulletSpeed bS, GunModel.damageRange dR)
-    {
-        tStats = tempStats;
-        bSpd = bS;
-        dRng = dR;
-        SetFireRate();
-        SetBulletEffect();
-    }
+    //public void GetTempStats(GunStats tempStats, GunModel.bulletSpeed bS, GunModel.damageRange dR)
+    //{
+    //    tStats = tempStats;
+    //    bSpd = bS;
+    //    dRng = dR;
+    //    SetFireRate();
+    //    SetBulletEffect();
+    //}
+
+    //public void SetFireRate()
+    //{
+    //    switch (bSpd)
+    //    {
+    //        case GunModel.bulletSpeed.low:
+    //            fireRate = .5f;
+    //            break;
+    //        case GunModel.bulletSpeed.med:
+    //            fireRate = .3f;
+    //            break;
+    //        case GunModel.bulletSpeed.fast:
+    //            fireRate = .15f;
+    //            break;
+    //        case GunModel.bulletSpeed.none:
+    //            break;
+    //        default:
+    //            break;
+    //    }
+    //}
 
     public void SetFireRate()
     {
         switch (bSpd)
         {
+            case GunModel.bulletSpeed.vLow:
+                fireRate = .75f;
+                break;
             case GunModel.bulletSpeed.low:
                 fireRate = .5f;
                 break;
@@ -302,6 +349,9 @@ public class Weapon : MonoBehaviour
                 break;
             case GunModel.bulletSpeed.fast:
                 fireRate = .15f;
+                break;
+            case GunModel.bulletSpeed.vFast:
+                fireRate = .1f;
                 break;
             case GunModel.bulletSpeed.none:
                 break;
@@ -312,6 +362,67 @@ public class Weapon : MonoBehaviour
 
     public void SetBulletEffect()
     {
+        //switch (gStats.myElementA)
+        //{
+        //    case GunStats.element.fire:
+        //        bES = beSFire;
+        //        bEM = beMFire;
+        //        bEL = beLFire;
+        //        bAES = baeSFire;
+        //        bAEM = baeMFire;
+        //        bAEL = baeLFire;
+        //        break;
+
+        //    case GunStats.element.ice:
+        //        bES = beSIce;
+        //        bEM = beMIce;
+        //        bEL = beLIce;
+        //        bAES = baeSIce;
+        //        bAEM = baeMIce;
+        //        bAEL = baeLIce;
+        //        break;
+        //    case GunStats.element.electric:
+        //        bES = beSLightning;
+        //        bEM = beMLightning;
+        //        bEL = beLLightning;
+        //        bAES = baeSLightning;
+        //        bAEM = baeMLightning;
+        //        bAEL = baeLLightning;
+        //        break;
+        //    case GunStats.element.plasma:
+        //        bES = beSPlasma;
+        //        bEM = beMPlasma;
+        //        bEL = beLPlasma;
+        //        bAES = baeSPlasma;
+        //        bAEM = baeMPlasma;
+        //        bAEL = baeLPlasma;
+        //        break;
+        //    case GunStats.element.acid:
+        //        bES = beSAcid;
+        //        bEM = beMAcid;
+        //        bEL = beLAcid;
+        //        bAES = baeSAcid;
+        //        bAEM = baeMAcid;
+        //        bAEL = baeLAcid;
+        //        break;
+        //    //case GunStats.element.explosive:
+        //    //    bulletEffect = explosion;
+
+        //    //    break;
+        //    case GunStats.element.subatomic:
+        //        bES = beSVoid;
+        //        bEM = beMVoid;
+        //        bEL = beLVoid;
+        //        bAES = baeSVoid;
+        //        bAEM = baeMVoid;
+        //        bAEL = baeLVoid;
+        //        break;
+        //    case GunStats.element.none:
+        //        break;
+        //    default:
+        //        break;
+        //}
+
         switch (gStats.myElementA)
         {
             case GunStats.element.fire:
@@ -355,10 +466,6 @@ public class Weapon : MonoBehaviour
                 bAEM = baeMAcid;
                 bAEL = baeLAcid;
                 break;
-            //case GunStats.element.explosive:
-            //    bulletEffect = explosion;
-
-            //    break;
             case GunStats.element.subatomic:
                 bES = beSVoid;
                 bEM = beMVoid;
@@ -366,6 +473,46 @@ public class Weapon : MonoBehaviour
                 bAES = baeSVoid;
                 bAEM = baeMVoid;
                 bAEL = baeLVoid;
+                break;
+            case GunStats.element.nova:
+                bES = beNova;
+                bEM = beNova;
+                bEL = beNova;
+                bAES = baeNova;
+                bAEM = baeNova;
+                bAEL =  baeNova;
+                break;
+            case GunStats.element.hydro:
+                bES = beHydro;
+                bEM = beHydro;
+                bEL = beHydro;
+                bAES = baeHydro;
+                bAEM = baeHydro;
+                bAEL = baeHydro;
+                break;
+            case GunStats.element.quantum:
+                bES = beQuantum;
+                bEM = beQuantum;
+                bEL = beQuantum;
+                bAES = baeQuantum;
+                bAEM = baeQuantum;
+                bAEL = baeQuantum;
+                break;
+            case GunStats.element.mystic:
+                bES = beMystic;
+                bEM = beMystic;
+                bEL = beMystic;
+                bAES = baeMystic;
+                bAEM = baeMystic;
+                bAEL = baeMystic;
+                break;
+            case GunStats.element.nuclear:
+                bES = beNuclear;
+                bEM = beNuclear;
+                bEL = beNuclear;
+                bAES = baeNuclear;
+                bAEM = baeNuclear;
+                bAEL = baeNuclear;
                 break;
             case GunStats.element.none:
                 break;

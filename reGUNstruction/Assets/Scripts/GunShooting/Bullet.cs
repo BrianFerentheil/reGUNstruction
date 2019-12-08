@@ -46,6 +46,10 @@ public class Bullet : MonoBehaviour
     void OnCollisionEnter(Collision other)
     {
 
+        if (other.gameObject.name.Contains("BulletShell"))
+        {
+            return;
+        }
         EnemyController enemy = other.transform.GetComponentInParent<EnemyController>();
         if (enemy != null)
         {
@@ -114,8 +118,52 @@ public class Bullet : MonoBehaviour
 
     public void SetBullet(GunStats gStats, GunModel.damageRange dRng, GunModel.bulletSpeed bSpd, GameObject gO, ParticlePack pP )
     {
+        //switch (dRng)
+        //{
+        //    case GunModel.damageRange.low:
+        //        damage = 100f;
+        //        explosiveForce = 5f;
+        //        upForce = 4f;
+        //        radius = 1;
+        //        bulletEffect = pP.beSmall;
+        //        bulletAfterEffect = pP.beSmall;
+        //        bulletDestroyEffect = pP.baeMedium;
+        //        break;
+        //    case GunModel.damageRange.med:
+        //        damage = 200f;
+        //        explosiveForce = 10f;
+        //        upForce = 7.5f;
+        //        radius = 2;
+        //        bulletEffect = pP.beMedium;
+        //        bulletAfterEffect = pP.baeMedium;
+        //        bulletDestroyEffect = pP.baeMedium;
+        //        break;
+        //    case GunModel.damageRange.high:
+        //        damage = 500f;
+        //        explosiveForce = 20f;
+        //        upForce = 12.5f;
+        //        radius = 3;
+        //        bulletEffect = pP.beLarge;
+        //        bulletAfterEffect = pP.baeLarge;
+        //        bulletDestroyEffect = pP.baeMedium;
+        //        break;
+        //    case GunModel.damageRange.none:
+        //        Debug.Log("SetBullet Damage Error");
+        //        break;
+        //    default:
+        //        break;
+        //}
         switch (dRng)
         {
+            case GunModel.damageRange.vLow:
+                damage = 50;
+                explosiveForce = 2.5f;
+                upForce = 1.25f;
+                radius = .5f;
+                bulletEffect = pP.beSmall;
+                bulletAfterEffect = pP.beSmall;
+                bulletDestroyEffect = pP.baeSmall;
+                break;
             case GunModel.damageRange.low:
                 damage = 100f;
                 explosiveForce = 5f;
@@ -139,26 +187,56 @@ public class Bullet : MonoBehaviour
                 explosiveForce = 20f;
                 upForce = 12.5f;
                 radius = 3;
+                bulletEffect = pP.beMedium;
+                bulletAfterEffect = pP.baeMedium;
+                bulletDestroyEffect = pP.baeMedium;
+                break;
+            case GunModel.damageRange.vHigh:
+                damage = 750f;
+                explosiveForce = 30f;
+                upForce = 20f;
+                radius = 7.5f;
                 bulletEffect = pP.beLarge;
-                bulletAfterEffect = pP.baeLarge;
+                bulletAfterEffect = pP.beLarge;
                 bulletDestroyEffect = pP.baeMedium;
                 break;
             case GunModel.damageRange.none:
-                Debug.Log("SetBullet Damage Error");
                 break;
             default:
                 break;
         }
+        //switch (bSpd)
+        //{
+        //    case GunModel.bulletSpeed.low:
+        //        speed = .5f;
+        //        break;
+        //    case GunModel.bulletSpeed.med:
+        //        speed = 1f;
+        //        break;
+        //    case GunModel.bulletSpeed.fast:
+        //        speed = 2f;
+        //        break;
+        //    case GunModel.bulletSpeed.none:
+        //        break;
+        //    default:
+        //        break;
+        //}
         switch (bSpd)
         {
+            case GunModel.bulletSpeed.vLow:
+                speed = 1;
+                break;
             case GunModel.bulletSpeed.low:
-                speed = .5f;
+                speed = 2;
                 break;
             case GunModel.bulletSpeed.med:
-                speed = 1f;
+                speed = 3;
                 break;
             case GunModel.bulletSpeed.fast:
-                speed = 2f;
+                speed = 4;
+                break;
+            case GunModel.bulletSpeed.vFast:
+                speed = 5;
                 break;
             case GunModel.bulletSpeed.none:
                 break;
