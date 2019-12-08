@@ -6,7 +6,11 @@ using UnityEngine.UI;
 public class ScoreManager : MonoBehaviour
 {
 
-    public int currentScore;
+    public float currentScore;
+    public float startToAddMultiplier;
+    public float bounceGap;
+    public float multiplierGap;
+    private float multiplier;
 
     void Start()
     {
@@ -17,5 +21,20 @@ public class ScoreManager : MonoBehaviour
     void Update()
     {
         
+    }
+
+    public void ScoreCheck()
+    {
+        if(currentScore >= startToAddMultiplier)
+        {
+            currentScore = currentScore * multiplier;
+            startToAddMultiplier = startToAddMultiplier + bounceGap;
+            multiplier = multiplier + multiplierGap;
+
+        }
+        else
+        {
+            return;
+        }
     }
 }
