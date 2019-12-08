@@ -197,13 +197,13 @@ public class Weapon : MonoBehaviour
                 {
                     tempBullet = Instantiate(bulletL, spawnTransform.position, spawnTransform.rotation).GetComponent<Bullet>();
                     tempBullet.SetBullet(gStats, dRng, bSpd, spawnTransform.gameObject, myParts);
-                    Instantiate(bulletShell, spawnTransform.position, spawnTransform.rotation);
+                    Instantiate(bulletShell, bulletShellSpawn.position, bulletShellSpawn.rotation);
                 }
                 else
                 {
                     tempBullet = Instantiate(bulletS, spawnTransform.position, spawnTransform.rotation).GetComponent<Bullet>();
                     tempBullet.SetBullet(gStats, dRng, bSpd, spawnTransform.gameObject, myParts);
-                    Instantiate(bulletShell, spawnTransform.position, spawnTransform.rotation);
+                    Instantiate(bulletShell, bulletShellSpawn.position, bulletShellSpawn.rotation);
                 }
 
                 curAmmo--;
