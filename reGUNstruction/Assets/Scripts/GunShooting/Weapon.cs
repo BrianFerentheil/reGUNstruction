@@ -13,6 +13,7 @@ public class Weapon : MonoBehaviour
     public bool isFiring;
     public float timer;
     public bool raycast;
+    public GameObject bulletShell;
 
     public GameObject beSFire;
     public GameObject beSVoid;
@@ -133,6 +134,7 @@ public class Weapon : MonoBehaviour
 
         bulletS = (GameObject)Resources.Load("Prefabs/BulletS");
         bulletL = (GameObject)Resources.Load("Prefabs/BulletL");
+        bulletShell = (GameObject)Resources.Load("Prefabs/BulletShell");
 
     }
 
@@ -194,11 +196,13 @@ public class Weapon : MonoBehaviour
                 {
                     tempBullet = Instantiate(bulletL, spawnTransform.position, spawnTransform.rotation).GetComponent<Bullet>();
                     tempBullet.SetBullet(gStats, dRng, bSpd, spawnTransform.gameObject, myParts);
+                    Instantiate(bulletShell, spawnTransform.position, spawnTransform.rotation);
                 }
                 else
                 {
                     tempBullet = Instantiate(bulletS, spawnTransform.position, spawnTransform.rotation).GetComponent<Bullet>();
                     tempBullet.SetBullet(gStats, dRng, bSpd, spawnTransform.gameObject, myParts);
+                    Instantiate(bulletShell, spawnTransform.position, spawnTransform.rotation);
                 }
 
                 curAmmo--;
