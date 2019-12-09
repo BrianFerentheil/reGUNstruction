@@ -12,15 +12,17 @@ public class GunModel : MonoBehaviour
 
     public GunStats myStats;
 
+    public GunStats tempStats;
+
     string[] myElements;
 
     public Material[] colors;
 
     public Text[] sliderTexts;
 
-    public enum damageRange { low, med, high, none}
+    public enum damageRange { vLow, low, med, high, vHigh, none}
     public damageRange dRange = damageRange.none;
-    public enum bulletSpeed { low, med, fast, none }
+    public enum bulletSpeed { vLow, low, med, fast, vFast, none }
     public bulletSpeed bSpeed = bulletSpeed.none;
 
     //public TMP_Text tmproTx;
@@ -29,6 +31,7 @@ public class GunModel : MonoBehaviour
     void Start()
     {
         myStats = new GunStats();
+        tempStats = new GunStats();
         FillColors();
         RunStats();
         SetColors();
@@ -46,15 +49,15 @@ public class GunModel : MonoBehaviour
 
     }
 
-    void Slidertexts()
-    {
-        sliderTexts[0].text = myStats.damage.ToString();
-        sliderTexts[1].text = myStats.accuracy.ToString();
-        sliderTexts[2].text = myStats.recoil.ToString();
-        sliderTexts[3].text = myStats.durability.ToString();
-        sliderTexts[4].text = myStats.fireRate.ToString();
+    //void Slidertexts()
+    //{
+    //    sliderTexts[0].text = myStats.damage.ToString();
+    //    sliderTexts[1].text = myStats.accuracy.ToString();
+    //    sliderTexts[2].text = myStats.recoil.ToString();
+    //    sliderTexts[3].text = myStats.durability.ToString();
+    //    sliderTexts[4].text = myStats.fireRate.ToString();
 
-    }
+    //}
 
     // Update is called once per frame
     void Update()
@@ -143,18 +146,49 @@ public class GunModel : MonoBehaviour
         RunStats();
     }
 
+    public void SetPiece(GunStats gunPart)
+    {
+        if (gunPart.GetType() == typeof(Grip))
+        {
+
+        }
+
+        else if (gunPart.GetType() == typeof(Barrel))
+        {
+ 
+
+        }
+        else if (gunPart.GetType() == typeof(Ammo))
+        {
+
+        }
+    }
+
     public void SetColors()
     {
         //myGrip.GetComponent<Renderer>().material = colors[myGrip.GetCurPos()];
         //myBarrel.GetComponent<Renderer>().material = colors[myBarrel.GetCurPos()];
         //myAmmo.GetComponent<Renderer>().material = colors[myAmmo.GetCurPos()];
-        Slidertexts();
+        //Slidertexts();
 
+        if (myGrip.swiMod == null)
+        {
+            myGrip.swiMod = myGrip.GetComponent<SwitchModel>();
+        }
+        if (myBarrel.swiMod == null)
+        {
+            myBarrel.swiMod = myBarrel.GetComponent<SwitchModel>();
+        }
+        if (myAmmo.swiMod == null)
+        {
+            myAmmo.swiMod = myAmmo.GetComponent<SwitchModel>();
+        }
+        myGrip.SetModels();
         myGrip.swiMod.SetModel(myGrip.GetCurPos());
+        myBarrel.SetModels();
         myBarrel.swiMod.SetModel(myBarrel.GetCurPos());
+        myAmmo.SetModels();
         myAmmo.swiMod.SetModel(myAmmo.GetCurPos());
-
-
     }
 
 
@@ -168,30 +202,46 @@ public class GunModel : MonoBehaviour
 
     private void SetRanges()
     {
-        if(myStats.damage < 10)
+        if(myStats.damage <= 10)
+        {
+            dRange = damageRange.vLow;
+        }
+        else if(10 < myStats.damage && myStats.damage <= 15)
         {
             dRange = damageRange.low;
         }
-        else if(9 < myStats.damage && myStats.damage < 15)
+        else if(15 < myStats.damage && myStats.damage <= 19)
         {
             dRange = damageRange.med;
         }
-        else if(14 < myStats.damage)
+        else if (19 < myStats.damage && myStats.damage <= 24)
         {
             dRange = damageRange.high;
         }
+        else if (24 < myStats.damage)
+        {
+            dRange = damageRange.vHigh;
+        }
 
-        if(myStats.fireRate < 10)
+        if (myStats.fireRate <= 10)
+        {
+            bSpeed = bulletSpeed.vLow;
+        }
+        else if(10 < myStats.fireRate && myStats.fireRate <= 15)
         {
             bSpeed = bulletSpeed.low;
         }
-        else if(9 < myStats.fireRate && myStats.fireRate < 15)
+        else if(15 < myStats.fireRate && myStats.fireRate <= 19)
         {
             bSpeed = bulletSpeed.med;
         }
-        else if(14 < myStats.fireRate)
+        else if (19 < myStats.fireRate && myStats.fireRate <= 24)
         {
             bSpeed = bulletSpeed.fast;
+        }
+        else if (24 < myStats.fireRate)
+        {
+            bSpeed = bulletSpeed.vFast;
         }
     }
 }

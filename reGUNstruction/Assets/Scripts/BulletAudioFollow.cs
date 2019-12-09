@@ -5,6 +5,7 @@ using UnityEngine;
 public class BulletAudioFollow : MonoBehaviour    
 {
     public GameObject myBullet;
+    float timer;
 
     // Start is called before the first frame update
     void Start()
@@ -15,9 +16,15 @@ public class BulletAudioFollow : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
+        timer += Time.deltaTime;
+
         if(myBullet.gameObject != null)
         {
             transform.position = myBullet.transform.position;
+        }
+        else if(timer > 3)
+        {
+            Destroy(gameObject);
         }
     }
 }

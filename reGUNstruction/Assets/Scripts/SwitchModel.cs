@@ -5,28 +5,33 @@ using UnityEngine;
 public class SwitchModel : MonoBehaviour
 {
 
-    [SerializeField] List<MeshFilter> models;
-    int currentIndex;
+    public MeshFilter[] models;
+    public int currentIndex;
 
-    public void SwapModelUp()
-    {
-        currentIndex++;
-        if (currentIndex > models.Count)
-            currentIndex = 0;
-        gameObject.GetComponent<MeshFilter>().mesh = models[currentIndex].mesh;
-    }
+    //public void SwapModelUp()
+    //{
+    //    currentIndex++;
+    //    if (currentIndex > models.Count)
+    //        currentIndex = 0;
+    //    gameObject.GetComponent<MeshFilter>().mesh = models[currentIndex].mesh;
+    //}
 
-    public void SwapModelDown()
+    //public void SwapModelDown()
+    //{
+    //    currentIndex--;
+    //    if (currentIndex < 0)
+    //        currentIndex = models.Count - 1;
+    //    gameObject.GetComponent<MeshFilter>().mesh = models[currentIndex].mesh;
+    //}
+
+    private void Start()
     {
-        currentIndex--;
-        if (currentIndex < 0)
-            currentIndex = models.Count - 1;
-        gameObject.GetComponent<MeshFilter>().mesh = models[currentIndex].mesh;
+        
     }
 
     public void SetModel(int num)
     {
-        gameObject.GetComponent<MeshFilter>().sharedMesh = models[num].mesh;
+        //gameObject.GetComponent<MeshFilter>().sharedMesh = models[num].mesh;
     }
 
 }

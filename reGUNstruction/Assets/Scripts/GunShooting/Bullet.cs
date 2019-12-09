@@ -18,9 +18,17 @@ public class Bullet : MonoBehaviour
     public GameObject bulletEffect;
     public GameObject parent;
 
+    public GameObject bulletDestroyEffect;
     public GameObject bulletAfterEffect;
     public GameObject freezePlane;
     public GameObject bulletAudio;
+
+    ScoreManager sm;
+
+    private void Awake()
+    {
+        sm = FindObjectOfType<ScoreManager>();
+    }
 
     private void Start()
     {
@@ -47,10 +55,13 @@ public class Bullet : MonoBehaviour
         }
 
 
-        if (other.gameObject.tag == "Destroy")
-        {
-            Destroy(other.gameObject);
-        }
+        //if (other.gameObject.tag == "Destroy")
+        //{
+        //    int objectScore;
+        //    objectScore = other.collider.GetComponent<Score>().score;
+        //    sm.currentScore = sm.currentScore + objectScore;
+        //    Destroy(other.gameObject);
+        //}
 
         if (other.collider.GetComponent<Bullet>())
         {
@@ -62,7 +73,8 @@ public class Bullet : MonoBehaviour
         {
             Rigidbody rigidbody = closeObjects.GetComponent<Rigidbody>();
             Bullet bullet = closeObjects.GetComponent<Bullet>();
-            if (rigidbody != null && bullet == null && myEl != element.ice)
+            Score score = closeObjects.GetComponent<Score>();
+            if (rigidbody != null && bullet == null)
             {
                 //rigidbody.AddExplosionForce(500f, transform.position, 50f);
                 rigidbody.AddExplosionForce(explosiveForce, transform.position, radius, upForce, ForceMode.Impulse);
@@ -72,6 +84,15 @@ public class Bullet : MonoBehaviour
                     Destroy(gameObject);
 
                 }
+            }
+            if(score != null)
+            {
+                int objectScore;
+                objectScore = score.CallScore();
+                sm.ScoreCheck();
+                sm.currentScore += objectScore + objectScore * sm.multiplier;
+                score.DoTheParticle(bulletDestroyEffect);
+                score.StartCoroutine(score.DestroyMe());
             }
         }
         if (myEl == element.ice && other.gameObject.tag == "Ground")
@@ -92,54 +113,133 @@ public class Bullet : MonoBehaviour
 
         var temp = Instantiate(bulletAfterEffect, transform.position, transform.rotation);
         temp.GetComponent<csDestroyEffect>().AEToggle(true);
-
-        if (speed > 0.5f)
-        {
-            Destroy(gameObject);
-        }
+        
+        Destroy(gameObject);
+        
 
     }
 
-    public void SetBullet(GunStats gStats, GunModel.damageRange dRng, GunModel.bulletSpeed bSpd, GameObject gO, GameObject bEf, GameObject bAE)
+    public void SetBullet(GunStats gStats, GunModel.damageRange dRng, GunModel.bulletSpeed bSpd, GameObject gO, ParticlePack pP )
     {
+        //switch (dRng)
+        //{
+        //    case GunModel.damageRange.low:
+        //        damage = 100f;
+        //        explosiveForce = 5f;
+        //        upForce = 4f;
+        //        radius = 1;
+        //        bulletEffect = pP.beSmall;
+        //        bulletAfterEffect = pP.beSmall;
+        //        bulletDestroyEffect = pP.baeMedium;
+        //        break;
+        //    case GunModel.damageRange.med:
+        //        damage = 200f;
+        //        explosiveForce = 10f;
+        //        upForce = 7.5f;
+        //        radius = 2;
+        //        bulletEffect = pP.beMedium;
+        //        bulletAfterEffect = pP.baeMedium;
+        //        bulletDestroyEffect = pP.baeMedium;
+        //        break;
+        //    case GunModel.damageRange.high:
+        //        damage = 500f;
+        //        explosiveForce = 20f;
+        //        upForce = 12.5f;
+        //        radius = 3;
+        //        bulletEffect = pP.beLarge;
+        //        bulletAfterEffect = pP.baeLarge;
+        //        bulletDestroyEffect = pP.baeMedium;
+        //        break;
+        //    case GunModel.damageRange.none:
+        //        Debug.Log("SetBullet Damage Error");
+        //        break;
+        //    default:
+        //        break;
+        //}
         switch (dRng)
         {
+            case GunModel.damageRange.vLow:
+                damage = 50;
+                explosiveForce = 2.5f;
+                upForce = 1.25f;
+                radius = .5f;
+                bulletEffect = pP.beSmall;
+                bulletAfterEffect = pP.beSmall;
+                bulletDestroyEffect = pP.baeSmall;
+                break;
             case GunModel.damageRange.low:
                 damage = 100f;
                 explosiveForce = 5f;
-                upForce = 5f;
-                radius = 6;
+                upForce = 4f;
+                radius = 1;
+                bulletEffect = pP.beSmall;
+                bulletAfterEffect = pP.beSmall;
+                bulletDestroyEffect = pP.baeMedium;
                 break;
             case GunModel.damageRange.med:
                 damage = 200f;
                 explosiveForce = 10f;
-                upForce = 10f;
-                radius = 10;
-
+                upForce = 7.5f;
+                radius = 2;
+                bulletEffect = pP.beMedium;
+                bulletAfterEffect = pP.baeMedium;
+                bulletDestroyEffect = pP.baeMedium;
                 break;
             case GunModel.damageRange.high:
                 damage = 500f;
                 explosiveForce = 20f;
+                upForce = 12.5f;
+                radius = 3;
+                bulletEffect = pP.beMedium;
+                bulletAfterEffect = pP.baeMedium;
+                bulletDestroyEffect = pP.baeMedium;
+                break;
+            case GunModel.damageRange.vHigh:
+                damage = 750f;
+                explosiveForce = 30f;
                 upForce = 20f;
-                radius = 18;
-
+                radius = 7.5f;
+                bulletEffect = pP.beLarge;
+                bulletAfterEffect = pP.beLarge;
+                bulletDestroyEffect = pP.baeMedium;
                 break;
             case GunModel.damageRange.none:
-                Debug.Log("SetBullet Damage Error");
                 break;
             default:
                 break;
         }
+        //switch (bSpd)
+        //{
+        //    case GunModel.bulletSpeed.low:
+        //        speed = .5f;
+        //        break;
+        //    case GunModel.bulletSpeed.med:
+        //        speed = 1f;
+        //        break;
+        //    case GunModel.bulletSpeed.fast:
+        //        speed = 2f;
+        //        break;
+        //    case GunModel.bulletSpeed.none:
+        //        break;
+        //    default:
+        //        break;
+        //}
         switch (bSpd)
         {
+            case GunModel.bulletSpeed.vLow:
+                speed = 4;
+                break;
             case GunModel.bulletSpeed.low:
-                speed = .5f;
+                speed = 6;
                 break;
             case GunModel.bulletSpeed.med:
-                speed = 1f;
+                speed = 8;
                 break;
             case GunModel.bulletSpeed.fast:
-                speed = 2f;
+                speed = 10;
+                break;
+            case GunModel.bulletSpeed.vFast:
+                speed = 12;
                 break;
             case GunModel.bulletSpeed.none:
                 break;
@@ -149,8 +249,6 @@ public class Bullet : MonoBehaviour
 
         myEl = (element)gStats.myElementA;
         parent = gO;
-        bulletEffect = bEf;
-        bulletAfterEffect = bAE;
         Instantiate(bulletEffect, transform);
 
 

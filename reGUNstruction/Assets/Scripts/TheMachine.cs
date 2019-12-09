@@ -11,6 +11,7 @@ public class TheMachine : MonoBehaviour
     public static CharacterController cc;
     public static Camera bC;
 
+
     public ButtonManager uiMan;
 
     public static Weapon weapon;
@@ -121,6 +122,7 @@ public class GunBuildingMenu : GameState
 {
     public void EnterState()
     {
+        RotateObj.atWorkBench = true;
         TheMachine.fpc.enabled = false;
         TheMachine.cc.enabled = false;
         TheMachine.bC.depth = 1;
@@ -136,6 +138,7 @@ public class GunBuildingMenu : GameState
 
     public void ExitState()
     {
+        RotateObj.atWorkBench = false;
         GameObject.FindObjectOfType<ButtonManager>().CloseCrafting();
         Cursor.visible = false;
         TheMachine.fpc.enabled = true;
