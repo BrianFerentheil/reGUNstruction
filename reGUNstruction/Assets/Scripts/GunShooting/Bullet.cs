@@ -90,7 +90,7 @@ public class Bullet : MonoBehaviour
                 int objectScore;
                 objectScore = score.CallScore();
                 sm.ScoreCheck();
-                sm.currentScore += objectScore;
+                sm.currentScore += objectScore + objectScore * sm.multiplier;
                 score.DoTheParticle(bulletDestroyEffect);
                 score.StartCoroutine(score.DestroyMe());
             }

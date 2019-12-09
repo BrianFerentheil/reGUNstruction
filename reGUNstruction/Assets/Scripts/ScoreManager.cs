@@ -10,11 +10,12 @@ public class ScoreManager : MonoBehaviour
     public float startToAddMultiplier;
     public float bounceGap;
     public float multiplierGap;
-    private float multiplier;
+    public float multiplier;
+    public float multiplierMax;
 
     void Start()
     {
-        
+        multiplier = 0;
     }
 
     // Update is called once per frame
@@ -25,10 +26,14 @@ public class ScoreManager : MonoBehaviour
 
     public void ScoreCheck()
     {
-        if(currentScore >= startToAddMultiplier)
+        if(multiplier >= multiplierMax)
         {
-            currentScore = currentScore * multiplier;
-            startToAddMultiplier = startToAddMultiplier + bounceGap;
+            multiplier = multiplierMax;
+        }
+        if (currentScore >= startToAddMultiplier)
+        {
+            //currentScore = currentScore + (currentScore * multiplier);
+            //startToAddMultiplier = startToAddMultiplier + bounceGap;
             multiplier = multiplier + multiplierGap;
 
         }
