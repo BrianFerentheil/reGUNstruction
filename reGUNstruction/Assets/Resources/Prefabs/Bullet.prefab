@@ -116,6 +116,8 @@ MonoBehaviour:
   bulletEffect: {fileID: 0}
   parent: {fileID: 0}
   bulletAfterEffect: {fileID: 0}
+  freezePlane: {fileID: 727918052694859797, guid: e38b711b74b38ed4ca56ae655bbd62c7,
+    type: 3}
   bulletAudio: {fileID: 0}
 --- !u!54 &3499379053741175742
 Rigidbody:

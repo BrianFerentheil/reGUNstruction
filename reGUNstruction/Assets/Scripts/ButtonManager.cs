@@ -29,7 +29,7 @@ public class ButtonManager : MonoBehaviour
         pause.SetActive(false);
         inGameCanvas.SetActive(false);
         theMachine.stateMachine.ChangeState(new Walking());
-        
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     public void OpenCrafting()
@@ -39,6 +39,7 @@ public class ButtonManager : MonoBehaviour
         option.SetActive(false);
         pause.SetActive(false);
         inGameCanvas.SetActive(true);
+        Cursor.lockState = CursorLockMode.None;
     }
 
     public void CloseCrafting()
@@ -48,6 +49,7 @@ public class ButtonManager : MonoBehaviour
         option.SetActive(false);
         pause.SetActive(false);
         inGameCanvas.SetActive(false);
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     public void OpenOption()
@@ -57,6 +59,7 @@ public class ButtonManager : MonoBehaviour
         option.SetActive(true);
         pause.SetActive(false);
         inGameCanvas.SetActive(false);
+        Cursor.lockState = CursorLockMode.None;
     }
 
     public void CloseOption()
@@ -66,14 +69,16 @@ public class ButtonManager : MonoBehaviour
         option.SetActive(false);
         pause.SetActive(false);
         inGameCanvas.SetActive(false);
+        Cursor.lockState = CursorLockMode.Locked;
     }
-    
+
     public void OpenPause()
     {
         mainMenu.SetActive(false);
         crafting.SetActive(false);
         option.SetActive(false);
         pause.SetActive(true);
+        Cursor.lockState = CursorLockMode.None;
     }
 
     public void ClosePause()
@@ -82,6 +87,7 @@ public class ButtonManager : MonoBehaviour
         crafting.SetActive(false);
         option.SetActive(false);
         pause.SetActive(false);
+        Cursor.lockState = CursorLockMode.Locked;
     }
 
     public void BackToMainMenu()

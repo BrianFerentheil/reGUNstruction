@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Bullet : MonoBehaviour
 {
-    public float damage  =1;
+    public float damage = 1;
     public float speed = 100;
     public float destroyTime = 2.5f;
 
@@ -19,7 +19,7 @@ public class Bullet : MonoBehaviour
     public GameObject parent;
 
     public GameObject bulletAfterEffect;
-
+    public GameObject freezePlane;
     public GameObject bulletAudio;
 
     private void Start()
@@ -32,7 +32,7 @@ public class Bullet : MonoBehaviour
     void Update()
     {
         GetComponent<Rigidbody>().AddForce(transform.forward * speed, ForceMode.Impulse);
-    
+
     }
 
     void OnCollisionEnter(Collision other)
@@ -62,7 +62,7 @@ public class Bullet : MonoBehaviour
         {
             Rigidbody rigidbody = closeObjects.GetComponent<Rigidbody>();
             Bullet bullet = closeObjects.GetComponent<Bullet>();
-            if (rigidbody != null && bullet == null)
+            if (rigidbody != null && bullet == null && myEl != element.ice)
             {
                 //rigidbody.AddExplosionForce(500f, transform.position, 50f);
                 rigidbody.AddExplosionForce(explosiveForce, transform.position, radius, upForce, ForceMode.Impulse);
@@ -73,6 +73,13 @@ public class Bullet : MonoBehaviour
 
                 }
             }
+        }
+        if (myEl == element.ice && other.gameObject.tag == "Ground")
+        {
+            GameObject newFreeze = Instantiate(freezePlane, gameObject.transform);
+            newFreeze.transform.parent = null;
+            newFreeze.transform.rotation = Quaternion.identity;
+            newFreeze.transform.position = new Vector3(newFreeze.transform.position.x, newFreeze.transform.position.y + .2f, newFreeze.transform.position.z);
         }
 
         //Rigidbody rB = other.transform.GetComponent<Rigidbody>();
@@ -93,7 +100,7 @@ public class Bullet : MonoBehaviour
 
     }
 
-    public void SetBullet(GunStats gStats, GunModel.damageRange dRng, GunModel.bulletSpeed bSpd, GameObject gO, GameObject bEf, GameObject bAE )
+    public void SetBullet(GunStats gStats, GunModel.damageRange dRng, GunModel.bulletSpeed bSpd, GameObject gO, GameObject bEf, GameObject bAE)
     {
         switch (dRng)
         {
@@ -145,7 +152,7 @@ public class Bullet : MonoBehaviour
         bulletEffect = bEf;
         bulletAfterEffect = bAE;
         Instantiate(bulletEffect, transform);
-        
+
 
     }
 }
