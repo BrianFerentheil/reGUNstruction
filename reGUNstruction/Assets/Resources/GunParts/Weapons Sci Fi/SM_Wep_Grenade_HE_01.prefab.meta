@@ -1,9 +1,7 @@
 fileFormatVersion: 2
-guid: eddff96bd0c59824dbbd55c5c666e22e
-timeCreated: 1523497841
-licenseType: Store
-NativeFormatImporter:
-  mainObjectFileID: 100100000
+guid: f530f110e6e493b44aa7ad398c8243a5
+PrefabImporter:
+  externalObjects: {}
   userData: 
   assetBundleName: 
   assetBundleVariant: 
