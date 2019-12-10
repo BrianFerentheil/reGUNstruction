@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 
 public class PauseMenu : MonoBehaviour
 {
@@ -44,4 +45,36 @@ public class PauseMenu : MonoBehaviour
         Time.timeScale = 1f;
         SceneManager.LoadScene("MainMenu");
     }
+
+public static bool OptionIsEnabled = false;
+public GameObject optionMenuUI;
+
+// Update is called once per frame
+
+    public void Enable()
+    {
+    optionMenuUI.SetActive(false);
+    OptionIsEnabled = false;
+    }
+    public void Disable()
+    {
+    optionMenuUI.SetActive(true);
+    OptionIsEnabled = true;
+    }
+
+public AudioMixer audioMixer;
+
+public void SetVolume(float volume)
+{
+    audioMixer.SetFloat("music", volume);
+    audioMixer.SetFloat("sfx", volume);
+}
+public void SetMusic(float volume)
+{
+    audioMixer.SetFloat("music", volume);
+}
+public void SetSfx(float volume)
+{
+    audioMixer.SetFloat("sfx", volume);
+}
 }

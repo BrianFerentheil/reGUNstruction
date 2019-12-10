@@ -4721,10 +4721,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1966984282}
     m_Modifications:
-    - target: {fileID: 100026, guid: b436741ad2fe21e4987e6e5330b42695, type: 3}
-      propertyPath: m_Name
-      value: Fragged Wall Glass (3)
-      objectReference: {fileID: 0}
     - target: {fileID: 400026, guid: b436741ad2fe21e4987e6e5330b42695, type: 3}
       propertyPath: m_LocalPosition.x
       value: 13.36371
@@ -4768,6 +4764,10 @@ PrefabInstance:
     - target: {fileID: 400026, guid: b436741ad2fe21e4987e6e5330b42695, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100026, guid: b436741ad2fe21e4987e6e5330b42695, type: 3}
+      propertyPath: m_Name
+      value: Fragged Wall Glass (3)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b436741ad2fe21e4987e6e5330b42695, type: 3}
@@ -9580,10 +9580,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1966984282}
     m_Modifications:
-    - target: {fileID: 100026, guid: b436741ad2fe21e4987e6e5330b42695, type: 3}
-      propertyPath: m_Name
-      value: Fragged Wall Glass (4)
-      objectReference: {fileID: 0}
     - target: {fileID: 400026, guid: b436741ad2fe21e4987e6e5330b42695, type: 3}
       propertyPath: m_LocalPosition.x
       value: 13.953711
@@ -9627,6 +9623,10 @@ PrefabInstance:
     - target: {fileID: 400026, guid: b436741ad2fe21e4987e6e5330b42695, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100026, guid: b436741ad2fe21e4987e6e5330b42695, type: 3}
+      propertyPath: m_Name
+      value: Fragged Wall Glass (4)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b436741ad2fe21e4987e6e5330b42695, type: 3}
@@ -9705,7 +9705,7 @@ PrefabInstance:
     - target: {fileID: 7470521427477147409, guid: 6440440a29b64954f8be456484e2f26b,
         type: 3}
       propertyPath: m_RootOrder
-      value: 2
+      value: 3
       objectReference: {fileID: 0}
     - target: {fileID: 7470521427304520735, guid: 6440440a29b64954f8be456484e2f26b,
         type: 3}
@@ -9742,6 +9742,40 @@ PrefabInstance:
       propertyPath: inGameCanvas
       value: 
       objectReference: {fileID: 1599479856}
+    - target: {fileID: 734621466030094955, guid: 6440440a29b64954f8be456484e2f26b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 8
+      objectReference: {fileID: 0}
+    - target: {fileID: 1663544114, guid: 6440440a29b64954f8be456484e2f26b, type: 3}
+      propertyPath: m_RootOrder
+      value: 9
+      objectReference: {fileID: 0}
+    - target: {fileID: 6985064181287968258, guid: 6440440a29b64954f8be456484e2f26b,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 10
+      objectReference: {fileID: 0}
+    - target: {fileID: 6985064180519281827, guid: 6440440a29b64954f8be456484e2f26b,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6985064180975332003, guid: 6440440a29b64954f8be456484e2f26b,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6985064181374678163, guid: 6440440a29b64954f8be456484e2f26b,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 6985064182056378225, guid: 6440440a29b64954f8be456484e2f26b,
+        type: 3}
+      propertyPath: m_AnchorMax.y
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6440440a29b64954f8be456484e2f26b, type: 3}
 --- !u!4 &611288334 stripped
@@ -28314,10 +28348,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1966984282}
     m_Modifications:
-    - target: {fileID: 100026, guid: b436741ad2fe21e4987e6e5330b42695, type: 3}
-      propertyPath: m_Name
-      value: Fragged Wall Glass (1)
-      objectReference: {fileID: 0}
     - target: {fileID: 400026, guid: b436741ad2fe21e4987e6e5330b42695, type: 3}
       propertyPath: m_LocalPosition.x
       value: 12.183711
@@ -28361,6 +28391,10 @@ PrefabInstance:
     - target: {fileID: 400026, guid: b436741ad2fe21e4987e6e5330b42695, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100026, guid: b436741ad2fe21e4987e6e5330b42695, type: 3}
+      propertyPath: m_Name
+      value: Fragged Wall Glass (1)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b436741ad2fe21e4987e6e5330b42695, type: 3}
@@ -33357,10 +33391,6 @@ PrefabInstance:
   m_Modification:
     m_TransformParent: {fileID: 1966984282}
     m_Modifications:
-    - target: {fileID: 100026, guid: b436741ad2fe21e4987e6e5330b42695, type: 3}
-      propertyPath: m_Name
-      value: Fragged Wall Glass (2)
-      objectReference: {fileID: 0}
     - target: {fileID: 400026, guid: b436741ad2fe21e4987e6e5330b42695, type: 3}
       propertyPath: m_LocalPosition.x
       value: 12.773711
@@ -33404,6 +33434,10 @@ PrefabInstance:
     - target: {fileID: 400026, guid: b436741ad2fe21e4987e6e5330b42695, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
       value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 100026, guid: b436741ad2fe21e4987e6e5330b42695, type: 3}
+      propertyPath: m_Name
+      value: Fragged Wall Glass (2)
       objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: b436741ad2fe21e4987e6e5330b42695, type: 3}

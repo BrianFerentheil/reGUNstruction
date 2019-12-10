@@ -18,12 +18,6 @@ public class ScoreManager : MonoBehaviour
         multiplier = 0;
     }
 
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
-
     public void ScoreCheck()
     {
         if(multiplier >= multiplierMax)
@@ -32,10 +26,7 @@ public class ScoreManager : MonoBehaviour
         }
         if (currentScore >= startToAddMultiplier)
         {
-            //currentScore = currentScore + (currentScore * multiplier);
-            //startToAddMultiplier = startToAddMultiplier + bounceGap;
             multiplier = multiplier + multiplierGap;
-
         }
         else
         {
