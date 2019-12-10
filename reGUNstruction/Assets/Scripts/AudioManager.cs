@@ -12,17 +12,6 @@ public class AudioManager : MonoBehaviour
         audioSource = GetComponent<AudioSource>();
     }
 
-    void Start()
-    {
-        audioSource.Play();
-    }
-
-    
-    void Update()
-    {
-        
-    }
-
     public void PlayAudio(string clipToPlay)
     {
         foreach(AudioClip clip in clips)
