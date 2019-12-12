@@ -15,7 +15,7 @@ public class Weapon : MonoBehaviour
     public float timer;
     public bool raycast;
     public GameObject bulletShell;
-
+    public GunBase gunBase;
     public GameObject beSFire;
     public GameObject beSVoid;
     public GameObject beSAcid;

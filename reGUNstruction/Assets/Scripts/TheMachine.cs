@@ -39,7 +39,7 @@ public class TheMachine : MonoBehaviour
 
     public static void SetWeaponRef()
     {
-        weapon = FindObjectOfType<SwappingGunModel>().gameObject.transform.GetComponent<Weapon>();
+        weapon = GameObject.FindWithTag("Gun").GetComponent<Weapon>();
 
     }
 }

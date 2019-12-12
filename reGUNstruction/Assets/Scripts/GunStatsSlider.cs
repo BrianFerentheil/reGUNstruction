@@ -22,7 +22,7 @@ public class GunStatsSlider : MonoBehaviour
     void Start()
     {
         gunModel = FindObjectOfType<GunModel>();
-        weapon = FindObjectOfType<Weapon>();
+        weapon = GameObject.FindWithTag("Gun").GetComponent<Weapon>();
         scoreManager = FindObjectOfType<ScoreManager>();
         scoreText = FindObjectOfType<ButtonManager>().scoreCanvas.transform.GetChild(0).GetComponent<Text>();
         scoreText.text = "";

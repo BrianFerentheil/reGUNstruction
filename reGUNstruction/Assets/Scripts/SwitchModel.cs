@@ -8,30 +8,32 @@ public class SwitchModel : MonoBehaviour
     public MeshFilter[] models;
     public int currentIndex;
 
-    //public void SwapModelUp()
-    //{
-    //    currentIndex++;
-    //    if (currentIndex > models.Count)
-    //        currentIndex = 0;
-    //    gameObject.GetComponent<MeshFilter>().mesh = models[currentIndex].mesh;
-    //}
-
-    //public void SwapModelDown()
-    //{
-    //    currentIndex--;
-    //    if (currentIndex < 0)
-    //        currentIndex = models.Count - 1;
-    //    gameObject.GetComponent<MeshFilter>().mesh = models[currentIndex].mesh;
-    //}
-
-    private void Start()
+    public void SwapModelUp()
     {
-        
+        if (models.Length != 0)
+        {
+            currentIndex++;
+            if (currentIndex > models.Length)
+                currentIndex = 0;
+            gameObject.GetComponent<MeshFilter>().mesh = models[currentIndex].mesh;
+        }
+    }
+
+    public void SwapModelDown()
+    {
+        if (models.Length != 0)
+        {
+            currentIndex--;
+            if (currentIndex < 0)
+                currentIndex = models.Length - 1;
+            gameObject.GetComponent<MeshFilter>().mesh = models[currentIndex].mesh;
+        }
     }
 
     public void SetModel(int num)
     {
-        //gameObject.GetComponent<MeshFilter>().sharedMesh = models[num].mesh;
+        if (num >= 0 && num < models.Length)
+            gameObject.GetComponent<MeshFilter>().sharedMesh = models[num].mesh;
     }
 
 }
