@@ -21,7 +21,8 @@ public class ButtonManager : MonoBehaviour
 
     private void Start()
     {
-        theMachine = FindObjectOfType<TheMachine>();
+        //Made public static reference to use state machine access instead, assigning a reference is no longer needed.
+        //theMachine = FindObjectOfType<TheMachine>();
     }
 
     public void StartGame()
@@ -31,7 +32,7 @@ public class ButtonManager : MonoBehaviour
         option.SetActive(false);
         pause.SetActive(false);
         inGameCanvas.SetActive(false);
-        theMachine.stateMachine.ChangeState(new Walking());
+        TheMachine.stateMachine.ChangeState(new Walking());
         gunStatCanvas.SetActive(false);
         ammoCanvas.SetActive(true);
         scoreCanvas.SetActive(true);

@@ -520,18 +520,32 @@ public class Weapon : MonoBehaviour
                 break;
         }
 
+        // Original
+        //myParts.beSmall = bES;
+        //myParts.beMedium = bEM;
+        //myParts.beLarge = bEL;
+        //myParts.baeSmall = bAES;
+        //myParts.baeMedium = bAEM;
+        //myParts.baeLarge = bAEL;
+
+        //All small effects
         myParts.beSmall = bES;
-        myParts.beMedium = bEM;
-        myParts.beLarge = bEL;
-        myParts.baeSmall = bAES;
-        myParts.baeMedium = bAEM;
-        myParts.baeLarge = bAEL;
+        myParts.beMedium = bES;
+        myParts.beLarge = bES;
+        myParts.baeSmall = bES;
+        myParts.baeMedium = bES;
+        myParts.baeLarge = bES;
 
         maxAmmo = gStats.ammo;
         curAmmo = maxAmmo;
 
         clipText = $"Clips: { clips.ToString()}/ 3";
         ammoText = $"Ammo: { curAmmo.ToString()}/ {maxAmmo.ToString()}";
+    }
+
+    public void ResetClips()
+    {
+        clips = 3;
     }
 }
 

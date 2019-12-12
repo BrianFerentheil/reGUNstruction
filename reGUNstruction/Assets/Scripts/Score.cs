@@ -8,6 +8,8 @@ public class Score : MonoBehaviour
     private GameObject parti;
     private bool hit = false;
 
+    private float scaleVar;
+    private float refVar = 0.1f;
 
     public void DoTheParticle(GameObject particle)
     {
@@ -32,7 +34,13 @@ public class Score : MonoBehaviour
     {
         if (!gameObject.name.Contains("Wall"))
         {
-            yield return new WaitForSeconds(1.5f);
+            //Shrink object before destroy for extra effect << Broken
+            //yield return new WaitForSeconds(8);
+            //scaleVar = Mathf.SmoothDamp(1, 0.1f, ref refVar, 1);
+            //transform.localScale = new Vector3(scaleVar, scaleVar, scaleVar);
+
+            //Destroy Time Increased from 3 to 10 (12/11)
+            yield return new WaitForSeconds(10f);
             StartCoroutine(DestroyParti());
             Destroy(gameObject);
         }

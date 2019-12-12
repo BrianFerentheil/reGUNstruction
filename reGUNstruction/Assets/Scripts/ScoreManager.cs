@@ -13,6 +13,8 @@ public class ScoreManager : MonoBehaviour
     public float multiplier;
     public float multiplierMax;
 
+    PlayerScoreSystem pSS;
+
     void Start()
     {
         multiplier = 0;
@@ -32,5 +34,17 @@ public class ScoreManager : MonoBehaviour
         {
             return;
         }
+    }
+
+    //This function is called between rounds  to add the current total to the player's saved total - then will reset their current total.
+    public void ResetScore()
+    {
+        if(pSS != null)
+        {
+            pSS = FindObjectOfType<PlayerScoreSystem>();
+        }
+
+        pSS.AddToTotal(currentScore);
+        currentScore = 0;
     }
 }
