@@ -31,6 +31,20 @@ MonoBehaviour:
   curPos: 0
   swiMod: {fileID: 0}
   modelSET: 0
+--- !u!114 &4352129695657890200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1918253353464496945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42625556d7867ee4fa44998f5de048ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  models: []
+  currentIndex: 0
 --- !u!114 &5745731105213832460
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -61,6 +75,20 @@ MonoBehaviour:
   indexLength: 0
   curPos: 0
   swiMod: {fileID: 0}
+--- !u!114 &4254275772707002675
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3558823793430508015}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42625556d7867ee4fa44998f5de048ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  models: []
+  currentIndex: 0
 --- !u!114 &7460778472954071846
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -92,6 +120,20 @@ MonoBehaviour:
   curPos: 0
   swiMod: {fileID: 0}
   modelsSET: 0
+--- !u!114 &5697112965976624480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 6978968274492121463}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42625556d7867ee4fa44998f5de048ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  models: []
+  currentIndex: 0
 --- !u!1 &7598515318556632739
 GameObject:
   m_ObjectHideFlags: 0
@@ -105,7 +147,7 @@ GameObject:
   - component: {fileID: -8089977598300142072}
   m_Layer: 0
   m_Name: GunModel
-  m_TagString: Untagged
+  m_TagString: Gun
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

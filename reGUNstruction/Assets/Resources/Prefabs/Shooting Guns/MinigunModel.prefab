@@ -296,9 +296,9 @@ MonoBehaviour:
   worldModel: 0
   weaponUI: {fileID: 0}
   myGun: {fileID: 0}
-  currentAmmo: 11
+  currentAmmo: 1
   indexLength: 0
-  curPos: 0
+  curPos: 1
   swiMod: {fileID: 3883110934473246086}
   modelSET: 0
 --- !u!114 &8147181027138129887
@@ -313,7 +313,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42625556d7867ee4fa44998f5de048ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  models: []
+  models:
+  - {fileID: 800157589743006454}
   currentIndex: 0
 --- !u!1 &821361663019532904
 GameObject:
@@ -497,9 +498,9 @@ MonoBehaviour:
   worldModel: 0
   weaponUI: {fileID: 0}
   myGun: {fileID: 0}
-  currentGrip: 4
+  currentGrip: 1
   indexLength: 0
-  curPos: 0
+  curPos: 1
   swiMod: {fileID: 3883110934473246086}
 --- !u!114 &3883110934473246086
 MonoBehaviour:
@@ -513,7 +514,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42625556d7867ee4fa44998f5de048ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  models: []
+  models:
+  - {fileID: 798342713565564182}
   currentIndex: 0
 --- !u!1 &821730787165065442
 GameObject:
@@ -623,7 +625,7 @@ MonoBehaviour:
   myGun: {fileID: 0}
   currentBarrel: 7
   indexLength: 0
-  curPos: 0
+  curPos: 1
   swiMod: {fileID: 9207916779800620147}
   modelsSET: 0
 --- !u!114 &9207916779800620147
@@ -638,5 +640,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42625556d7867ee4fa44998f5de048ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  models: []
+  models:
+  - {fileID: 798394504298601874}
   currentIndex: 0

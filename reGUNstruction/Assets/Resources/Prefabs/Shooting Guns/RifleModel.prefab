@@ -99,15 +99,15 @@ MonoBehaviour:
   stability: 0
   extraStatOne: ' '
   extraStatTwo: ' '
-  myElementA: 11
-  myElementB: 11
-  myElementG: 11
+  myElementA: 3
+  myElementB: 3
+  myElementG: 3
   worldModel: 0
   weaponUI: {fileID: 0}
   myGun: {fileID: 0}
   currentBarrel: 7
   indexLength: 0
-  curPos: 0
+  curPos: 2
   swiMod: {fileID: 5525277475284683821}
   modelsSET: 0
 --- !u!114 &5525277475284683821
@@ -122,7 +122,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42625556d7867ee4fa44998f5de048ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  models: []
+  models:
+  - {fileID: 3185508672439390014}
   currentIndex: 0
 --- !u!1 &3190550477105343150
 GameObject:
@@ -223,15 +224,15 @@ MonoBehaviour:
   stability: 0
   extraStatOne: ' '
   extraStatTwo: ' '
-  myElementA: 11
-  myElementB: 11
-  myElementG: 11
+  myElementA: 3
+  myElementB: 3
+  myElementG: 3
   worldModel: 0
   weaponUI: {fileID: 0}
   myGun: {fileID: 0}
-  currentAmmo: 11
+  currentAmmo: 4
   indexLength: 0
-  curPos: 0
+  curPos: 2
   swiMod: {fileID: 2483170933371792960}
   modelSET: 0
 --- !u!114 &2483170933371792960
@@ -246,7 +247,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42625556d7867ee4fa44998f5de048ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  models: []
+  models:
+  - {fileID: 3185573067529645446}
   currentIndex: 0
 --- !u!1 &3190559692776771710
 GameObject:
@@ -377,7 +379,7 @@ MeshRenderer:
   m_Enabled: 1
   m_CastShadows: 1
   m_ReceiveShadows: 1
-  m_DynamicOccludee: 1
+  m_DynamicOccludee: 0
   m_MotionVectors: 1
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
@@ -424,15 +426,15 @@ MonoBehaviour:
   stability: 0
   extraStatOne: ' '
   extraStatTwo: ' '
-  myElementA: 11
-  myElementB: 11
-  myElementG: 11
+  myElementA: 3
+  myElementB: 3
+  myElementG: 3
   worldModel: 0
   weaponUI: {fileID: 0}
   myGun: {fileID: 0}
   currentGrip: 4
   indexLength: 0
-  curPos: 0
+  curPos: 2
   swiMod: {fileID: 6534633023824730136}
 --- !u!114 &6534633023824730136
 MonoBehaviour:
@@ -446,7 +448,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 42625556d7867ee4fa44998f5de048ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  models: []
+  models:
+  - {fileID: 3186977501622315280}
   currentIndex: 0
 --- !u!1 &3190628340144626532
 GameObject:

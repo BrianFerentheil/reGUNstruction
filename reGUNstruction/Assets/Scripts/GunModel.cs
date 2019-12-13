@@ -84,6 +84,7 @@ public class GunModel : MonoBehaviour
         myGrip.RunStatMods(myGrip.currentGrip, myStats);
         myBarrel.RunStatMods(myBarrel.currentBarrel, myStats);
         myAmmo.RunStatMods(myAmmo.currentAmmo, myStats);
+        Debug.Log("Element = " + myStats.myElementA);
         ElementArray();
         SetRanges();
         Weapon wep = GetComponent<Weapon>();

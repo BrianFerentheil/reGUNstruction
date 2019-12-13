@@ -52,12 +52,17 @@ public class SwappingGunModel : MonoBehaviour
                     if (bases[i].GetComponent<Weapon>().gunBase == GunBase.AR)
                     {
                         GameObject newGun = Instantiate(bases[i], currWeapon.transform.parent);
+                        Debug.Log("Original Weapon: " + currWeapon.name);
                         newGun.transform.position = gunTransform.position;
                         newGun.transform.rotation = gunTransform.rotation;
                         GameObject Temp = currWeapon;
                         currWeapon = newGun;
                         currWeapon.GetComponent<Weapon>().spawnTransform = GameObject.Find("SpawnPoint").transform;
+                        currWeapon.GetComponent<Weapon>().bulletShellSpawn = GameObject.Find("BulletShellSpawn").transform;
+                        Debug.Log("New Weapon: " + newGun.name);
+                        Debug.Log("Old Weapon: " + Temp.name);
                         Destroy(Temp);
+                        Debug.Log("Current Weapon: " + currWeapon.name);
                     }
                 }
                 break;
@@ -67,11 +72,15 @@ public class SwappingGunModel : MonoBehaviour
                     if (bases[i].GetComponent<Weapon>().gunBase == GunBase.SG)
                     {
                         GameObject newGun = Instantiate(bases[i], currWeapon.transform.parent);
+                        Debug.Log("Original Weapon: " + currWeapon.name);
                         newGun.transform.position = gunTransform.position;
                         newGun.transform.rotation = gunTransform.rotation;
                         GameObject Temp = currWeapon;
                         currWeapon = newGun;
                         currWeapon.GetComponent<Weapon>().spawnTransform = GameObject.Find("SpawnPoint").transform;
+                        currWeapon.GetComponent<Weapon>().bulletShellSpawn = GameObject.Find("BulletShellSpawn").transform;
+                        Debug.Log("New Weapon: " + newGun.name);
+                        Debug.Log("Old Weapon: " + Temp.name);
                         Destroy(Temp);
                     }
                 }
@@ -87,6 +96,7 @@ public class SwappingGunModel : MonoBehaviour
                         GameObject Temp = currWeapon;
                         currWeapon = newGun;
                         currWeapon.GetComponent<Weapon>().spawnTransform = GameObject.Find("SpawnPoint").transform;
+                        currWeapon.GetComponent<Weapon>().bulletShellSpawn = GameObject.Find("BulletShellSpawn").transform;
                         Destroy(Temp);
                     }
                 }
@@ -102,6 +112,7 @@ public class SwappingGunModel : MonoBehaviour
                         GameObject Temp = currWeapon;
                         currWeapon = newGun;
                         currWeapon.GetComponent<Weapon>().spawnTransform = GameObject.Find("SpawnPoint").transform;
+                        currWeapon.GetComponent<Weapon>().bulletShellSpawn = GameObject.Find("BulletShellSpawn").transform;
                         Destroy(Temp);
                     }
                 }
@@ -128,6 +139,7 @@ public class SwappingGunModel : MonoBehaviour
                         GameObject Temp = currWeapon;
                         currWeapon = newGun;
                         currWeapon.GetComponent<Weapon>().spawnTransform = GameObject.Find("SpawnPoint").transform;
+                        currWeapon.GetComponent<Weapon>().bulletShellSpawn = GameObject.Find("BulletShellSpawn").transform;
                         Destroy(Temp);
                     }
                 }
@@ -143,6 +155,7 @@ public class SwappingGunModel : MonoBehaviour
                         GameObject Temp = currWeapon;
                         currWeapon = newGun;
                         currWeapon.GetComponent<Weapon>().spawnTransform = GameObject.Find("SpawnPoint").transform;
+                        currWeapon.GetComponent<Weapon>().bulletShellSpawn = GameObject.Find("BulletShellSpawn").transform;
                         Destroy(Temp);
                     }
                 }
@@ -158,6 +171,7 @@ public class SwappingGunModel : MonoBehaviour
                         GameObject Temp = currWeapon;
                         currWeapon = newGun;
                         currWeapon.GetComponent<Weapon>().spawnTransform = GameObject.Find("SpawnPoint").transform;
+                        currWeapon.GetComponent<Weapon>().bulletShellSpawn = GameObject.Find("BulletShellSpawn").transform;
                         Destroy(Temp);
                     }
                 }
@@ -173,6 +187,7 @@ public class SwappingGunModel : MonoBehaviour
                         GameObject Temp = currWeapon;
                         currWeapon = newGun;
                         currWeapon.GetComponent<Weapon>().spawnTransform = GameObject.Find("SpawnPoint").transform;
+                        currWeapon.GetComponent<Weapon>().bulletShellSpawn = GameObject.Find("BulletShellSpawn").transform;
                         Destroy(Temp);
                     }
                 }
@@ -186,5 +201,6 @@ public class SwappingGunModel : MonoBehaviour
     void UpdateTheMachine()
     {
         TheMachine.weapon = currWeapon.GetComponent<Weapon>();
+        gunTransform = currWeapon.transform;
     }
 }

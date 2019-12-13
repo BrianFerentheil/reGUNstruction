@@ -515,8 +515,10 @@ public class Weapon : MonoBehaviour
                 bAEL = baeNuclear;
                 break;
             case GunStats.element.none:
+                Debug.Log("No Element Found");
                 break;
             default:
+                Debug.Log("Default Case Occurred");
                 break;
         }
 
