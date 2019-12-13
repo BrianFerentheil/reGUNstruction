@@ -5,16 +5,19 @@ using UnityStandardAssets.Characters.FirstPerson;
 
 public class TheMachine : MonoBehaviour
 {
-    public StateMachine stateMachine = new StateMachine();
+    public static StateMachine stateMachine = new StateMachine();
 
     public static FirstPersonController fpc;
     public static CharacterController cc;
     public static Camera bC;
 
+    public static ScoreManager scoreMan;
+
 
     public ButtonManager uiMan;
 
     public static Weapon weapon;
+
 
 
     private void Start()
@@ -24,6 +27,8 @@ public class TheMachine : MonoBehaviour
         cc = FindObjectOfType<CharacterController>();
         bC = FindObjectOfType<BenchCam>().gameObject.GetComponent<Camera>();
         uiMan = FindObjectOfType<ButtonManager>();
+
+        scoreMan = FindObjectOfType<ScoreManager>();
     }
 
     private void Update()
@@ -118,6 +123,30 @@ public class Walking : GameState
     }
 }
 
+public class NewRound : GameState
+{
+    public void EnterState()
+    {
+        TheMachine.fpc.enabled = true;
+        Cursor.visible = false;
+
+        TheMachine.scoreMan.ResetScore();
+
+        TheMachine.weapon.ResetClips();
+        TheMachine.stateMachine.ChangeState(new Walking());
+    }
+
+    public void ActiveState()
+    {
+
+    }
+
+    public void ExitState()
+    {
+
+    }
+}
+
 public class GunBuildingMenu : GameState
 {
     public void EnterState()
@@ -166,4 +195,6 @@ public class GunRange : GameState
 
     }
 }
+
+
 
