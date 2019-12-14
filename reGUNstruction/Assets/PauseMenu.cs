@@ -54,12 +54,12 @@ public GameObject optionMenuUI;
     public void Enable()
     {
     optionMenuUI.SetActive(false);
-    OptionIsEnabled = false;
+    OptionIsEnabled = true;
     }
     public void Disable()
     {
     optionMenuUI.SetActive(true);
-    OptionIsEnabled = true;
+    OptionIsEnabled = false;
     }
 
 public AudioMixer audioMixer;
