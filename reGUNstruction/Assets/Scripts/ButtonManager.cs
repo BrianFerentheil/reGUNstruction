@@ -19,12 +19,15 @@ public class ButtonManager : MonoBehaviour
 
     TheMachine theMachine;
 
+    UnityStandardAssets.Characters.FirstPerson.MouseLook mLook;
 
 
     private void Start()
     {
         //Made public static reference to use state machine access instead, assigning a reference is no longer needed.
         //theMachine = FindObjectOfType<TheMachine>();
+        mLook = FindObjectOfType<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().m_MouseLook;
+
     }
 
     public void StartGame()
@@ -155,6 +158,14 @@ public class ButtonManager : MonoBehaviour
 
     public void Resume()
     {
+        mainMenu.SetActive(false);
+        crafting.SetActive(false);
+        option.SetActive(false);
+        pause.SetActive(true);
+        gunStatCanvas.SetActive(false);
+        ammoCanvas.SetActive(false);
+        scoreCanvas.SetActive(false);
+
         pauseMenuUI.SetActive(false);
         TheMachine.fpc.enabled = true;
         TheMachine.cc.enabled = true;
@@ -166,11 +177,21 @@ public class ButtonManager : MonoBehaviour
 
     void Pause()
     {
+        mainMenu.SetActive(false);
+        crafting.SetActive(false);
+        option.SetActive(false);
+        pause.SetActive(true);
+        gunStatCanvas.SetActive(false);
+        ammoCanvas.SetActive(false);
+        scoreCanvas.SetActive(false);
+
         pauseMenuUI.SetActive(true);
         TheMachine.fpc.enabled = false;
         TheMachine.cc.enabled = false;
         TheMachine.weapon.enabled = false;
         Cursor.visible = true;
+        mLook.SetCursorLock(false);
+
         Time.timeScale = 0f;
         GameIsPaused = true;
     }
