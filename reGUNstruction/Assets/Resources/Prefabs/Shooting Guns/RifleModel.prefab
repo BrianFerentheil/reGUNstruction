@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 3439001066134548466}
   - component: {fileID: 5525277475284683821}
   m_Layer: 0
-  m_Name: SM_Wep_AssaultRifle_03_Slide_01
+  m_Name: Barrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -139,7 +139,7 @@ GameObject:
   - component: {fileID: 1113248739315515181}
   - component: {fileID: 2483170933371792960}
   m_Layer: 0
-  m_Name: SM_Wep_AssaultRifle_03_Magazine_01
+  m_Name: Ammo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -341,7 +341,7 @@ GameObject:
   - component: {fileID: 458919179425974032}
   - component: {fileID: 6534633023824730136}
   m_Layer: 0
-  m_Name: SM_Wep_AssaultRifle_03_Charge_01
+  m_Name: Grip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

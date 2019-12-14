@@ -14,7 +14,7 @@ GameObject:
   - component: {fileID: 4031916315880807532}
   - component: {fileID: 1711875373116414393}
   m_Layer: 0
-  m_Name: SM_Wep_Shotgun_Trigger_01
+  m_Name: Ammo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -139,7 +139,7 @@ GameObject:
   - component: {fileID: 3757289287928255005}
   - component: {fileID: 4694268991882263864}
   m_Layer: 0
-  m_Name: SM_Wep_Shotgun_Pump_01
+  m_Name: Grip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -263,7 +263,7 @@ GameObject:
   - component: {fileID: 5576684672489973346}
   - component: {fileID: 3046731277342780856}
   m_Layer: 0
-  m_Name: SM_Wep_Shotgun_Slide_01
+  m_Name: Barrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

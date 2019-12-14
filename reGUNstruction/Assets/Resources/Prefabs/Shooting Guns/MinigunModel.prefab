@@ -205,7 +205,7 @@ GameObject:
   - component: {fileID: 8252646578876598749}
   - component: {fileID: 8147181027138129887}
   m_Layer: 0
-  m_Name: SM_Wep_Minigun_01_Magazine_01
+  m_Name: Ammo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -407,7 +407,7 @@ GameObject:
   - component: {fileID: 9112898858418299152}
   - component: {fileID: 3883110934473246086}
   m_Layer: 0
-  m_Name: SM_Wep_Minigun_01_Trigger_01
+  m_Name: Grip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -531,7 +531,7 @@ GameObject:
   - component: {fileID: 9134675839078072807}
   - component: {fileID: 9207916779800620147}
   m_Layer: 0
-  m_Name: SM_Wep_Minigun_01_Barrel_01
+  m_Name: Barrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

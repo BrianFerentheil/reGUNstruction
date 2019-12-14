@@ -19,6 +19,11 @@ public class GunStatsSlider : MonoBehaviour
     Color damageColor;
     ScoreManager scoreManager;
 
+    public void SetWeapon(Weapon w)
+    {
+        weapon = w;
+    }
+
     void Start()
     {
         gunModel = FindObjectOfType<GunModel>();

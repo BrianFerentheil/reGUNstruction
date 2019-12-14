@@ -1,7 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
-
+using UnityEngine.UI;
 
 public enum GunBase
 {
@@ -15,30 +15,14 @@ public class SwappingGunModel : MonoBehaviour
 {
     [SerializeField] List<GameObject> bases;
     [SerializeField] GameObject currWeapon;
+    [SerializeField] GunStatsSlider statSlider;
     Transform gunTransform;
     TheMachine machine;
+    [SerializeField] GameObject craftingCanvas;
+
     void Start()
     {
         gunTransform = currWeapon.transform;
-    }
-
-    void LoadAR()
-    {
-
-    }
-
-    void LoadShotgun()
-    {
-
-    }
-
-    void LoadMG()
-    {
-
-    }
-
-    void LoadOtherGun()
-    {
 
     }
 
@@ -120,7 +104,7 @@ public class SwappingGunModel : MonoBehaviour
             default:
                 break;
         }
-
+        Debug.Log("Old Gun Destroyed");
         UpdateTheMachine();
     }
 
@@ -195,6 +179,7 @@ public class SwappingGunModel : MonoBehaviour
             default:
                 break;
         }
+        Debug.Log("Old Gun Destroyed");
         UpdateTheMachine();
     }
 
@@ -202,5 +187,42 @@ public class SwappingGunModel : MonoBehaviour
     {
         TheMachine.weapon = currWeapon.GetComponent<Weapon>();
         gunTransform = currWeapon.transform;
+        statSlider.SetWeapon(GameObject.FindWithTag("Gun").GetComponent<Weapon>());
+        foreach (Button btn in craftingCanvas.GetComponentsInChildren<Button>())
+        {
+            Debug.Log("Swapping Function");
+            if (btn.name.Contains("Grip"))
+            {
+                Debug.Log("Swapping Grip Function");
+                GameObject grip = GameObject.Find("Grip");
+                Debug.Log(grip.name);
+                SwitchModel gripSwitch = grip.GetComponent<SwitchModel>();
+                if (btn.name.Contains("Next"))
+                {
+                    btn.onClick.AddListener(delegate { gripSwitch.SwapModelUp(); });
+                    Debug.Log("Swap Up Function Added");
+                }
+                else
+                    btn.onClick.AddListener(delegate { gripSwitch.SwapModelDown(); });
+            }
+            else if (btn.name.Contains("Barrel"))
+            {
+                GameObject barrel = GameObject.Find("Barrel");
+                SwitchModel barrelSwitch = barrel.GetComponent<SwitchModel>();
+                if (btn.name.Contains("Next"))
+                    btn.onClick.AddListener(delegate { barrelSwitch.SwapModelUp(); });
+                else
+                    btn.onClick.AddListener(delegate { barrelSwitch.SwapModelDown(); });
+            }
+            else if (btn.name.Contains("Ammo"))
+            {
+                GameObject ammo = GameObject.Find("Ammo");
+                SwitchModel ammoSwitch = ammo.GetComponent<SwitchModel>();
+                if (btn.name.Contains("Next"))
+                    btn.onClick.AddListener(delegate { ammoSwitch.SwapModelUp(); });
+                else
+                    btn.onClick.AddListener(delegate { ammoSwitch.SwapModelDown(); });
+            }
+        }
     }
 }
