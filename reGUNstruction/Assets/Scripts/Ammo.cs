@@ -19,7 +19,8 @@ public class Ammo : GunStats
         indexLength = System.Enum.GetValues(typeof(ammoModel)).Length -1;
         currentAmmo = (ammoModel)curPos;
         swiMod = GetComponent<SwitchModel>();
-        SetModels();
+        if (swiMod.models.Length == 0)
+            SetModels();
     }
 
     public void SetModels()

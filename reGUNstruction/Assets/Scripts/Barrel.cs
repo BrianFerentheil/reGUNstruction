@@ -19,7 +19,8 @@ public class Barrel : GunStats
         indexLength = System.Enum.GetValues(typeof(barrelModel)).Length -1;
         currentBarrel = (barrelModel)curPos;
         swiMod = GetComponent<SwitchModel>();
-        SetModels();
+        if (swiMod.models.Length == 0)
+            SetModels();
     }
 
     public void SetModels()

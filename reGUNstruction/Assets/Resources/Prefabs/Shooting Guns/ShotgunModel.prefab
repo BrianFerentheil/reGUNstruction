@@ -11,8 +11,8 @@ GameObject:
   - component: {fileID: 7657954290054829917}
   - component: {fileID: 7655583084850657759}
   - component: {fileID: 7646346542058073095}
-  - component: {fileID: 4031916315880807532}
   - component: {fileID: 1711875373116414393}
+  - component: {fileID: 4031916315880807532}
   m_Layer: 0
   m_Name: Ammo
   m_TagString: Untagged
@@ -79,6 +79,25 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &1711875373116414393
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7659077418517416077}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42625556d7867ee4fa44998f5de048ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  models:
+  - {fileID: 7655583084850657759}
+  - {fileID: 3300000, guid: 2c2d5dccf304fe04a87e196c2a7ed69c, type: 3}
+  - {fileID: 3300000, guid: 1f96faa5dba841645a5e03ffcaf8114a, type: 3}
+  - {fileID: 3300000, guid: 7806c9724cab5b247a0b1ae42ef8ce08, type: 3}
+  currentIndex: 0
+  model: {fileID: 0}
 --- !u!114 &4031916315880807532
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -110,21 +129,6 @@ MonoBehaviour:
   curPos: 3
   swiMod: {fileID: 1711875373116414393}
   modelSET: 0
---- !u!114 &1711875373116414393
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7659077418517416077}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42625556d7867ee4fa44998f5de048ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  models:
-  - {fileID: 7655583084850657759}
-  currentIndex: 0
 --- !u!1 &7659872117586339227
 GameObject:
   m_ObjectHideFlags: 0
@@ -136,8 +140,8 @@ GameObject:
   - component: {fileID: 7658296651171728987}
   - component: {fileID: 7652133089148635757}
   - component: {fileID: 7646310238728933623}
-  - component: {fileID: 3757289287928255005}
   - component: {fileID: 4694268991882263864}
+  - component: {fileID: 3757289287928255005}
   m_Layer: 0
   m_Name: Grip
   m_TagString: Untagged
@@ -204,6 +208,25 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &4694268991882263864
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7659872117586339227}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42625556d7867ee4fa44998f5de048ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  models:
+  - {fileID: 7652133089148635757}
+  - {fileID: 3300004, guid: b1736d79a2fc9be4b88db1fafd3c0c1b, type: 3}
+  - {fileID: 3300004, guid: e436f1c05d7495f4ba683b39f364552e, type: 3}
+  - {fileID: 3300002, guid: 9b82d6373e2325c468a37bd22a5efb5b, type: 3}
+  currentIndex: 0
+  model: {fileID: 0}
 --- !u!114 &3757289287928255005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -234,21 +257,6 @@ MonoBehaviour:
   indexLength: 0
   curPos: 3
   swiMod: {fileID: 4694268991882263864}
---- !u!114 &4694268991882263864
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7659872117586339227}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42625556d7867ee4fa44998f5de048ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  models:
-  - {fileID: 7652133089148635757}
-  currentIndex: 0
 --- !u!1 &7659954262993407429
 GameObject:
   m_ObjectHideFlags: 0
@@ -260,8 +268,8 @@ GameObject:
   - component: {fileID: 7662964383269225917}
   - component: {fileID: 7655164638884947245}
   - component: {fileID: 7645913930682985985}
-  - component: {fileID: 5576684672489973346}
   - component: {fileID: 3046731277342780856}
+  - component: {fileID: 5576684672489973346}
   m_Layer: 0
   m_Name: Barrel
   m_TagString: Untagged
@@ -328,6 +336,24 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &3046731277342780856
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7659954262993407429}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42625556d7867ee4fa44998f5de048ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  models:
+  - {fileID: 7655164638884947245}
+  - {fileID: 3300000, guid: 3e6ce9aaa7d87244882a755e31ce65f2, type: 3}
+  - {fileID: 3300000, guid: d11078ca112e0c04298fb3e84e1f95f9, type: 3}
+  currentIndex: 0
+  model: {fileID: 0}
 --- !u!114 &5576684672489973346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -359,21 +385,6 @@ MonoBehaviour:
   curPos: 3
   swiMod: {fileID: 3046731277342780856}
   modelsSET: 0
---- !u!114 &3046731277342780856
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 7659954262993407429}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42625556d7867ee4fa44998f5de048ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  models:
-  - {fileID: 7655164638884947245}
-  currentIndex: 0
 --- !u!1 &7660524749840790121
 GameObject:
   m_ObjectHideFlags: 0

@@ -19,13 +19,20 @@ public class SwappingGunModel : MonoBehaviour
     Transform gunTransform;
     TheMachine machine;
     [SerializeField] GameObject craftingCanvas;
-
+    bool update = false;
     void Start()
     {
         gunTransform = currWeapon.transform;
 
     }
-
+    void Update()
+    {
+        if (update)
+        {
+            UpdateTheMachine();
+            update = false;
+        }
+    }
     public void SwitchGunUp()
     {
         switch (currWeapon.GetComponent<Weapon>().gunBase)
@@ -36,17 +43,13 @@ public class SwappingGunModel : MonoBehaviour
                     if (bases[i].GetComponent<Weapon>().gunBase == GunBase.AR)
                     {
                         GameObject newGun = Instantiate(bases[i], currWeapon.transform.parent);
-                        Debug.Log("Original Weapon: " + currWeapon.name);
                         newGun.transform.position = gunTransform.position;
                         newGun.transform.rotation = gunTransform.rotation;
                         GameObject Temp = currWeapon;
                         currWeapon = newGun;
                         currWeapon.GetComponent<Weapon>().spawnTransform = GameObject.Find("SpawnPoint").transform;
                         currWeapon.GetComponent<Weapon>().bulletShellSpawn = GameObject.Find("BulletShellSpawn").transform;
-                        Debug.Log("New Weapon: " + newGun.name);
-                        Debug.Log("Old Weapon: " + Temp.name);
                         Destroy(Temp);
-                        Debug.Log("Current Weapon: " + currWeapon.name);
                     }
                 }
                 break;
@@ -56,15 +59,12 @@ public class SwappingGunModel : MonoBehaviour
                     if (bases[i].GetComponent<Weapon>().gunBase == GunBase.SG)
                     {
                         GameObject newGun = Instantiate(bases[i], currWeapon.transform.parent);
-                        Debug.Log("Original Weapon: " + currWeapon.name);
                         newGun.transform.position = gunTransform.position;
                         newGun.transform.rotation = gunTransform.rotation;
                         GameObject Temp = currWeapon;
                         currWeapon = newGun;
                         currWeapon.GetComponent<Weapon>().spawnTransform = GameObject.Find("SpawnPoint").transform;
                         currWeapon.GetComponent<Weapon>().bulletShellSpawn = GameObject.Find("BulletShellSpawn").transform;
-                        Debug.Log("New Weapon: " + newGun.name);
-                        Debug.Log("Old Weapon: " + Temp.name);
                         Destroy(Temp);
                     }
                 }
@@ -104,8 +104,7 @@ public class SwappingGunModel : MonoBehaviour
             default:
                 break;
         }
-        Debug.Log("Old Gun Destroyed");
-        UpdateTheMachine();
+        StartCoroutine("DelayUpdate");
     }
 
     public void SwitchGunDown()
@@ -179,21 +178,28 @@ public class SwappingGunModel : MonoBehaviour
             default:
                 break;
         }
-        Debug.Log("Old Gun Destroyed");
-        UpdateTheMachine();
+        StartCoroutine("DelayUpdate");
+    }
+
+    IEnumerator DelayUpdate()
+    {
+        yield return new WaitForSeconds(.2f);
+        update = true;
+        Debug.Log("Update is true");
+        yield return new WaitForSeconds(0);
     }
 
     void UpdateTheMachine()
     {
         TheMachine.weapon = currWeapon.GetComponent<Weapon>();
+        TheMachine.weapon.enabled = false;
         gunTransform = currWeapon.transform;
         statSlider.SetWeapon(GameObject.FindWithTag("Gun").GetComponent<Weapon>());
         foreach (Button btn in craftingCanvas.GetComponentsInChildren<Button>())
         {
-            Debug.Log("Swapping Function");
+            btn.onClick.RemoveAllListeners();
             if (btn.name.Contains("Grip"))
             {
-                Debug.Log("Swapping Grip Function");
                 GameObject grip = GameObject.Find("Grip");
                 Debug.Log(grip.name);
                 SwitchModel gripSwitch = grip.GetComponent<SwitchModel>();
@@ -218,10 +224,15 @@ public class SwappingGunModel : MonoBehaviour
             {
                 GameObject ammo = GameObject.Find("Ammo");
                 SwitchModel ammoSwitch = ammo.GetComponent<SwitchModel>();
-                if (btn.name.Contains("Next"))
-                    btn.onClick.AddListener(delegate { ammoSwitch.SwapModelUp(); });
+                if (ammoSwitch != null)
+                {
+                    if (btn.name.Contains("Next"))
+                        btn.onClick.AddListener(() => { ammoSwitch.SwapModelUp(); });
+                    else
+                        btn.onClick.AddListener(() => { ammoSwitch.SwapModelDown(); });
+                }
                 else
-                    btn.onClick.AddListener(delegate { ammoSwitch.SwapModelDown(); });
+                    Debug.Log("Switcher Doesn't Exist.");
             }
         }
     }

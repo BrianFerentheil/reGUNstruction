@@ -12,12 +12,12 @@ public class SwitchModel : MonoBehaviour
     Barrel barrel;
     [SerializeField] GunModel model;
 
-    void Start()
+    void Awake()
     {
         ammo = gameObject.GetComponent<Ammo>();
         barrel = gameObject.GetComponent<Barrel>();
         grip = gameObject.GetComponent<Grip>();
-
+        model = gameObject.GetComponentInParent<GunModel>();
     }
 
     public void SwapModelUp()
