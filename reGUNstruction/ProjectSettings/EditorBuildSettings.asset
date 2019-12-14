@@ -6,6 +6,24 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/NukeTown.unity
-    guid: 26010d7d3cb9b7f4fa0e9747721c27df
+    path: Assets/Scenes/WorkShop.unity
+    guid: 9493c8df08b93434e8b371309b65a674
+  - enabled: 1
+    path: Assets/Scenes/LvOne.unity
+    guid: 2c1a09aec709453469db290d5d27cbeb
+  - enabled: 1
+    path: Assets/Scenes/LvTwo.unity
+    guid: ea49ce0d880967f41a5ea898c9598b2a
+  - enabled: 1
+    path: Assets/Scenes/LvThree.unity
+    guid: 6121c1b5ffe90f0489235a6728240d93
+  - enabled: 1
+    path: Assets/Scenes/LvFour.unity
+    guid: eb8c6ed99a128cc4fa48ca8377113f50
+  - enabled: 1
+    path: Assets/Scenes/LvFive.unity
+    guid: abc031b073bc341439b52c811f928b3f
+  - enabled: 1
+    path: Assets/Scenes/LvSix.unity
+    guid: d1a0e82cb726fb34cb470194f3612b70
   m_configObjects: {}

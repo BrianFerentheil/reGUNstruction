@@ -47,6 +47,11 @@ public class TheMachine : MonoBehaviour
         weapon = GameObject.FindWithTag("Gun").GetComponent<Weapon>();
 
     }
+
+    public static void SceneChange()
+    {
+        stateMachine.ChangeState(new NewRound());
+    }
 }
 
 public interface GameState
