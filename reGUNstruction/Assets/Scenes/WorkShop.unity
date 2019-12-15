@@ -261,8 +261,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 1, z: 3.33}
-  m_Center: {x: 0, y: 0, z: 1}
+  m_Size: {x: 2, y: 1, z: 3}
+  m_Center: {x: 0, y: 0, z: 1.34}
 --- !u!23 &23579948
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -320,9 +320,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b5708bf1af239429b6411b5019b5ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grip: 0
-  barrel: 0
-  ammo: 0
+  grip: 4
+  barrel: 7
+  ammo: 11
   myGrip: {fileID: 0}
   myBarrel: {fileID: 0}
   myAmmo: {fileID: 0}
@@ -334,6 +334,9 @@ MonoBehaviour:
   firSliFill: {fileID: 0}
   partUI: {fileID: 0}
   uiSet: 0
+  ownText: {fileID: 0}
+  frText: {fileID: 0}
+  dText: {fileID: 0}
 --- !u!65 &23579951
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -683,8 +686,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 1, z: 3.33}
-  m_Center: {x: 0, y: 0, z: 1}
+  m_Size: {x: 2, y: 1, z: 3}
+  m_Center: {x: 0, y: 0, z: 1.34}
 --- !u!23 &89052130
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -742,9 +745,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b5708bf1af239429b6411b5019b5ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grip: 0
-  barrel: 0
-  ammo: 0
+  grip: 4
+  barrel: 7
+  ammo: 11
   myGrip: {fileID: 0}
   myBarrel: {fileID: 0}
   myAmmo: {fileID: 0}
@@ -756,6 +759,9 @@ MonoBehaviour:
   firSliFill: {fileID: 0}
   partUI: {fileID: 0}
   uiSet: 0
+  ownText: {fileID: 0}
+  frText: {fileID: 0}
+  dText: {fileID: 0}
 --- !u!65 &89052133
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1013,6 +1019,97 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 100
+--- !u!1 &137374939
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 137374940}
+  - component: {fileID: 137374943}
+  - component: {fileID: 137374942}
+  - component: {fileID: 137374941}
+  m_Layer: 0
+  m_Name: DoorB
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
+  m_IsActive: 1
+--- !u!4 &137374940
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 137374939}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0.5314279}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1239149090}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &137374941
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 137374939}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &137374942
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 137374939}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: c480c1f7cb4d5274e87dddbe81739c23, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &137374943
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 137374939}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &140704144
 GameObject:
   m_ObjectHideFlags: 0
@@ -1059,8 +1156,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 1, z: 3.33}
-  m_Center: {x: 0, y: 0, z: 1}
+  m_Size: {x: 2, y: 1, z: 3}
+  m_Center: {x: 0, y: 0, z: 1.34}
 --- !u!23 &140704147
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1118,9 +1215,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b5708bf1af239429b6411b5019b5ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grip: 0
-  barrel: 0
-  ammo: 0
+  grip: 4
+  barrel: 7
+  ammo: 11
   myGrip: {fileID: 0}
   myBarrel: {fileID: 0}
   myAmmo: {fileID: 0}
@@ -1132,6 +1229,9 @@ MonoBehaviour:
   firSliFill: {fileID: 0}
   partUI: {fileID: 0}
   uiSet: 0
+  ownText: {fileID: 0}
+  frText: {fileID: 0}
+  dText: {fileID: 0}
 --- !u!65 &140704150
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1183,6 +1283,97 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 100
+--- !u!1 &147618239
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 147618240}
+  - component: {fileID: 147618243}
+  - component: {fileID: 147618242}
+  - component: {fileID: 147618241}
+  m_Layer: 0
+  m_Name: DoorA
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 1
+  m_StaticEditorFlags: 8
+  m_IsActive: 1
+--- !u!4 &147618240
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147618239}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: -0.46857205}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 1239149090}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!65 &147618241
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147618239}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
+--- !u!23 &147618242
+MeshRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147618239}
+  m_Enabled: 1
+  m_CastShadows: 1
+  m_ReceiveShadows: 1
+  m_DynamicOccludee: 1
+  m_MotionVectors: 1
+  m_LightProbeUsage: 1
+  m_ReflectionProbeUsage: 1
+  m_RenderingLayerMask: 1
+  m_RendererPriority: 0
+  m_Materials:
+  - {fileID: 2100000, guid: c480c1f7cb4d5274e87dddbe81739c23, type: 2}
+  m_StaticBatchInfo:
+    firstSubMesh: 0
+    subMeshCount: 0
+  m_StaticBatchRoot: {fileID: 0}
+  m_ProbeAnchor: {fileID: 0}
+  m_LightProbeVolumeOverride: {fileID: 0}
+  m_ScaleInLightmap: 1
+  m_PreserveUVs: 0
+  m_IgnoreNormalsForChartDetection: 0
+  m_ImportantGI: 0
+  m_StitchLightmapSeams: 1
+  m_SelectedEditorRenderState: 3
+  m_MinimumChartSize: 4
+  m_AutoUVMaxDistance: 0.5
+  m_AutoUVMaxAngle: 89
+  m_LightmapParameters: {fileID: 0}
+  m_SortingLayerID: 0
+  m_SortingLayer: 0
+  m_SortingOrder: 0
+--- !u!33 &147618243
+MeshFilter:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 147618239}
+  m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1001 &150362763
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -1535,8 +1726,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 1, z: 3.33}
-  m_Center: {x: 0, y: 0, z: 1}
+  m_Size: {x: 2, y: 1, z: 3}
+  m_Center: {x: 0, y: 0, z: 1.34}
 --- !u!23 &180690873
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1594,9 +1785,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b5708bf1af239429b6411b5019b5ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grip: 0
-  barrel: 0
-  ammo: 0
+  grip: 4
+  barrel: 7
+  ammo: 11
   myGrip: {fileID: 0}
   myBarrel: {fileID: 0}
   myAmmo: {fileID: 0}
@@ -1608,6 +1799,9 @@ MonoBehaviour:
   firSliFill: {fileID: 0}
   partUI: {fileID: 0}
   uiSet: 0
+  ownText: {fileID: 0}
+  frText: {fileID: 0}
+  dText: {fileID: 0}
 --- !u!65 &180690876
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1686,8 +1880,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 1, z: 3.33}
-  m_Center: {x: 0, y: 0, z: 1}
+  m_Size: {x: 2, y: 1, z: 3}
+  m_Center: {x: 0, y: 0, z: 1.34}
 --- !u!23 &185015198
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1745,9 +1939,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b5708bf1af239429b6411b5019b5ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grip: 0
-  barrel: 0
-  ammo: 0
+  grip: 4
+  barrel: 7
+  ammo: 11
   myGrip: {fileID: 0}
   myBarrel: {fileID: 0}
   myAmmo: {fileID: 0}
@@ -1759,6 +1953,9 @@ MonoBehaviour:
   firSliFill: {fileID: 0}
   partUI: {fileID: 0}
   uiSet: 0
+  ownText: {fileID: 0}
+  frText: {fileID: 0}
+  dText: {fileID: 0}
 --- !u!65 &185015201
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2304,8 +2501,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 1, z: 3.33}
-  m_Center: {x: 0, y: 0, z: 1}
+  m_Size: {x: 2, y: 1, z: 3}
+  m_Center: {x: 0, y: 0, z: 1.34}
 --- !u!23 &294312949
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2363,9 +2560,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b5708bf1af239429b6411b5019b5ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grip: 0
-  barrel: 0
-  ammo: 0
+  grip: 4
+  barrel: 7
+  ammo: 11
   myGrip: {fileID: 0}
   myBarrel: {fileID: 0}
   myAmmo: {fileID: 0}
@@ -2377,6 +2574,9 @@ MonoBehaviour:
   firSliFill: {fileID: 0}
   partUI: {fileID: 0}
   uiSet: 0
+  ownText: {fileID: 0}
+  frText: {fileID: 0}
+  dText: {fileID: 0}
 --- !u!65 &294312952
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2473,8 +2673,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 1, z: 3.33}
-  m_Center: {x: 0, y: 0, z: 1}
+  m_Size: {x: 2, y: 1, z: 3}
+  m_Center: {x: 0, y: 0, z: 1.34}
 --- !u!23 &318660385
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2532,9 +2732,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b5708bf1af239429b6411b5019b5ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grip: 0
-  barrel: 0
-  ammo: 0
+  grip: 4
+  barrel: 7
+  ammo: 11
   myGrip: {fileID: 0}
   myBarrel: {fileID: 0}
   myAmmo: {fileID: 0}
@@ -2546,6 +2746,9 @@ MonoBehaviour:
   firSliFill: {fileID: 0}
   partUI: {fileID: 0}
   uiSet: 0
+  ownText: {fileID: 0}
+  frText: {fileID: 0}
+  dText: {fileID: 0}
 --- !u!65 &318660388
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3893,8 +4096,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 1, z: 3.33}
-  m_Center: {x: 0, y: 0, z: 1}
+  m_Size: {x: 2, y: 1, z: 3}
+  m_Center: {x: 0, y: 0, z: 1.34}
 --- !u!23 &561837041
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3952,9 +4155,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b5708bf1af239429b6411b5019b5ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grip: 0
-  barrel: 0
-  ammo: 0
+  grip: 4
+  barrel: 7
+  ammo: 11
   myGrip: {fileID: 0}
   myBarrel: {fileID: 0}
   myAmmo: {fileID: 0}
@@ -3966,6 +4169,9 @@ MonoBehaviour:
   firSliFill: {fileID: 0}
   partUI: {fileID: 0}
   uiSet: 0
+  ownText: {fileID: 0}
+  frText: {fileID: 0}
+  dText: {fileID: 0}
 --- !u!65 &561837044
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4414,8 +4620,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 1, z: 3.33}
-  m_Center: {x: 0, y: 0, z: 1}
+  m_Size: {x: 2, y: 1, z: 3}
+  m_Center: {x: 0, y: 0, z: 1.34}
 --- !u!23 &659244049
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4473,9 +4679,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b5708bf1af239429b6411b5019b5ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grip: 0
-  barrel: 0
-  ammo: 0
+  grip: 4
+  barrel: 7
+  ammo: 11
   myGrip: {fileID: 0}
   myBarrel: {fileID: 0}
   myAmmo: {fileID: 0}
@@ -4487,6 +4693,9 @@ MonoBehaviour:
   firSliFill: {fileID: 0}
   partUI: {fileID: 0}
   uiSet: 0
+  ownText: {fileID: 0}
+  frText: {fileID: 0}
+  dText: {fileID: 0}
 --- !u!65 &659244052
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5229,8 +5438,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 1, z: 3.33}
-  m_Center: {x: 0, y: 0, z: 1}
+  m_Size: {x: 2, y: 1, z: 3}
+  m_Center: {x: 0, y: 0, z: 1.34}
 --- !u!23 &835232353
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5288,9 +5497,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b5708bf1af239429b6411b5019b5ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grip: 0
-  barrel: 0
-  ammo: 0
+  grip: 4
+  barrel: 7
+  ammo: 11
   myGrip: {fileID: 0}
   myBarrel: {fileID: 0}
   myAmmo: {fileID: 0}
@@ -5302,6 +5511,9 @@ MonoBehaviour:
   firSliFill: {fileID: 0}
   partUI: {fileID: 0}
   uiSet: 0
+  ownText: {fileID: 0}
+  frText: {fileID: 0}
+  dText: {fileID: 0}
 --- !u!65 &835232356
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5832,8 +6044,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 1, z: 3.33}
-  m_Center: {x: 0, y: 0, z: 1}
+  m_Size: {x: 2, y: 1, z: 3}
+  m_Center: {x: 0, y: 0, z: 1.34}
 --- !u!23 &942018519
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5891,9 +6103,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b5708bf1af239429b6411b5019b5ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grip: 0
-  barrel: 0
-  ammo: 0
+  grip: 4
+  barrel: 7
+  ammo: 11
   myGrip: {fileID: 0}
   myBarrel: {fileID: 0}
   myAmmo: {fileID: 0}
@@ -5905,6 +6117,9 @@ MonoBehaviour:
   firSliFill: {fileID: 0}
   partUI: {fileID: 0}
   uiSet: 0
+  ownText: {fileID: 0}
+  frText: {fileID: 0}
+  dText: {fileID: 0}
 --- !u!65 &942018522
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6082,8 +6297,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 1, z: 3.33}
-  m_Center: {x: 0, y: 0, z: 1}
+  m_Size: {x: 2, y: 1, z: 3}
+  m_Center: {x: 0, y: 0, z: 1.34}
 --- !u!23 &954757314
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6141,9 +6356,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b5708bf1af239429b6411b5019b5ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grip: 0
-  barrel: 0
-  ammo: 0
+  grip: 4
+  barrel: 7
+  ammo: 11
   myGrip: {fileID: 0}
   myBarrel: {fileID: 0}
   myAmmo: {fileID: 0}
@@ -6155,6 +6370,9 @@ MonoBehaviour:
   firSliFill: {fileID: 0}
   partUI: {fileID: 0}
   uiSet: 0
+  ownText: {fileID: 0}
+  frText: {fileID: 0}
+  dText: {fileID: 0}
 --- !u!65 &954757317
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6381,8 +6599,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 1, z: 3.33}
-  m_Center: {x: 0, y: 0, z: 1}
+  m_Size: {x: 2, y: 1, z: 3}
+  m_Center: {x: 0, y: 0, z: 1.34}
 --- !u!23 &976438327
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6440,9 +6658,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b5708bf1af239429b6411b5019b5ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grip: 0
-  barrel: 0
-  ammo: 0
+  grip: 4
+  barrel: 7
+  ammo: 11
   myGrip: {fileID: 0}
   myBarrel: {fileID: 0}
   myAmmo: {fileID: 0}
@@ -6454,6 +6672,9 @@ MonoBehaviour:
   firSliFill: {fileID: 0}
   partUI: {fileID: 0}
   uiSet: 0
+  ownText: {fileID: 0}
+  frText: {fileID: 0}
+  dText: {fileID: 0}
 --- !u!65 &976438330
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -7561,6 +7782,7 @@ Transform:
   - {fileID: 288832744}
   - {fileID: 568343985}
   - {fileID: 260883623}
+  - {fileID: 1239149090}
   m_Father: {fileID: 0}
   m_RootOrder: 11
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -7647,8 +7869,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 1, z: 3.33}
-  m_Center: {x: 0, y: 0, z: 1}
+  m_Size: {x: 2, y: 1, z: 3}
+  m_Center: {x: 0, y: 0, z: 1.34}
 --- !u!23 &1194093160
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -7706,9 +7928,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b5708bf1af239429b6411b5019b5ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grip: 0
-  barrel: 0
-  ammo: 0
+  grip: 4
+  barrel: 7
+  ammo: 11
   myGrip: {fileID: 0}
   myBarrel: {fileID: 0}
   myAmmo: {fileID: 0}
@@ -7720,6 +7942,9 @@ MonoBehaviour:
   firSliFill: {fileID: 0}
   partUI: {fileID: 0}
   uiSet: 0
+  ownText: {fileID: 0}
+  frText: {fileID: 0}
+  dText: {fileID: 0}
 --- !u!65 &1194093163
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8092,6 +8317,86 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 09c76973314790040b9ef284977d7e81, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: ad55235868386b54e94727001847945d, type: 3}
+--- !u!1 &1239149089
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1239149090}
+  - component: {fileID: 1239149091}
+  - component: {fileID: 1239149093}
+  - component: {fileID: 1239149092}
+  m_Layer: 0
+  m_Name: ShopDoors
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1239149090
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1239149089}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 25.849998, y: 4, z: -5.62}
+  m_LocalScale: {x: 0.9, y: 8, z: 3.5}
+  m_Children:
+  - {fileID: 147618240}
+  - {fileID: 137374940}
+  m_Father: {fileID: 1181272688}
+  m_RootOrder: 29
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!95 &1239149091
+Animator:
+  serializedVersion: 3
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1239149089}
+  m_Enabled: 1
+  m_Avatar: {fileID: 0}
+  m_Controller: {fileID: 9100000, guid: 35994b41c27fbe14590adaed5e873dab, type: 2}
+  m_CullingMode: 0
+  m_UpdateMode: 0
+  m_ApplyRootMotion: 0
+  m_LinearVelocityBlending: 0
+  m_WarningMessage: 
+  m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
+  m_KeepAnimatorControllerStateOnDisable: 0
+--- !u!65 &1239149092
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1239149089}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 1
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 7.1}
+  m_Center: {x: -10.93, y: 0, z: -0}
+--- !u!114 &1239149093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1239149089}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3e3c20f6e7aed04a9b2d90f7e43c3d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  doorState: 0
 --- !u!1 &1240574763
 GameObject:
   m_ObjectHideFlags: 0
@@ -9137,8 +9442,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 1, z: 3.33}
-  m_Center: {x: 0, y: 0, z: 1}
+  m_Size: {x: 2, y: 1, z: 3}
+  m_Center: {x: 0, y: 0, z: 1.34}
 --- !u!23 &1419508867
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9196,9 +9501,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b5708bf1af239429b6411b5019b5ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grip: 0
-  barrel: 0
-  ammo: 0
+  grip: 4
+  barrel: 7
+  ammo: 11
   myGrip: {fileID: 0}
   myBarrel: {fileID: 0}
   myAmmo: {fileID: 0}
@@ -9210,6 +9515,9 @@ MonoBehaviour:
   firSliFill: {fileID: 0}
   partUI: {fileID: 0}
   uiSet: 0
+  ownText: {fileID: 0}
+  frText: {fileID: 0}
+  dText: {fileID: 0}
 --- !u!65 &1419508870
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9532,8 +9840,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 1, z: 3.33}
-  m_Center: {x: 0, y: 0, z: 1}
+  m_Size: {x: 2, y: 1, z: 3}
+  m_Center: {x: 0, y: 0, z: 1.34}
 --- !u!23 &1548269562
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9591,9 +9899,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b5708bf1af239429b6411b5019b5ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grip: 0
-  barrel: 0
-  ammo: 0
+  grip: 4
+  barrel: 7
+  ammo: 11
   myGrip: {fileID: 0}
   myBarrel: {fileID: 0}
   myAmmo: {fileID: 0}
@@ -9605,6 +9913,9 @@ MonoBehaviour:
   firSliFill: {fileID: 0}
   partUI: {fileID: 0}
   uiSet: 0
+  ownText: {fileID: 0}
+  frText: {fileID: 0}
+  dText: {fileID: 0}
 --- !u!65 &1548269565
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10382,8 +10693,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 1, z: 3.33}
-  m_Center: {x: 0, y: 0, z: 1}
+  m_Size: {x: 2, y: 1, z: 3}
+  m_Center: {x: 0, y: 0, z: 1.34}
 --- !u!23 &1737325066
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10441,9 +10752,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b5708bf1af239429b6411b5019b5ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grip: 0
-  barrel: 0
-  ammo: 0
+  grip: 4
+  barrel: 7
+  ammo: 11
   myGrip: {fileID: 0}
   myBarrel: {fileID: 0}
   myAmmo: {fileID: 0}
@@ -10455,6 +10766,9 @@ MonoBehaviour:
   firSliFill: {fileID: 0}
   partUI: {fileID: 0}
   uiSet: 0
+  ownText: {fileID: 0}
+  frText: {fileID: 0}
+  dText: {fileID: 0}
 --- !u!65 &1737325069
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10514,8 +10828,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 1, z: 3.33}
-  m_Center: {x: 0, y: 0, z: 1}
+  m_Size: {x: 2, y: 1, z: 3}
+  m_Center: {x: 0, y: 0, z: 1.34}
 --- !u!23 &1739534464
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10573,9 +10887,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b5708bf1af239429b6411b5019b5ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grip: 0
-  barrel: 0
-  ammo: 0
+  grip: 4
+  barrel: 7
+  ammo: 11
   myGrip: {fileID: 0}
   myBarrel: {fileID: 0}
   myAmmo: {fileID: 0}
@@ -10587,6 +10901,9 @@ MonoBehaviour:
   firSliFill: {fileID: 0}
   partUI: {fileID: 0}
   uiSet: 0
+  ownText: {fileID: 0}
+  frText: {fileID: 0}
+  dText: {fileID: 0}
 --- !u!65 &1739534467
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11532,8 +11849,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 1, z: 3.33}
-  m_Center: {x: 0, y: 0, z: 1}
+  m_Size: {x: 2, y: 1, z: 3}
+  m_Center: {x: 0, y: 0, z: 1.34}
 --- !u!23 &1902922809
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11591,9 +11908,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b5708bf1af239429b6411b5019b5ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grip: 0
-  barrel: 0
-  ammo: 0
+  grip: 4
+  barrel: 7
+  ammo: 11
   myGrip: {fileID: 0}
   myBarrel: {fileID: 0}
   myAmmo: {fileID: 0}
@@ -11605,6 +11922,9 @@ MonoBehaviour:
   firSliFill: {fileID: 0}
   partUI: {fileID: 0}
   uiSet: 0
+  ownText: {fileID: 0}
+  frText: {fileID: 0}
+  dText: {fileID: 0}
 --- !u!65 &1902922812
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11763,8 +12083,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 1, z: 3.33}
-  m_Center: {x: 0, y: 0, z: 1}
+  m_Size: {x: 2, y: 1, z: 3}
+  m_Center: {x: 0, y: 0, z: 1.34}
 --- !u!23 &1937222435
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11822,9 +12142,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b5708bf1af239429b6411b5019b5ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grip: 0
-  barrel: 0
-  ammo: 0
+  grip: 4
+  barrel: 7
+  ammo: 11
   myGrip: {fileID: 0}
   myBarrel: {fileID: 0}
   myAmmo: {fileID: 0}
@@ -11836,6 +12156,9 @@ MonoBehaviour:
   firSliFill: {fileID: 0}
   partUI: {fileID: 0}
   uiSet: 0
+  ownText: {fileID: 0}
+  frText: {fileID: 0}
+  dText: {fileID: 0}
 --- !u!65 &1937222438
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12044,8 +12367,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 1, z: 3.33}
-  m_Center: {x: 0, y: 0, z: 1}
+  m_Size: {x: 2, y: 1, z: 3}
+  m_Center: {x: 0, y: 0, z: 1.34}
 --- !u!23 &1991268146
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12103,9 +12426,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b5708bf1af239429b6411b5019b5ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grip: 0
-  barrel: 0
-  ammo: 0
+  grip: 4
+  barrel: 7
+  ammo: 11
   myGrip: {fileID: 0}
   myBarrel: {fileID: 0}
   myAmmo: {fileID: 0}
@@ -12117,6 +12440,9 @@ MonoBehaviour:
   firSliFill: {fileID: 0}
   partUI: {fileID: 0}
   uiSet: 0
+  ownText: {fileID: 0}
+  frText: {fileID: 0}
+  dText: {fileID: 0}
 --- !u!65 &1991268149
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -12895,8 +13221,8 @@ BoxCollider:
   m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 2, y: 1, z: 3.33}
-  m_Center: {x: 0, y: 0, z: 1}
+  m_Size: {x: 2, y: 1, z: 3}
+  m_Center: {x: 0, y: 0, z: 1.34}
 --- !u!23 &2115322608
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -12954,9 +13280,9 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b5708bf1af239429b6411b5019b5ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  grip: 0
-  barrel: 0
-  ammo: 0
+  grip: 4
+  barrel: 7
+  ammo: 11
   myGrip: {fileID: 0}
   myBarrel: {fileID: 0}
   myAmmo: {fileID: 0}
@@ -12968,6 +13294,9 @@ MonoBehaviour:
   firSliFill: {fileID: 0}
   partUI: {fileID: 0}
   uiSet: 0
+  ownText: {fileID: 0}
+  frText: {fileID: 0}
+  dText: {fileID: 0}
 --- !u!65 &2115322611
 BoxCollider:
   m_ObjectHideFlags: 0

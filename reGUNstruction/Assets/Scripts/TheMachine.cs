@@ -140,6 +140,8 @@ public class NewRound : GameState
 
         TheMachine.weapon.ResetClips();
         TheMachine.stateMachine.ChangeState(new Walking());
+
+        TheMachine.FindObjectOfType<AnimDoor>().ToggleDoor(true);
     }
 
     public void ActiveState()

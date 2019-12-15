@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 
 public class InvItem : MonoBehaviour
 {
@@ -30,11 +31,18 @@ public class InvItem : MonoBehaviour
     public GameObject partUI;
     public bool uiSet;
 
+    public TMP_Text ownText;
+    public TMP_Text frText;
+    public TMP_Text dText;
+
+
+
     // Start is called before the first frame update
     void Start()
     {
         me = new GunStats();
         partUI = Resources.Load<GameObject>("Prefabs/GunCanvas");
+        WhichPartIsThis();
         
         if(grip != Grip.gripModel.none)
         {
@@ -260,6 +268,8 @@ public class InvItem : MonoBehaviour
         firSliFill = fRObj.transform.GetChild(1).GetChild(0).GetComponent<Image>();
         damSliFill = dObj.transform.GetChild(1).GetChild(0).GetComponent<Image>();
 
+        frText = fRObj.transform.GetChild(3).GetComponent<TMP_Text>();
+        dText = dObj.transform.GetChild(3).GetComponent<TMP_Text>();
 
     }
 
@@ -268,7 +278,8 @@ public class InvItem : MonoBehaviour
         damageSlider.value = me.damage;
         fireRateSlider.value = me.fireRate;
 
-        Debug.Log($"Damage {me.damage} , FireRate {me.fireRate} , My Stats");
+        frText.text = $"Fire Rate";
+        dText.text = $"Damage";
     }
 
     public void OpenUI()
