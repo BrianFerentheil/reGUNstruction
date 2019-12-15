@@ -227,6 +227,8 @@ GameObject:
   - component: {fileID: 23579949}
   - component: {fileID: 23579948}
   - component: {fileID: 23579947}
+  - component: {fileID: 23579950}
+  - component: {fileID: 23579951}
   m_Layer: 0
   m_Name: AmmoFour
   m_TagString: Untagged
@@ -256,11 +258,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 23579945}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2, y: 1, z: 3.33}
+  m_Center: {x: 0, y: 0, z: 1}
 --- !u!23 &23579948
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -306,6 +308,45 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 23579945}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &23579950
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 23579945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64b5708bf1af239429b6411b5019b5ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grip: 0
+  barrel: 0
+  ammo: 0
+  myGrip: {fileID: 0}
+  myBarrel: {fileID: 0}
+  myAmmo: {fileID: 0}
+  fRObj: {fileID: 0}
+  dObj: {fileID: 0}
+  damageSlider: {fileID: 0}
+  fireRateSlider: {fileID: 0}
+  damSliFill: {fileID: 0}
+  firSliFill: {fileID: 0}
+  partUI: {fileID: 0}
+  uiSet: 0
+--- !u!65 &23579951
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 23579945}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &26203051 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4858279551145274414, guid: d637936af3d32d149ad7b7e93139f595,
@@ -412,7 +453,7 @@ GameObject:
   - component: {fileID: 48349263}
   - component: {fileID: 48349262}
   m_Layer: 5
-  m_Name: Image
+  m_Name: Background
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -428,7 +469,9 @@ RectTransform:
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
-  m_Children: []
+  m_Children:
+  - {fileID: 1056135616}
+  - {fileID: 260626444}
   m_Father: {fileID: 260883623}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -606,6 +649,8 @@ GameObject:
   - component: {fileID: 89052131}
   - component: {fileID: 89052130}
   - component: {fileID: 89052129}
+  - component: {fileID: 89052132}
+  - component: {fileID: 89052133}
   m_Layer: 0
   m_Name: AmmoFive
   m_TagString: Untagged
@@ -635,11 +680,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 89052127}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2, y: 1, z: 3.33}
+  m_Center: {x: 0, y: 0, z: 1}
 --- !u!23 &89052130
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -685,6 +730,45 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 89052127}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &89052132
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 89052127}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64b5708bf1af239429b6411b5019b5ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grip: 0
+  barrel: 0
+  ammo: 0
+  myGrip: {fileID: 0}
+  myBarrel: {fileID: 0}
+  myAmmo: {fileID: 0}
+  fRObj: {fileID: 0}
+  dObj: {fileID: 0}
+  damageSlider: {fileID: 0}
+  fireRateSlider: {fileID: 0}
+  damSliFill: {fileID: 0}
+  firSliFill: {fileID: 0}
+  partUI: {fileID: 0}
+  uiSet: 0
+--- !u!65 &89052133
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 89052127}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &90406168 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4858279549894859863, guid: d637936af3d32d149ad7b7e93139f595,
@@ -941,6 +1025,8 @@ GameObject:
   - component: {fileID: 140704148}
   - component: {fileID: 140704147}
   - component: {fileID: 140704146}
+  - component: {fileID: 140704149}
+  - component: {fileID: 140704150}
   m_Layer: 0
   m_Name: AmmoThree
   m_TagString: Untagged
@@ -970,11 +1056,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 140704144}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2, y: 1, z: 3.33}
+  m_Center: {x: 0, y: 0, z: 1}
 --- !u!23 &140704147
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1020,6 +1106,45 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 140704144}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &140704149
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 140704144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64b5708bf1af239429b6411b5019b5ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grip: 0
+  barrel: 0
+  ammo: 0
+  myGrip: {fileID: 0}
+  myBarrel: {fileID: 0}
+  myAmmo: {fileID: 0}
+  fRObj: {fileID: 0}
+  dObj: {fileID: 0}
+  damageSlider: {fileID: 0}
+  fireRateSlider: {fileID: 0}
+  damSliFill: {fileID: 0}
+  firSliFill: {fileID: 0}
+  partUI: {fileID: 0}
+  uiSet: 0
+--- !u!65 &140704150
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 140704144}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: -0.0000076293945}
 --- !u!1 &142173520 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4858279550138479732, guid: d637936af3d32d149ad7b7e93139f595,
@@ -1376,6 +1501,8 @@ GameObject:
   - component: {fileID: 180690874}
   - component: {fileID: 180690873}
   - component: {fileID: 180690872}
+  - component: {fileID: 180690875}
+  - component: {fileID: 180690876}
   m_Layer: 0
   m_Name: AmmoSix
   m_TagString: Untagged
@@ -1405,11 +1532,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 180690870}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2, y: 1, z: 3.33}
+  m_Center: {x: 0, y: 0, z: 1}
 --- !u!23 &180690873
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1455,6 +1582,45 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 180690870}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &180690875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180690870}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64b5708bf1af239429b6411b5019b5ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grip: 0
+  barrel: 0
+  ammo: 0
+  myGrip: {fileID: 0}
+  myBarrel: {fileID: 0}
+  myAmmo: {fileID: 0}
+  fRObj: {fileID: 0}
+  dObj: {fileID: 0}
+  damageSlider: {fileID: 0}
+  fireRateSlider: {fileID: 0}
+  damSliFill: {fileID: 0}
+  firSliFill: {fileID: 0}
+  partUI: {fileID: 0}
+  uiSet: 0
+--- !u!65 &180690876
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 180690870}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &184595282 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4858279549909677049, guid: d637936af3d32d149ad7b7e93139f595,
@@ -1486,6 +1652,8 @@ GameObject:
   - component: {fileID: 185015199}
   - component: {fileID: 185015198}
   - component: {fileID: 185015197}
+  - component: {fileID: 185015200}
+  - component: {fileID: 185015201}
   m_Layer: 0
   m_Name: BarrelTwo
   m_TagString: Untagged
@@ -1515,11 +1683,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 185015195}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2, y: 1, z: 3.33}
+  m_Center: {x: 0, y: 0, z: 1}
 --- !u!23 &185015198
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -1565,6 +1733,45 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 185015195}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &185015200
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 185015195}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64b5708bf1af239429b6411b5019b5ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grip: 0
+  barrel: 0
+  ammo: 0
+  myGrip: {fileID: 0}
+  myBarrel: {fileID: 0}
+  myAmmo: {fileID: 0}
+  fRObj: {fileID: 0}
+  dObj: {fileID: 0}
+  damageSlider: {fileID: 0}
+  fireRateSlider: {fileID: 0}
+  damSliFill: {fileID: 0}
+  firSliFill: {fileID: 0}
+  partUI: {fileID: 0}
+  uiSet: 0
+--- !u!65 &185015201
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 185015195}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: -0.000015258789}
 --- !u!1 &199668781
 GameObject:
   m_ObjectHideFlags: 0
@@ -1677,6 +1884,81 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: 09c76973314790040b9ef284977d7e81, type: 2}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 066631960efc4b24d8b8fcce7020becf, type: 3}
+--- !u!1 &260626443
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 260626444}
+  - component: {fileID: 260626446}
+  - component: {fileID: 260626445}
+  m_Layer: 5
+  m_Name: Image (1)
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &260626444
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 260626443}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1084891941}
+  m_Father: {fileID: 48349261}
+  m_RootOrder: 1
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -2.1, y: -48}
+  m_SizeDelta: {x: 693.6, y: 76.2}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &260626445
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 260626443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.16981131, g: 0.16981131, b: 0.16981131, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: 3d8675433a508ec47b8f895201eacf20, type: 3}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!222 &260626446
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 260626443}
+  m_CullTransparentMesh: 0
 --- !u!1 &260883622
 GameObject:
   m_ObjectHideFlags: 0
@@ -1690,7 +1972,7 @@ GameObject:
   - component: {fileID: 260883625}
   - component: {fileID: 260883624}
   m_Layer: 5
-  m_Name: Canvas
+  m_Name: WallScore
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1704,11 +1986,10 @@ RectTransform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 260883622}
   m_LocalRotation: {x: 0, y: -1, z: 0, w: 0}
-  m_LocalPosition: {x: 0, y: 0, z: -17.78}
+  m_LocalPosition: {x: 0, y: 0, z: -18}
   m_LocalScale: {x: 0.018314, y: 0.018314, z: 0.018314}
   m_Children:
   - {fileID: 48349261}
-  - {fileID: 1241032133}
   m_Father: {fileID: 1181272688}
   m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: -180, z: 0}
@@ -1989,6 +2270,8 @@ GameObject:
   - component: {fileID: 294312950}
   - component: {fileID: 294312949}
   - component: {fileID: 294312948}
+  - component: {fileID: 294312951}
+  - component: {fileID: 294312952}
   m_Layer: 0
   m_Name: BarrelSix
   m_TagString: Untagged
@@ -2018,11 +2301,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 294312946}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2, y: 1, z: 3.33}
+  m_Center: {x: 0, y: 0, z: 1}
 --- !u!23 &294312949
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2068,6 +2351,45 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 294312946}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &294312951
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 294312946}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64b5708bf1af239429b6411b5019b5ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grip: 0
+  barrel: 0
+  ammo: 0
+  myGrip: {fileID: 0}
+  myBarrel: {fileID: 0}
+  myAmmo: {fileID: 0}
+  fRObj: {fileID: 0}
+  dObj: {fileID: 0}
+  damageSlider: {fileID: 0}
+  fireRateSlider: {fileID: 0}
+  damSliFill: {fileID: 0}
+  firSliFill: {fileID: 0}
+  partUI: {fileID: 0}
+  uiSet: 0
+--- !u!65 &294312952
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 294312946}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &304241846 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4858279550730351010, guid: d637936af3d32d149ad7b7e93139f595,
@@ -2117,6 +2439,8 @@ GameObject:
   - component: {fileID: 318660386}
   - component: {fileID: 318660385}
   - component: {fileID: 318660384}
+  - component: {fileID: 318660387}
+  - component: {fileID: 318660388}
   m_Layer: 0
   m_Name: AmmoOne
   m_TagString: Untagged
@@ -2146,11 +2470,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 318660382}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2, y: 1, z: 3.33}
+  m_Center: {x: 0, y: 0, z: 1}
 --- !u!23 &318660385
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -2196,6 +2520,45 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 318660382}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &318660387
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 318660382}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64b5708bf1af239429b6411b5019b5ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grip: 0
+  barrel: 0
+  ammo: 0
+  myGrip: {fileID: 0}
+  myBarrel: {fileID: 0}
+  myAmmo: {fileID: 0}
+  fRObj: {fileID: 0}
+  dObj: {fileID: 0}
+  damageSlider: {fileID: 0}
+  fireRateSlider: {fileID: 0}
+  damSliFill: {fileID: 0}
+  firSliFill: {fileID: 0}
+  partUI: {fileID: 0}
+  uiSet: 0
+--- !u!65 &318660388
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 318660382}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: -0.0000076293945, y: 0, z: -0.0000076293945}
 --- !u!1 &326958974 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4858279550963336761, guid: d637936af3d32d149ad7b7e93139f595,
@@ -3496,6 +3859,8 @@ GameObject:
   - component: {fileID: 561837042}
   - component: {fileID: 561837041}
   - component: {fileID: 561837040}
+  - component: {fileID: 561837043}
+  - component: {fileID: 561837044}
   m_Layer: 0
   m_Name: AmmoTen
   m_TagString: Untagged
@@ -3525,11 +3890,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 561837038}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2, y: 1, z: 3.33}
+  m_Center: {x: 0, y: 0, z: 1}
 --- !u!23 &561837041
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -3575,6 +3940,45 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 561837038}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &561837043
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 561837038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64b5708bf1af239429b6411b5019b5ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grip: 0
+  barrel: 0
+  ammo: 0
+  myGrip: {fileID: 0}
+  myBarrel: {fileID: 0}
+  myAmmo: {fileID: 0}
+  fRObj: {fileID: 0}
+  dObj: {fileID: 0}
+  damageSlider: {fileID: 0}
+  fireRateSlider: {fileID: 0}
+  damSliFill: {fileID: 0}
+  firSliFill: {fileID: 0}
+  partUI: {fileID: 0}
+  uiSet: 0
+--- !u!65 &561837044
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 561837038}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: -0.000015258789, y: 0, z: -0.0000076293945}
 --- !u!1 &566325395 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4858279551080788697, guid: d637936af3d32d149ad7b7e93139f595,
@@ -3976,6 +4380,8 @@ GameObject:
   - component: {fileID: 659244050}
   - component: {fileID: 659244049}
   - component: {fileID: 659244048}
+  - component: {fileID: 659244051}
+  - component: {fileID: 659244052}
   m_Layer: 0
   m_Name: GripTwo
   m_TagString: Untagged
@@ -4005,11 +4411,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 659244046}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2, y: 1, z: 3.33}
+  m_Center: {x: 0, y: 0, z: 1}
 --- !u!23 &659244049
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4055,6 +4461,45 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 659244046}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &659244051
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 659244046}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64b5708bf1af239429b6411b5019b5ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grip: 0
+  barrel: 0
+  ammo: 0
+  myGrip: {fileID: 0}
+  myBarrel: {fileID: 0}
+  myAmmo: {fileID: 0}
+  fRObj: {fileID: 0}
+  dObj: {fileID: 0}
+  damageSlider: {fileID: 0}
+  fireRateSlider: {fileID: 0}
+  damSliFill: {fileID: 0}
+  firSliFill: {fileID: 0}
+  partUI: {fileID: 0}
+  uiSet: 0
+--- !u!65 &659244052
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 659244046}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0000002, y: 1, z: 1.0000002}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &662525330
 GameObject:
   m_ObjectHideFlags: 0
@@ -4750,6 +5195,8 @@ GameObject:
   - component: {fileID: 835232354}
   - component: {fileID: 835232353}
   - component: {fileID: 835232352}
+  - component: {fileID: 835232355}
+  - component: {fileID: 835232356}
   m_Layer: 0
   m_Name: AmmoEleven
   m_TagString: Untagged
@@ -4779,11 +5226,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 835232350}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2, y: 1, z: 3.33}
+  m_Center: {x: 0, y: 0, z: 1}
 --- !u!23 &835232353
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -4829,6 +5276,45 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 835232350}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &835232355
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 835232350}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64b5708bf1af239429b6411b5019b5ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grip: 0
+  barrel: 0
+  ammo: 0
+  myGrip: {fileID: 0}
+  myBarrel: {fileID: 0}
+  myAmmo: {fileID: 0}
+  fRObj: {fileID: 0}
+  dObj: {fileID: 0}
+  damageSlider: {fileID: 0}
+  fireRateSlider: {fileID: 0}
+  damSliFill: {fileID: 0}
+  firSliFill: {fileID: 0}
+  partUI: {fileID: 0}
+  uiSet: 0
+--- !u!65 &835232356
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 835232350}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: -0.000015258789, y: 0, z: 0}
 --- !u!1 &835785961 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4858279550063805040, guid: d637936af3d32d149ad7b7e93139f595,
@@ -5312,6 +5798,8 @@ GameObject:
   - component: {fileID: 942018520}
   - component: {fileID: 942018519}
   - component: {fileID: 942018518}
+  - component: {fileID: 942018521}
+  - component: {fileID: 942018522}
   m_Layer: 0
   m_Name: AmmoNine
   m_TagString: Untagged
@@ -5341,11 +5829,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 942018516}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2, y: 1, z: 3.33}
+  m_Center: {x: 0, y: 0, z: 1}
 --- !u!23 &942018519
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5391,6 +5879,45 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 942018516}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &942018521
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 942018516}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64b5708bf1af239429b6411b5019b5ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grip: 0
+  barrel: 0
+  ammo: 0
+  myGrip: {fileID: 0}
+  myBarrel: {fileID: 0}
+  myAmmo: {fileID: 0}
+  fRObj: {fileID: 0}
+  dObj: {fileID: 0}
+  damageSlider: {fileID: 0}
+  fireRateSlider: {fileID: 0}
+  damSliFill: {fileID: 0}
+  firSliFill: {fileID: 0}
+  partUI: {fileID: 0}
+  uiSet: 0
+--- !u!65 &942018522
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 942018516}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: -0.000015258789, y: 0, z: -0.0000076293945}
 --- !u!1 &949408385
 GameObject:
   m_ObjectHideFlags: 0
@@ -5521,6 +6048,8 @@ GameObject:
   - component: {fileID: 954757315}
   - component: {fileID: 954757314}
   - component: {fileID: 954757313}
+  - component: {fileID: 954757316}
+  - component: {fileID: 954757317}
   m_Layer: 0
   m_Name: BarrelFour
   m_TagString: Untagged
@@ -5550,11 +6079,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 954757311}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2, y: 1, z: 3.33}
+  m_Center: {x: 0, y: 0, z: 1}
 --- !u!23 &954757314
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5600,6 +6129,45 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 954757311}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &954757316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 954757311}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64b5708bf1af239429b6411b5019b5ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grip: 0
+  barrel: 0
+  ammo: 0
+  myGrip: {fileID: 0}
+  myBarrel: {fileID: 0}
+  myAmmo: {fileID: 0}
+  fRObj: {fileID: 0}
+  dObj: {fileID: 0}
+  damageSlider: {fileID: 0}
+  fireRateSlider: {fileID: 0}
+  damSliFill: {fileID: 0}
+  firSliFill: {fileID: 0}
+  partUI: {fileID: 0}
+  uiSet: 0
+--- !u!65 &954757317
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 954757311}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: -0.000015258789}
 --- !u!1 &957487385 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 6262116134476392920, guid: 5e9e851c0e142814dac026a256ba2ac0,
@@ -5779,6 +6347,8 @@ GameObject:
   - component: {fileID: 976438328}
   - component: {fileID: 976438327}
   - component: {fileID: 976438326}
+  - component: {fileID: 976438329}
+  - component: {fileID: 976438330}
   m_Layer: 0
   m_Name: GripFour
   m_TagString: Untagged
@@ -5808,11 +6378,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 976438324}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2, y: 1, z: 3.33}
+  m_Center: {x: 0, y: 0, z: 1}
 --- !u!23 &976438327
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -5858,6 +6428,45 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 976438324}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &976438329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 976438324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64b5708bf1af239429b6411b5019b5ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grip: 0
+  barrel: 0
+  ammo: 0
+  myGrip: {fileID: 0}
+  myBarrel: {fileID: 0}
+  myAmmo: {fileID: 0}
+  fRObj: {fileID: 0}
+  dObj: {fileID: 0}
+  damageSlider: {fileID: 0}
+  fireRateSlider: {fileID: 0}
+  damSliFill: {fileID: 0}
+  firSliFill: {fileID: 0}
+  partUI: {fileID: 0}
+  uiSet: 0
+--- !u!65 &976438330
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 976438324}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0000002, y: 1, z: 1.0000002}
+  m_Center: {x: 0, y: 0, z: 0.0000076293945}
 --- !u!4 &993405894 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: 4896801035141906, guid: 5e93b18aeba68324cb0c6196b3791c1d,
@@ -6240,6 +6849,81 @@ Transform:
   m_Father: {fileID: 1181272688}
   m_RootOrder: 22
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!1 &1056135615
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1056135616}
+  - component: {fileID: 1056135618}
+  - component: {fileID: 1056135617}
+  m_Layer: 5
+  m_Name: Image
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1056135616
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1056135615}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children:
+  - {fileID: 1241032133}
+  m_Father: {fileID: 48349261}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: -2.1, y: 52}
+  m_SizeDelta: {x: 693.6, y: 76.2}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1056135617
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1056135615}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: -765806418, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 0.16981131, g: 0.16981131, b: 0.16981131, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_Sprite: {fileID: 21300000, guid: 3d8675433a508ec47b8f895201eacf20, type: 3}
+  m_Type: 1
+  m_PreserveAspect: 0
+  m_FillCenter: 1
+  m_FillMethod: 4
+  m_FillAmount: 1
+  m_FillClockwise: 1
+  m_FillOrigin: 0
+  m_UseSpriteMesh: 0
+--- !u!222 &1056135618
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1056135615}
+  m_CullTransparentMesh: 0
 --- !u!1 &1056205885
 GameObject:
   m_ObjectHideFlags: 0
@@ -6371,6 +7055,176 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   score: 100
+--- !u!1 &1084891940
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 1084891941}
+  - component: {fileID: 1084891943}
+  - component: {fileID: 1084891942}
+  - component: {fileID: 1084891944}
+  m_Layer: 5
+  m_Name: HighScoreText
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!224 &1084891941
+RectTransform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1084891940}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 260626444}
+  m_RootOrder: 0
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+  m_AnchorMin: {x: 0.5, y: 0.5}
+  m_AnchorMax: {x: 0.5, y: 0.5}
+  m_AnchoredPosition: {x: 1.21, y: -7.000515}
+  m_SizeDelta: {x: 689.93, y: 73.7}
+  m_Pivot: {x: 0.5, y: 0.5}
+--- !u!114 &1084891942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1084891940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f4688fdb7df04437aeb418b961361dc5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  m_Material: {fileID: 0}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
+  m_RaycastTarget: 1
+  m_OnCullStateChanged:
+    m_PersistentCalls:
+      m_Calls: []
+    m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
+      Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
+  m_text: 'High Score:'
+  m_isRightToLeft: 0
+  m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
+  m_fontSharedMaterials: []
+  m_fontMaterial: {fileID: 0}
+  m_fontMaterials: []
+  m_fontColor32:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_fontColor: {r: 1, g: 1, b: 1, a: 1}
+  m_enableVertexGradient: 0
+  m_colorMode: 3
+  m_fontColorGradient:
+    topLeft: {r: 1, g: 1, b: 1, a: 1}
+    topRight: {r: 1, g: 1, b: 1, a: 1}
+    bottomLeft: {r: 1, g: 1, b: 1, a: 1}
+    bottomRight: {r: 1, g: 1, b: 1, a: 1}
+  m_fontColorGradientPreset: {fileID: 0}
+  m_spriteAsset: {fileID: 0}
+  m_tintAllSprites: 0
+  m_overrideHtmlColors: 0
+  m_faceColor:
+    serializedVersion: 2
+    rgba: 4294967295
+  m_outlineColor:
+    serializedVersion: 2
+    rgba: 4278190080
+  m_fontSize: 66.75
+  m_fontSizeBase: 36
+  m_fontWeight: 400
+  m_enableAutoSizing: 1
+  m_fontSizeMin: 18
+  m_fontSizeMax: 72
+  m_fontStyle: 0
+  m_textAlignment: 513
+  m_characterSpacing: 0
+  m_wordSpacing: 0
+  m_lineSpacing: 0
+  m_lineSpacingMax: 0
+  m_paragraphSpacing: 0
+  m_charWidthMaxAdj: 0
+  m_enableWordWrapping: 0
+  m_wordWrappingRatios: 0.4
+  m_overflowMode: 0
+  m_firstOverflowCharacterIndex: -1
+  m_linkedTextComponent: {fileID: 0}
+  m_isLinkedTextComponent: 0
+  m_isTextTruncated: 0
+  m_enableKerning: 1
+  m_enableExtraPadding: 0
+  checkPaddingRequired: 0
+  m_isRichText: 1
+  m_parseCtrlCharacters: 1
+  m_isOrthographic: 1
+  m_isCullingEnabled: 0
+  m_ignoreRectMaskCulling: 0
+  m_ignoreCulling: 1
+  m_horizontalMapping: 0
+  m_verticalMapping: 0
+  m_uvLineOffset: 0
+  m_geometrySortingOrder: 0
+  m_VertexBufferAutoSizeReduction: 1
+  m_firstVisibleCharacter: 0
+  m_useMaxVisibleDescender: 1
+  m_pageToDisplay: 1
+  m_margin: {x: 0, y: -7.457814, z: 0, w: 6.5330386}
+  m_textInfo:
+    textComponent: {fileID: 1084891942}
+    characterCount: 11
+    spriteCount: 0
+    spaceCount: 1
+    wordCount: 2
+    linkCount: 0
+    lineCount: 1
+    pageCount: 1
+    materialCount: 1
+  m_isUsingLegacyAnimationComponent: 0
+  m_isVolumetricText: 0
+  m_spriteAnimator: {fileID: 0}
+  m_hasFontAssetChanged: 0
+  m_subTextObjects:
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  - {fileID: 0}
+  m_baseMaterial: {fileID: 0}
+  m_maskOffset: {x: 0, y: 0, z: 0, w: 0}
+--- !u!222 &1084891943
+CanvasRenderer:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1084891940}
+  m_CullTransparentMesh: 0
+--- !u!114 &1084891944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1084891940}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a283f52d9cea03f44ae8427f7e9a0d8e, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1095199554
 GameObject:
   m_ObjectHideFlags: 0
@@ -6759,6 +7613,8 @@ GameObject:
   - component: {fileID: 1194093161}
   - component: {fileID: 1194093160}
   - component: {fileID: 1194093159}
+  - component: {fileID: 1194093162}
+  - component: {fileID: 1194093163}
   m_Layer: 0
   m_Name: BarrelFive
   m_TagString: Untagged
@@ -6788,11 +7644,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1194093157}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2, y: 1, z: 3.33}
+  m_Center: {x: 0, y: 0, z: 1}
 --- !u!23 &1194093160
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -6838,6 +7694,45 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1194093157}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1194093162
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1194093157}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64b5708bf1af239429b6411b5019b5ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grip: 0
+  barrel: 0
+  ammo: 0
+  myGrip: {fileID: 0}
+  myBarrel: {fileID: 0}
+  myAmmo: {fileID: 0}
+  fRObj: {fileID: 0}
+  dObj: {fileID: 0}
+  damageSlider: {fileID: 0}
+  fireRateSlider: {fileID: 0}
+  damSliFill: {fileID: 0}
+  firSliFill: {fileID: 0}
+  partUI: {fileID: 0}
+  uiSet: 0
+--- !u!65 &1194093163
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1194093157}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1197872965 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4858279550694272110, guid: d637936af3d32d149ad7b7e93139f595,
@@ -7326,8 +8221,9 @@ GameObject:
   - component: {fileID: 1241032133}
   - component: {fileID: 1241032135}
   - component: {fileID: 1241032134}
+  - component: {fileID: 1241032136}
   m_Layer: 5
-  m_Name: Text (TMP)
+  m_Name: TotalScoreText
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -7340,17 +8236,17 @@ RectTransform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1241032132}
-  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
-  m_Father: {fileID: 260883623}
-  m_RootOrder: 1
+  m_Father: {fileID: 1056135616}
+  m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: 4.5, y: 54.1}
-  m_SizeDelta: {x: 720.4, y: 73.7}
+  m_AnchoredPosition: {x: 1.21, y: -7.000515}
+  m_SizeDelta: {x: 689.93, y: 73.7}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &1241032134
 MonoBehaviour:
@@ -7372,7 +8268,7 @@ MonoBehaviour:
       m_Calls: []
     m_TypeName: UnityEngine.UI.MaskableGraphic+CullStateChangedEvent, UnityEngine.UI,
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
-  m_text: New Text
+  m_text: 'Total Score:'
   m_isRightToLeft: 0
   m_fontAsset: {fileID: 11400000, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
   m_sharedMaterial: {fileID: 2180264, guid: 8f586378b4e144a9851e7b34d9b748ee, type: 2}
@@ -7400,14 +8296,14 @@ MonoBehaviour:
   m_outlineColor:
     serializedVersion: 2
     rgba: 4278190080
-  m_fontSize: 36
+  m_fontSize: 68.55
   m_fontSizeBase: 36
   m_fontWeight: 400
-  m_enableAutoSizing: 0
+  m_enableAutoSizing: 1
   m_fontSizeMin: 18
   m_fontSizeMax: 72
   m_fontStyle: 0
-  m_textAlignment: 514
+  m_textAlignment: 513
   m_characterSpacing: 0
   m_wordSpacing: 0
   m_lineSpacing: 0
@@ -7438,10 +8334,10 @@ MonoBehaviour:
   m_firstVisibleCharacter: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 0, z: 0, w: 0}
+  m_margin: {x: 0, y: -7.887913, z: 0, w: 4.9639335}
   m_textInfo:
     textComponent: {fileID: 1241032134}
-    characterCount: 8
+    characterCount: 12
     spriteCount: 0
     spaceCount: 1
     wordCount: 2
@@ -7472,6 +8368,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1241032132}
   m_CullTransparentMesh: 0
+--- !u!114 &1241032136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1241032132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9871ac47162dbe241a6336b4fc0a2303, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1244375341 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4858279550193515700, guid: d637936af3d32d149ad7b7e93139f595,
@@ -8195,6 +9103,8 @@ GameObject:
   - component: {fileID: 1419508868}
   - component: {fileID: 1419508867}
   - component: {fileID: 1419508866}
+  - component: {fileID: 1419508869}
+  - component: {fileID: 1419508870}
   m_Layer: 0
   m_Name: GripThree
   m_TagString: Untagged
@@ -8224,11 +9134,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1419508864}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2, y: 1, z: 3.33}
+  m_Center: {x: 0, y: 0, z: 1}
 --- !u!23 &1419508867
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8274,6 +9184,45 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1419508864}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1419508869
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1419508864}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64b5708bf1af239429b6411b5019b5ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grip: 0
+  barrel: 0
+  ammo: 0
+  myGrip: {fileID: 0}
+  myBarrel: {fileID: 0}
+  myAmmo: {fileID: 0}
+  fRObj: {fileID: 0}
+  dObj: {fileID: 0}
+  damageSlider: {fileID: 0}
+  fireRateSlider: {fileID: 0}
+  damSliFill: {fileID: 0}
+  firSliFill: {fileID: 0}
+  partUI: {fileID: 0}
+  uiSet: 0
+--- !u!65 &1419508870
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1419508864}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0000002, y: 1, z: 1.0000002}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1424935233
 GameObject:
   m_ObjectHideFlags: 0
@@ -8549,6 +9498,8 @@ GameObject:
   - component: {fileID: 1548269563}
   - component: {fileID: 1548269562}
   - component: {fileID: 1548269561}
+  - component: {fileID: 1548269564}
+  - component: {fileID: 1548269565}
   m_Layer: 0
   m_Name: BarrelThree
   m_TagString: Untagged
@@ -8578,11 +9529,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1548269559}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2, y: 1, z: 3.33}
+  m_Center: {x: 0, y: 0, z: 1}
 --- !u!23 &1548269562
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -8628,6 +9579,45 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1548269559}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1548269564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1548269559}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64b5708bf1af239429b6411b5019b5ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grip: 0
+  barrel: 0
+  ammo: 0
+  myGrip: {fileID: 0}
+  myBarrel: {fileID: 0}
+  myAmmo: {fileID: 0}
+  fRObj: {fileID: 0}
+  dObj: {fileID: 0}
+  damageSlider: {fileID: 0}
+  fireRateSlider: {fileID: 0}
+  damSliFill: {fileID: 0}
+  firSliFill: {fileID: 0}
+  partUI: {fileID: 0}
+  uiSet: 0
+--- !u!65 &1548269565
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1548269559}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1556796088 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4858279549383800340, guid: d637936af3d32d149ad7b7e93139f595,
@@ -9358,6 +10348,8 @@ GameObject:
   - component: {fileID: 1737325067}
   - component: {fileID: 1737325066}
   - component: {fileID: 1737325065}
+  - component: {fileID: 1737325068}
+  - component: {fileID: 1737325069}
   m_Layer: 0
   m_Name: AmmoEight
   m_TagString: Untagged
@@ -9387,11 +10379,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1737325063}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2, y: 1, z: 3.33}
+  m_Center: {x: 0, y: 0, z: 1}
 --- !u!23 &1737325066
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9437,6 +10429,45 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1737325063}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1737325068
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1737325063}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64b5708bf1af239429b6411b5019b5ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grip: 0
+  barrel: 0
+  ammo: 0
+  myGrip: {fileID: 0}
+  myBarrel: {fileID: 0}
+  myAmmo: {fileID: 0}
+  fRObj: {fileID: 0}
+  dObj: {fileID: 0}
+  damageSlider: {fileID: 0}
+  fireRateSlider: {fileID: 0}
+  damSliFill: {fileID: 0}
+  firSliFill: {fileID: 0}
+  partUI: {fileID: 0}
+  uiSet: 0
+--- !u!65 &1737325069
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1737325063}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: -0.000015258789, y: 0, z: -0.0000076293945}
 --- !u!1 &1739534461
 GameObject:
   m_ObjectHideFlags: 0
@@ -9449,6 +10480,8 @@ GameObject:
   - component: {fileID: 1739534465}
   - component: {fileID: 1739534464}
   - component: {fileID: 1739534463}
+  - component: {fileID: 1739534466}
+  - component: {fileID: 1739534467}
   m_Layer: 0
   m_Name: AmmoSeven
   m_TagString: Untagged
@@ -9478,11 +10511,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1739534461}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2, y: 1, z: 3.33}
+  m_Center: {x: 0, y: 0, z: 1}
 --- !u!23 &1739534464
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -9528,6 +10561,45 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1739534461}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1739534466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1739534461}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64b5708bf1af239429b6411b5019b5ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grip: 0
+  barrel: 0
+  ammo: 0
+  myGrip: {fileID: 0}
+  myBarrel: {fileID: 0}
+  myAmmo: {fileID: 0}
+  fRObj: {fileID: 0}
+  dObj: {fileID: 0}
+  damageSlider: {fileID: 0}
+  fireRateSlider: {fileID: 0}
+  damSliFill: {fileID: 0}
+  firSliFill: {fileID: 0}
+  partUI: {fileID: 0}
+  uiSet: 0
+--- !u!65 &1739534467
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1739534461}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: -0.0000076293945}
 --- !u!1001 &1742714277
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10426,6 +11498,8 @@ GameObject:
   - component: {fileID: 1902922810}
   - component: {fileID: 1902922809}
   - component: {fileID: 1902922808}
+  - component: {fileID: 1902922811}
+  - component: {fileID: 1902922812}
   m_Layer: 0
   m_Name: BarrelSeven
   m_TagString: Untagged
@@ -10455,11 +11529,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1902922806}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2, y: 1, z: 3.33}
+  m_Center: {x: 0, y: 0, z: 1}
 --- !u!23 &1902922809
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10505,6 +11579,45 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1902922806}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1902922811
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1902922806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64b5708bf1af239429b6411b5019b5ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grip: 0
+  barrel: 0
+  ammo: 0
+  myGrip: {fileID: 0}
+  myBarrel: {fileID: 0}
+  myAmmo: {fileID: 0}
+  fRObj: {fileID: 0}
+  dObj: {fileID: 0}
+  damageSlider: {fileID: 0}
+  fireRateSlider: {fileID: 0}
+  damSliFill: {fileID: 0}
+  firSliFill: {fileID: 0}
+  partUI: {fileID: 0}
+  uiSet: 0
+--- !u!65 &1902922812
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1902922806}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1918324374 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4858279550693840032, guid: d637936af3d32d149ad7b7e93139f595,
@@ -10616,6 +11729,8 @@ GameObject:
   - component: {fileID: 1937222436}
   - component: {fileID: 1937222435}
   - component: {fileID: 1937222434}
+  - component: {fileID: 1937222437}
+  - component: {fileID: 1937222438}
   m_Layer: 0
   m_Name: GripOne
   m_TagString: Untagged
@@ -10645,11 +11760,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1937222432}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2, y: 1, z: 3.33}
+  m_Center: {x: 0, y: 0, z: 1}
 --- !u!23 &1937222435
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10695,6 +11810,45 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1937222432}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1937222437
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1937222432}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64b5708bf1af239429b6411b5019b5ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grip: 0
+  barrel: 0
+  ammo: 0
+  myGrip: {fileID: 0}
+  myBarrel: {fileID: 0}
+  myAmmo: {fileID: 0}
+  fRObj: {fileID: 0}
+  dObj: {fileID: 0}
+  damageSlider: {fileID: 0}
+  fireRateSlider: {fileID: 0}
+  damSliFill: {fileID: 0}
+  firSliFill: {fileID: 0}
+  partUI: {fileID: 0}
+  uiSet: 0
+--- !u!65 &1937222438
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1937222432}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1.0000002, y: 1, z: 1.0000002}
+  m_Center: {x: -0.0000076293945, y: 0, z: 0}
 --- !u!1 &1955051608 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4858279551199023987, guid: d637936af3d32d149ad7b7e93139f595,
@@ -10856,6 +12010,8 @@ GameObject:
   - component: {fileID: 1991268147}
   - component: {fileID: 1991268146}
   - component: {fileID: 1991268145}
+  - component: {fileID: 1991268149}
+  - component: {fileID: 1991268148}
   m_Layer: 0
   m_Name: BarrelOne
   m_TagString: Untagged
@@ -10885,11 +12041,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1991268143}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2, y: 1, z: 3.33}
+  m_Center: {x: 0, y: 0, z: 1}
 --- !u!23 &1991268146
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -10935,6 +12091,45 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1991268143}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &1991268148
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1991268143}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64b5708bf1af239429b6411b5019b5ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grip: 0
+  barrel: 0
+  ammo: 0
+  myGrip: {fileID: 0}
+  myBarrel: {fileID: 0}
+  myAmmo: {fileID: 0}
+  fRObj: {fileID: 0}
+  dObj: {fileID: 0}
+  damageSlider: {fileID: 0}
+  fireRateSlider: {fileID: 0}
+  damSliFill: {fileID: 0}
+  firSliFill: {fileID: 0}
+  partUI: {fileID: 0}
+  uiSet: 0
+--- !u!65 &1991268149
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1991268143}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: 0}
 --- !u!1 &1993032063 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4858279549586388470, guid: d637936af3d32d149ad7b7e93139f595,
@@ -11666,6 +12861,8 @@ GameObject:
   - component: {fileID: 2115322609}
   - component: {fileID: 2115322608}
   - component: {fileID: 2115322607}
+  - component: {fileID: 2115322610}
+  - component: {fileID: 2115322611}
   m_Layer: 0
   m_Name: AmmoTwo
   m_TagString: Untagged
@@ -11695,11 +12892,11 @@ BoxCollider:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2115322605}
   m_Material: {fileID: 0}
-  m_IsTrigger: 0
+  m_IsTrigger: 1
   m_Enabled: 1
   serializedVersion: 2
-  m_Size: {x: 1, y: 1, z: 1}
-  m_Center: {x: 0, y: 0, z: 0}
+  m_Size: {x: 2, y: 1, z: 3.33}
+  m_Center: {x: 0, y: 0, z: 1}
 --- !u!23 &2115322608
 MeshRenderer:
   m_ObjectHideFlags: 0
@@ -11745,6 +12942,45 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2115322605}
   m_Mesh: {fileID: 10202, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!114 &2115322610
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2115322605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 64b5708bf1af239429b6411b5019b5ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  grip: 0
+  barrel: 0
+  ammo: 0
+  myGrip: {fileID: 0}
+  myBarrel: {fileID: 0}
+  myAmmo: {fileID: 0}
+  fRObj: {fileID: 0}
+  dObj: {fileID: 0}
+  damageSlider: {fileID: 0}
+  fireRateSlider: {fileID: 0}
+  damSliFill: {fileID: 0}
+  firSliFill: {fileID: 0}
+  partUI: {fileID: 0}
+  uiSet: 0
+--- !u!65 &2115322611
+BoxCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 2115322605}
+  m_Material: {fileID: 0}
+  m_IsTrigger: 0
+  m_Enabled: 1
+  serializedVersion: 2
+  m_Size: {x: 1, y: 1, z: 1}
+  m_Center: {x: 0, y: 0, z: -0.0000076293945}
 --- !u!1 &2121532377 stripped
 GameObject:
   m_CorrespondingSourceObject: {fileID: 4858279549701096700, guid: d637936af3d32d149ad7b7e93139f595,

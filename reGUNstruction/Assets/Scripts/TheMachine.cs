@@ -96,6 +96,7 @@ public class MainMenu : GameState
             TheMachine.SetWeaponRef();
         }
         TheMachine.weapon.enabled = false;
+
     }
 
     public void ActiveState()
@@ -163,6 +164,7 @@ public class GunBuildingMenu : GameState
         GameObject.FindObjectOfType<ButtonManager>().OpenCrafting();
         Cursor.visible = true;
         TheMachine.weapon.enabled = false;
+        
     }
 
     public void ActiveState()
