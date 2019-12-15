@@ -161,10 +161,11 @@ public class ButtonManager : MonoBehaviour
         mainMenu.SetActive(false);
         crafting.SetActive(false);
         option.SetActive(false);
-        pause.SetActive(true);
+        pause.SetActive(false);
+        inGameCanvas.SetActive(false);
         gunStatCanvas.SetActive(false);
-        ammoCanvas.SetActive(false);
-        scoreCanvas.SetActive(false);
+        ammoCanvas.SetActive(true);
+        scoreCanvas.SetActive(true);
 
         pauseMenuUI.SetActive(false);
         TheMachine.fpc.enabled = true;
