@@ -92,7 +92,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   models:
-  - {fileID: 7655583084850657759}
+  - {fileID: 3300006, guid: 0a139ed954ef18240a1f8afcab4ed2bb, type: 3}
   - {fileID: 3300000, guid: 2c2d5dccf304fe04a87e196c2a7ed69c, type: 3}
   - {fileID: 3300000, guid: 1f96faa5dba841645a5e03ffcaf8114a, type: 3}
   - {fileID: 3300000, guid: 7806c9724cab5b247a0b1ae42ef8ce08, type: 3}
@@ -128,7 +128,8 @@ MonoBehaviour:
   indexLength: 0
   curPos: 3
   swiMod: {fileID: 1711875373116414393}
-  modelSET: 0
+  modelSET: 1
+  preset: 1
 --- !u!1 &7659872117586339227
 GameObject:
   m_ObjectHideFlags: 0
@@ -221,7 +222,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   models:
-  - {fileID: 7652133089148635757}
+  - {fileID: 3300002, guid: 0a139ed954ef18240a1f8afcab4ed2bb, type: 3}
   - {fileID: 3300004, guid: b1736d79a2fc9be4b88db1fafd3c0c1b, type: 3}
   - {fileID: 3300004, guid: e436f1c05d7495f4ba683b39f364552e, type: 3}
   - {fileID: 3300002, guid: 9b82d6373e2325c468a37bd22a5efb5b, type: 3}
@@ -257,6 +258,8 @@ MonoBehaviour:
   indexLength: 0
   curPos: 3
   swiMod: {fileID: 4694268991882263864}
+  modelsSET: 1
+  preset: 1
 --- !u!1 &7659954262993407429
 GameObject:
   m_ObjectHideFlags: 0
@@ -349,7 +352,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   models:
-  - {fileID: 7655164638884947245}
+  - {fileID: 3300004, guid: 0a139ed954ef18240a1f8afcab4ed2bb, type: 3}
   - {fileID: 3300000, guid: 3e6ce9aaa7d87244882a755e31ce65f2, type: 3}
   - {fileID: 3300000, guid: d11078ca112e0c04298fb3e84e1f95f9, type: 3}
   currentIndex: 0
@@ -384,7 +387,8 @@ MonoBehaviour:
   indexLength: 0
   curPos: 3
   swiMod: {fileID: 3046731277342780856}
-  modelsSET: 0
+  modelsSET: 1
+  preset: 1
 --- !u!1 &7660524749840790121
 GameObject:
   m_ObjectHideFlags: 0

@@ -16,11 +16,10 @@ public class Ammo : GunStats
     protected override void Start()
     {
         base.Start();
-        indexLength = System.Enum.GetValues(typeof(ammoModel)).Length -1;
+        indexLength = System.Enum.GetValues(typeof(ammoModel)).Length - 1;
         currentAmmo = (ammoModel)curPos;
         swiMod = GetComponent<SwitchModel>();
-        if (swiMod.models.Length == 0)
-            SetModels();
+        SetModels();
     }
 
     public void SetModels()
@@ -67,7 +66,7 @@ public class Ammo : GunStats
         }
 
         currentAmmo = (ammoModel)curPos;
-        
+
         return currentAmmo;
     }
 

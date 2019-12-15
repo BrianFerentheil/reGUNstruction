@@ -10,8 +10,7 @@ public class Grip : GunStats
     public int curPos = 0;
 
     public SwitchModel swiMod;
-    bool modelsSET;
-
+    public bool modelsSET;
 
     protected override void Start()
     {
@@ -19,8 +18,7 @@ public class Grip : GunStats
         indexLength = System.Enum.GetValues(typeof(gripModel)).Length - 1;
         currentGrip = (gripModel)curPos;
         swiMod = GetComponent<SwitchModel>();
-        if (swiMod.models.Length == 0)
-            SetModels();
+        SetModels();
     }
 
     public void SetModels()

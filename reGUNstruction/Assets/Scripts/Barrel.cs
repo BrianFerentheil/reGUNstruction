@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class Barrel : GunStats
 {
-    public enum barrelModel { one, two, three, four, five, six, seven,  none }
+    public enum barrelModel { one, two, three, four, five, six, seven, none }
     public barrelModel currentBarrel = barrelModel.none;
 
     public int indexLength;
@@ -16,11 +16,10 @@ public class Barrel : GunStats
     protected override void Start()
     {
         base.Start();
-        indexLength = System.Enum.GetValues(typeof(barrelModel)).Length -1;
+        indexLength = System.Enum.GetValues(typeof(barrelModel)).Length - 1;
         currentBarrel = (barrelModel)curPos;
         swiMod = GetComponent<SwitchModel>();
-        if (swiMod.models.Length == 0)
-            SetModels();
+        SetModels();
     }
 
     public void SetModels()

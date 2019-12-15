@@ -27,7 +27,7 @@ public class SwitchModel : MonoBehaviour
             currentIndex++;
             if (currentIndex >= models.Length)
                 currentIndex = 0;
-            gameObject.GetComponent<MeshFilter>().mesh = models[currentIndex].mesh;
+            gameObject.GetComponent<MeshFilter>().sharedMesh = models[currentIndex].sharedMesh;
             if(ammo != null)
             {
                 ammo.NextPart();
@@ -53,7 +53,7 @@ public class SwitchModel : MonoBehaviour
             currentIndex--;
             if (currentIndex < 0)
                 currentIndex = models.Length - 1;
-            gameObject.GetComponent<MeshFilter>().mesh = models[currentIndex].mesh;
+            gameObject.GetComponent<MeshFilter>().sharedMesh = models[currentIndex].sharedMesh;
             if (ammo != null)
             {
                 ammo.LastPart();
@@ -75,7 +75,7 @@ public class SwitchModel : MonoBehaviour
     public void SetModel(int num)
     {
         if (num >= 0 && num < models.Length)
-            gameObject.GetComponent<MeshFilter>().sharedMesh = models[num].mesh;
+            gameObject.GetComponent<MeshFilter>().sharedMesh = models[num].sharedMesh;
         else
             Debug.Log("Model Index out of bounds");
     }
