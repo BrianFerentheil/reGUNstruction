@@ -4,11 +4,18 @@ using UnityEngine;
 
 public class Ball : MonoBehaviour
 {
-    
+    AudioManager am;
+    MinigameWall[] walls;
+    BasketMinigameWall[] basketWalls;
+    public bool basketball;
+    public bool soccerball;
 
     void Start()
     {
-        
+        am = FindObjectOfType<AudioManager>();
+
+        walls = FindObjectsOfType(typeof(MinigameWall)) as MinigameWall[];
+        basketWalls = FindObjectsOfType(typeof(BasketMinigameWall)) as BasketMinigameWall[];
     }
 
     
@@ -20,14 +27,51 @@ public class Ball : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.GetComponent<Goal>() != null)
+        
+
+
+        if (other.GetComponent<Goal>() != null)
         {
             other.GetComponent<Goal>().Score();
-            Destroy(gameObject,0.1f);
+            Destroy(gameObject,0.2f);
         }
         else
         {
             return;
         }
+    }
+
+    private void OnCollisionEnter(Collision collision)
+    {
+        if(basketball)
+        {
+            foreach(BasketMinigameWall wall in basketWalls)
+            {
+                if (wall.playerEnter)
+                {
+                    am.PlayAudio("BallBounce");
+                }
+                else
+                {
+                    //am.PlayAudio("BallBounce");
+                }
+            }
+        }
+
+        if (soccerball)
+        {
+            foreach (MinigameWall wall in walls)
+            {
+                if (wall.playerEnter)
+                {
+                    am.PlayAudio("BallBounce");
+                }
+                else
+                {
+                    //am.PlayAudio("BallBounce");
+                }
+            }
+        }
+        
     }
 }

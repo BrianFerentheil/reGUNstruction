@@ -5,20 +5,18 @@ using UnityEngine;
 public class MinigameWall : MonoBehaviour
 {
     public GameObject player;
-
+    public bool playerEnter;
 
     void Start()
     {
         player = GameObject.FindGameObjectWithTag("Player");
-
-        
     }
 
-    // Update is called once per frame
-    void Update()
+    private void OnTriggerEnter(Collider other)
     {
-        
+        if (other.tag == "Player")
+        {
+            playerEnter = !playerEnter;
+        }
     }
-
-    
 }

@@ -19,6 +19,7 @@ public class AudioManager : MonoBehaviour
             if(clip.name == clipToPlay)
             {
                 audioSource.PlayOneShot(clip);
+                //audioSource.volume = clipVolume;
             }
         }
     }
