@@ -11,6 +11,15 @@ public enum GunBase
     MG,
     COUNT
 }
+
+public enum ComponentType
+{
+    ammo,
+    barrel,
+    grip,
+    none
+}
+
 public class SwappingGunModel : MonoBehaviour
 {
     [SerializeField] List<GameObject> bases;
@@ -20,6 +29,25 @@ public class SwappingGunModel : MonoBehaviour
     TheMachine machine;
     [SerializeField] GameObject craftingCanvas;
     bool update = false;
+    [SerializeField] int currentGrip = 0;
+    [SerializeField] int currentAmmo = 0;
+    [SerializeField] int currentBarrel = 0;
+    
+    public void SetGrip(int index)
+    {
+        currentGrip = index;
+    }
+
+    public void SetAmmo(int index)
+    {
+        currentAmmo = index;
+    }
+
+    public void SetBarrel(int index)
+    {
+        currentBarrel = index;
+    }
+
     void Start()
     {
         gunTransform = currWeapon.transform;
@@ -104,6 +132,7 @@ public class SwappingGunModel : MonoBehaviour
             default:
                 break;
         }
+
         StartCoroutine("DelayUpdate");
     }
 
@@ -178,6 +207,7 @@ public class SwappingGunModel : MonoBehaviour
             default:
                 break;
         }
+
         StartCoroutine("DelayUpdate");
     }
 
@@ -185,7 +215,6 @@ public class SwappingGunModel : MonoBehaviour
     {
         yield return new WaitForSeconds(.2f);
         update = true;
-        Debug.Log("Update is true");
         yield return new WaitForSeconds(0);
     }
 
@@ -235,5 +264,29 @@ public class SwappingGunModel : MonoBehaviour
                     Debug.Log("Switcher Doesn't Exist.");
             }
         }
+        Debug.Log("Current Ammo: " + currentAmmo);
+        foreach(SwitchModel comp in currWeapon.GetComponentsInChildren<SwitchModel>())
+        {
+            GameObject component = comp.gameObject;
+            Debug.Log("Correcting index");
+            switch (comp.GetComponentType())
+            {
+                case ComponentType.ammo:
+                    comp.SetCurrentIndex(currentAmmo);
+                    break;
+                case ComponentType.grip:
+                    comp.SetCurrentIndex(currentGrip);
+                    break;
+                case ComponentType.barrel:
+                    comp.SetCurrentIndex(currentBarrel);
+                    break;
+                case ComponentType.none:
+                    break;
+                default:
+                    break;
+            }
+        }
+
+        currWeapon.GetComponent<GunModel>().RunStats();
     }
 }

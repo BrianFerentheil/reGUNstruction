@@ -11,6 +11,38 @@ public class SwitchModel : MonoBehaviour
     Grip grip;
     Barrel barrel;
     [SerializeField] GunModel model;
+    [SerializeField] SwappingGunModel swapper;
+
+    public int GetCurrentIndex()
+    {
+        return currentIndex;
+    }
+
+    public void SetCurrentIndex(int index)
+    {
+        currentIndex = index;
+        int i = 0;
+        if (ammo != null)
+            for (i = 0; i < index; i++)
+                ammo.NextPart();
+        else if (grip != null)
+            for (i = 0; i < index; i++)
+                grip.NextPart();
+        else if (barrel != null)
+            for (i = 0; i < index; i++)
+                barrel.NextPart();
+    }
+
+    public ComponentType GetComponentType()
+    {
+        if (ammo != null)
+            return ComponentType.ammo;
+        else if (grip != null)
+            return ComponentType.grip;
+        else if (barrel != null)
+            return ComponentType.barrel;
+        return ComponentType.none;
+    }
 
     void Awake()
     {
@@ -18,6 +50,7 @@ public class SwitchModel : MonoBehaviour
         barrel = gameObject.GetComponent<Barrel>();
         grip = gameObject.GetComponent<Grip>();
         model = gameObject.GetComponentInParent<GunModel>();
+        swapper = GameObject.Find("Gun Swapper").GetComponent<SwappingGunModel>();
     }
 
     public void SwapModelUp()
@@ -28,17 +61,17 @@ public class SwitchModel : MonoBehaviour
             if (currentIndex >= models.Length)
                 currentIndex = 0;
             gameObject.GetComponent<MeshFilter>().sharedMesh = models[currentIndex].sharedMesh;
-            if(ammo != null)
+            if (ammo != null)
             {
                 ammo.NextPart();
                 model.RunStats();
             }
-            else if(grip != null)
+            else if (grip != null)
             {
                 grip.NextPart();
                 model.RunStats();
             }
-            else if(barrel != null)
+            else if (barrel != null)
             {
                 barrel.NextPart();
                 model.RunStats();
@@ -78,6 +111,16 @@ public class SwitchModel : MonoBehaviour
             gameObject.GetComponent<MeshFilter>().sharedMesh = models[num].sharedMesh;
         else
             Debug.Log("Model Index out of bounds");
+    }
+
+    void OnDestroy()
+    {
+        if (ammo != null)
+            swapper.SetAmmo(currentIndex);
+        else if (grip != null)
+            swapper.SetGrip(currentIndex);
+        else if (barrel != null)
+            swapper.SetBarrel(currentIndex);
     }
 
 }
