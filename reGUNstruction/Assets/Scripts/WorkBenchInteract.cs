@@ -28,7 +28,7 @@ public class WorkBenchInteract : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if(other.name == "FPSController")
+        if(other.tag == "Player")
         {
             playerClose = true;
         }
@@ -36,7 +36,7 @@ public class WorkBenchInteract : MonoBehaviour
 
     private void OnTriggerExit(Collider other)
     {
-        if(other.name == "FPSController")
+        if(other.tag == "Player")
         {
             playerClose = false;
         }
