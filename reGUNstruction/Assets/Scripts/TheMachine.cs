@@ -13,6 +13,7 @@ public class TheMachine : MonoBehaviour
 
     public static ScoreManager scoreMan;
 
+    public static bool atWorkBench = false;
 
     public ButtonManager uiMan;
 
@@ -159,6 +160,7 @@ public class GunBuildingMenu : GameState
 {
     public void EnterState()
     {
+        TheMachine.atWorkBench = true;
         RotateObj.atWorkBench = true;
         TheMachine.fpc.enabled = false;
         TheMachine.cc.enabled = false;
@@ -176,6 +178,7 @@ public class GunBuildingMenu : GameState
 
     public void ExitState()
     {
+        TheMachine.atWorkBench = false;
         RotateObj.atWorkBench = false;
         GameObject.FindObjectOfType<ButtonManager>().CloseCrafting();
         Cursor.visible = false;

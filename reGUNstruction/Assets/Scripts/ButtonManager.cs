@@ -178,23 +178,26 @@ public class ButtonManager : MonoBehaviour
 
     void Pause()
     {
-        mainMenu.SetActive(false);
-        crafting.SetActive(false);
-        option.SetActive(false);
-        pause.SetActive(true);
-        gunStatCanvas.SetActive(false);
-        ammoCanvas.SetActive(false);
-        scoreCanvas.SetActive(false);
+        if (!TheMachine.atWorkBench)
+        {
+            mainMenu.SetActive(false);
+            crafting.SetActive(false);
+            option.SetActive(false);
+            pause.SetActive(true);
+            gunStatCanvas.SetActive(false);
+            ammoCanvas.SetActive(false);
+            scoreCanvas.SetActive(false);
 
-        pauseMenuUI.SetActive(true);
-        TheMachine.fpc.enabled = false;
-        TheMachine.cc.enabled = false;
-        TheMachine.weapon.enabled = false;
-        Cursor.visible = true;
-        mLook.SetCursorLock(false);
+            pauseMenuUI.SetActive(true);
+            TheMachine.fpc.enabled = false;
+            TheMachine.cc.enabled = false;
+            TheMachine.weapon.enabled = false;
+            Cursor.visible = true;
+            mLook.SetCursorLock(false);
 
-        Time.timeScale = 0f;
-        GameIsPaused = true;
+            Time.timeScale = 0f;
+            GameIsPaused = true;
+        }
     }
     public void QuitGame()
     {
