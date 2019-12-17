@@ -11137,6 +11137,12 @@ PrefabInstance:
       propertyPath: statSlider
       value: 
       objectReference: {fileID: 2022774453}
+    - target: {fileID: 3330854976571541728, guid: c2acb69517e2b624b8c9b47a2a7ca374,
+        type: 3}
+      propertyPath: bases.Array.data[0]
+      value: 
+      objectReference: {fileID: 7598515318556632739, guid: 71c7652708db3e94fb609f1e81cff1f4,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2acb69517e2b624b8c9b47a2a7ca374, type: 3}
 --- !u!114 &1776216858 stripped
