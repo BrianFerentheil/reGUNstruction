@@ -6,7 +6,7 @@ public class SwitchModel : MonoBehaviour
 {
 
     public MeshFilter[] models;
-    public int currentIndex;
+    int currentIndex;
     Ammo ammo;
     Grip grip;
     Barrel barrel;

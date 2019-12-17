@@ -29,9 +29,9 @@ public class SwappingGunModel : MonoBehaviour
     TheMachine machine;
     [SerializeField] GameObject craftingCanvas;
     bool update = false;
-    [SerializeField] int currentGrip = 0;
-    [SerializeField] int currentAmmo = 0;
-    [SerializeField] int currentBarrel = 0;
+    int currentGrip = 0;
+    int currentAmmo = 0;
+    int currentBarrel = 0;
     
     public void SetGrip(int index)
     {
@@ -264,11 +264,9 @@ public class SwappingGunModel : MonoBehaviour
                     Debug.Log("Switcher Doesn't Exist.");
             }
         }
-        Debug.Log("Current Ammo: " + currentAmmo);
         foreach(SwitchModel comp in currWeapon.GetComponentsInChildren<SwitchModel>())
         {
             GameObject component = comp.gameObject;
-            Debug.Log("Correcting index");
             switch (comp.GetComponentType())
             {
                 case ComponentType.ammo:
