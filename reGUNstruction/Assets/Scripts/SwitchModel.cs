@@ -13,37 +13,6 @@ public class SwitchModel : MonoBehaviour
     [SerializeField] GunModel model;
     [SerializeField] SwappingGunModel swapper;
 
-    public int GetCurrentIndex()
-    {
-        return currentIndex;
-    }
-
-    public void SetCurrentIndex(int index)
-    {
-        currentIndex = index;
-        int i = 0;
-        if (ammo != null)
-            for (i = 0; i < index; i++)
-                ammo.NextPart();
-        else if (grip != null)
-            for (i = 0; i < index; i++)
-                grip.NextPart();
-        else if (barrel != null)
-            for (i = 0; i < index; i++)
-                barrel.NextPart();
-    }
-
-    public ComponentType GetComponentType()
-    {
-        if (ammo != null)
-            return ComponentType.ammo;
-        else if (grip != null)
-            return ComponentType.grip;
-        else if (barrel != null)
-            return ComponentType.barrel;
-        return ComponentType.none;
-    }
-
     void Awake()
     {
         ammo = gameObject.GetComponent<Ammo>();
@@ -105,14 +74,6 @@ public class SwitchModel : MonoBehaviour
         }
     }
 
-    public void SetModel(int num)
-    {
-        if (num >= 0 && num < models.Length)
-            gameObject.GetComponent<MeshFilter>().sharedMesh = models[num].sharedMesh;
-        else
-            Debug.Log("Model Index out of bounds");
-    }
-
     void OnDestroy()
     {
         if (ammo != null)
@@ -123,4 +84,42 @@ public class SwitchModel : MonoBehaviour
             swapper.SetBarrel(currentIndex);
     }
 
+    public int GetCurrentIndex()
+    {
+        return currentIndex;
+    }
+
+    public ComponentType GetComponentType()
+    {
+        if (ammo != null)
+            return ComponentType.ammo;
+        else if (grip != null)
+            return ComponentType.grip;
+        else if (barrel != null)
+            return ComponentType.barrel;
+        return ComponentType.none;
+    }
+
+    public void SetCurrentIndex(int index)
+    {
+        currentIndex = index;
+        int i = 0;
+        if (ammo != null)
+            for (i = 0; i < index; i++)
+                ammo.NextPart();
+        else if (grip != null)
+            for (i = 0; i < index; i++)
+                grip.NextPart();
+        else if (barrel != null)
+            for (i = 0; i < index; i++)
+                barrel.NextPart();
+    }
+
+    public void SetModel(int num)
+    {
+        if (num >= 0 && num < models.Length)
+            gameObject.GetComponent<MeshFilter>().sharedMesh = models[num].sharedMesh;
+        else
+            Debug.Log("Model Index out of bounds");
+    }
 }
