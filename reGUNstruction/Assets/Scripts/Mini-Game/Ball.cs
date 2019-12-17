@@ -13,23 +13,12 @@ public class Ball : MonoBehaviour
     void Start()
     {
         am = FindObjectOfType<AudioManager>();
-
         walls = FindObjectsOfType(typeof(MinigameWall)) as MinigameWall[];
         basketWalls = FindObjectsOfType(typeof(BasketMinigameWall)) as BasketMinigameWall[];
     }
 
-    
-
-    void Update()
-    {
-        
-    }
-
     private void OnTriggerEnter(Collider other)
     {
-        
-
-
         if (other.GetComponent<Goal>() != null)
         {
             other.GetComponent<Goal>().Score();
@@ -53,7 +42,7 @@ public class Ball : MonoBehaviour
                 }
                 if(!wall.playerEnter)
                 {
-                    //am.PlayAudio("BallBounce");
+                    return;
                 }
             }
         }
@@ -68,7 +57,7 @@ public class Ball : MonoBehaviour
                 }
                 if(!wall.playerEnter)
                 {
-                    //am.PlayAudio("BallBounce");
+                    return;
                 }
             }
         }
