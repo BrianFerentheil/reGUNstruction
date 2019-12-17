@@ -12,8 +12,11 @@ public class ScoreManager : MonoBehaviour
     public float multiplierGap;
     public float multiplier;
     public float multiplierMax;
+    
+
 
     PlayerScoreSystem pSS;
+    
 
     void Start()
     {
@@ -39,7 +42,7 @@ public class ScoreManager : MonoBehaviour
     //This function is called between rounds  to add the current total to the player's saved total - then will reset their current total.
     public void ResetScore()
     {
-        if(pSS != null)
+        if(pSS == null)
         {
             pSS = FindObjectOfType<PlayerScoreSystem>();
         }

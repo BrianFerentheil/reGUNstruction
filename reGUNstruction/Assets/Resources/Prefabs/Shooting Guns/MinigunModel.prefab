@@ -202,10 +202,10 @@ GameObject:
   - component: {fileID: 824721986600621990}
   - component: {fileID: 800157589743006454}
   - component: {fileID: 806365882898341626}
-  - component: {fileID: 8252646578876598749}
   - component: {fileID: 8147181027138129887}
+  - component: {fileID: 8252646578876598749}
   m_Layer: 0
-  m_Name: SM_Wep_Minigun_01_Magazine_01
+  m_Name: Ammo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -270,6 +270,24 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &8147181027138129887
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 821068148985703018}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42625556d7867ee4fa44998f5de048ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  models:
+  - {fileID: 33083152602430152, guid: 8bcf33c33fb10124c8902419aa0ce875, type: 3}
+  - {fileID: 3300006, guid: 17b3a5ffae9cbc94ab8159837fb10dc6, type: 3}
+  - {fileID: 33883012632819116, guid: 4c0470e789a5dfa449095ca1fe17000c, type: 3}
+  currentIndex: 0
+  model: {fileID: 0}
 --- !u!114 &8252646578876598749
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -300,22 +318,8 @@ MonoBehaviour:
   indexLength: 0
   curPos: 1
   swiMod: {fileID: 3883110934473246086}
-  modelSET: 0
---- !u!114 &8147181027138129887
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 821068148985703018}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42625556d7867ee4fa44998f5de048ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  models:
-  - {fileID: 800157589743006454}
-  currentIndex: 0
+  modelSET: 1
+  preset: 1
 --- !u!1 &821361663019532904
 GameObject:
   m_ObjectHideFlags: 0
@@ -404,10 +408,10 @@ GameObject:
   - component: {fileID: 824810494236122140}
   - component: {fileID: 798342713565564182}
   - component: {fileID: 806176142544315522}
-  - component: {fileID: 9112898858418299152}
   - component: {fileID: 3883110934473246086}
+  - component: {fileID: 9112898858418299152}
   m_Layer: 0
-  m_Name: SM_Wep_Minigun_01_Trigger_01
+  m_Name: Grip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -472,6 +476,25 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &3883110934473246086
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 821518361361740568}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42625556d7867ee4fa44998f5de048ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  models:
+  - {fileID: 3300008, guid: 4949fa37f86977d409bbde6b6ca0ccdd, type: 3}
+  - {fileID: 3300008, guid: 17b3a5ffae9cbc94ab8159837fb10dc6, type: 3}
+  - {fileID: 3300000, guid: 0e13700d182ad2146bdaafa34ddafb82, type: 3}
+  - {fileID: 3300000, guid: db794e0c9610f7948b500aa85045dbc4, type: 3}
+  currentIndex: 0
+  model: {fileID: 0}
 --- !u!114 &9112898858418299152
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -502,21 +525,8 @@ MonoBehaviour:
   indexLength: 0
   curPos: 1
   swiMod: {fileID: 3883110934473246086}
---- !u!114 &3883110934473246086
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 821518361361740568}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42625556d7867ee4fa44998f5de048ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  models:
-  - {fileID: 798342713565564182}
-  currentIndex: 0
+  modelsSET: 1
+  preset: 1
 --- !u!1 &821730787165065442
 GameObject:
   m_ObjectHideFlags: 0
@@ -528,10 +538,10 @@ GameObject:
   - component: {fileID: 824899760421258842}
   - component: {fileID: 798394504298601874}
   - component: {fileID: 807935966673450710}
-  - component: {fileID: 9134675839078072807}
   - component: {fileID: 9207916779800620147}
+  - component: {fileID: 9134675839078072807}
   m_Layer: 0
-  m_Name: SM_Wep_Minigun_01_Barrel_01
+  m_Name: Barrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -597,6 +607,24 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &9207916779800620147
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 821730787165065442}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42625556d7867ee4fa44998f5de048ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  models:
+  - {fileID: 33735081928884416, guid: 3b55e704427231a419aa6332d047928b, type: 3}
+  - {fileID: 3300000, guid: da67c7e0a66055842b176fd21ad06262, type: 3}
+  - {fileID: 33708538260321566, guid: dab15cb0f516d954994fcd5aef0a45e1, type: 3}
+  currentIndex: 0
+  model: {fileID: 0}
 --- !u!114 &9134675839078072807
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -627,19 +655,5 @@ MonoBehaviour:
   indexLength: 0
   curPos: 1
   swiMod: {fileID: 9207916779800620147}
-  modelsSET: 0
---- !u!114 &9207916779800620147
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 821730787165065442}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42625556d7867ee4fa44998f5de048ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  models:
-  - {fileID: 798394504298601874}
-  currentIndex: 0
+  modelsSET: 1
+  preset: 1

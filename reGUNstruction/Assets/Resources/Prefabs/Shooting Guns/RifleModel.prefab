@@ -11,10 +11,10 @@ GameObject:
   - component: {fileID: 3192334707966607820}
   - component: {fileID: 3185508672439390014}
   - component: {fileID: 3175346999202024732}
-  - component: {fileID: 3439001066134548466}
   - component: {fileID: 5525277475284683821}
+  - component: {fileID: 3439001066134548466}
   m_Layer: 0
-  m_Name: SM_Wep_AssaultRifle_03_Slide_01
+  m_Name: Barrel
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -79,6 +79,24 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &5525277475284683821
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3189048916338332508}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42625556d7867ee4fa44998f5de048ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  models:
+  - {fileID: 3300006, guid: 9782ffd36b3686f4eb4d820b0861438f, type: 3}
+  - {fileID: 3300006, guid: 2c26b9ec409afa9468615584de21afab, type: 3}
+  - {fileID: 3300004, guid: 174abc94a5cf6b44992c03a6bf528bee, type: 3}
+  currentIndex: 0
+  model: {fileID: 0}
 --- !u!114 &3439001066134548466
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -109,22 +127,8 @@ MonoBehaviour:
   indexLength: 0
   curPos: 2
   swiMod: {fileID: 5525277475284683821}
-  modelsSET: 0
---- !u!114 &5525277475284683821
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3189048916338332508}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42625556d7867ee4fa44998f5de048ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  models:
-  - {fileID: 3185508672439390014}
-  currentIndex: 0
+  modelsSET: 1
+  preset: 1
 --- !u!1 &3190550477105343150
 GameObject:
   m_ObjectHideFlags: 0
@@ -136,10 +140,10 @@ GameObject:
   - component: {fileID: 3192122855358655066}
   - component: {fileID: 3185573067529645446}
   - component: {fileID: 3175578523893464880}
-  - component: {fileID: 1113248739315515181}
   - component: {fileID: 2483170933371792960}
+  - component: {fileID: 1113248739315515181}
   m_Layer: 0
-  m_Name: SM_Wep_AssaultRifle_03_Magazine_01
+  m_Name: Ammo
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -204,6 +208,24 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &2483170933371792960
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3190550477105343150}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42625556d7867ee4fa44998f5de048ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  models:
+  - {fileID: 3300004, guid: 9782ffd36b3686f4eb4d820b0861438f, type: 3}
+  - {fileID: 3300002, guid: 174abc94a5cf6b44992c03a6bf528bee, type: 3}
+  - {fileID: 3300004, guid: 2c26b9ec409afa9468615584de21afab, type: 3}
+  currentIndex: 0
+  model: {fileID: 0}
 --- !u!114 &1113248739315515181
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -234,22 +256,8 @@ MonoBehaviour:
   indexLength: 0
   curPos: 2
   swiMod: {fileID: 2483170933371792960}
-  modelSET: 0
---- !u!114 &2483170933371792960
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3190550477105343150}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42625556d7867ee4fa44998f5de048ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  models:
-  - {fileID: 3185573067529645446}
-  currentIndex: 0
+  modelSET: 1
+  preset: 1
 --- !u!1 &3190559692776771710
 GameObject:
   m_ObjectHideFlags: 0
@@ -338,10 +346,10 @@ GameObject:
   - component: {fileID: 3192468446449469432}
   - component: {fileID: 3186977501622315280}
   - component: {fileID: 3175397245617159082}
-  - component: {fileID: 458919179425974032}
   - component: {fileID: 6534633023824730136}
+  - component: {fileID: 458919179425974032}
   m_Layer: 0
-  m_Name: SM_Wep_AssaultRifle_03_Charge_01
+  m_Name: Grip
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -406,6 +414,24 @@ MeshRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
+--- !u!114 &6534633023824730136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3190598644975800924}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 42625556d7867ee4fa44998f5de048ff, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  models:
+  - {fileID: 3300002, guid: 9782ffd36b3686f4eb4d820b0861438f, type: 3}
+  - {fileID: 3300004, guid: 174abc94a5cf6b44992c03a6bf528bee, type: 3}
+  - {fileID: 3300002, guid: 2c26b9ec409afa9468615584de21afab, type: 3}
+  currentIndex: 0
+  model: {fileID: 0}
 --- !u!114 &458919179425974032
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -436,21 +462,8 @@ MonoBehaviour:
   indexLength: 0
   curPos: 2
   swiMod: {fileID: 6534633023824730136}
---- !u!114 &6534633023824730136
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3190598644975800924}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 42625556d7867ee4fa44998f5de048ff, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  models:
-  - {fileID: 3186977501622315280}
-  currentIndex: 0
+  modelsSET: 1
+  preset: 1
 --- !u!1 &3190628340144626532
 GameObject:
   m_ObjectHideFlags: 0

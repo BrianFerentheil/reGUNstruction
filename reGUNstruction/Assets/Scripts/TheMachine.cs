@@ -13,6 +13,7 @@ public class TheMachine : MonoBehaviour
 
     public static ScoreManager scoreMan;
 
+    public static bool atWorkBench = false;
 
     public ButtonManager uiMan;
 
@@ -46,6 +47,11 @@ public class TheMachine : MonoBehaviour
     {
         weapon = GameObject.FindWithTag("Gun").GetComponent<Weapon>();
 
+    }
+
+    public static void SceneChange()
+    {
+        stateMachine.ChangeState(new NewRound());
     }
 }
 
@@ -91,6 +97,7 @@ public class MainMenu : GameState
             TheMachine.SetWeaponRef();
         }
         TheMachine.weapon.enabled = false;
+
     }
 
     public void ActiveState()
@@ -134,6 +141,8 @@ public class NewRound : GameState
 
         TheMachine.weapon.ResetClips();
         TheMachine.stateMachine.ChangeState(new Walking());
+
+        TheMachine.FindObjectOfType<AnimDoor>().ToggleDoor(true);
     }
 
     public void ActiveState()
@@ -151,6 +160,7 @@ public class GunBuildingMenu : GameState
 {
     public void EnterState()
     {
+        TheMachine.atWorkBench = true;
         RotateObj.atWorkBench = true;
         TheMachine.fpc.enabled = false;
         TheMachine.cc.enabled = false;
@@ -158,6 +168,7 @@ public class GunBuildingMenu : GameState
         GameObject.FindObjectOfType<ButtonManager>().OpenCrafting();
         Cursor.visible = true;
         TheMachine.weapon.enabled = false;
+        
     }
 
     public void ActiveState()
@@ -167,6 +178,7 @@ public class GunBuildingMenu : GameState
 
     public void ExitState()
     {
+        TheMachine.atWorkBench = false;
         RotateObj.atWorkBench = false;
         GameObject.FindObjectOfType<ButtonManager>().CloseCrafting();
         Cursor.visible = false;

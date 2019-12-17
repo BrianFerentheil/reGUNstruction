@@ -1,6 +1,8 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
+using UnityEngine.Audio;
 
 public class ButtonManager : MonoBehaviour
 {
@@ -17,12 +19,15 @@ public class ButtonManager : MonoBehaviour
 
     TheMachine theMachine;
 
+    UnityStandardAssets.Characters.FirstPerson.MouseLook mLook;
 
 
     private void Start()
     {
         //Made public static reference to use state machine access instead, assigning a reference is no longer needed.
         //theMachine = FindObjectOfType<TheMachine>();
+        mLook = FindObjectOfType<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().m_MouseLook;
+
     }
 
     public void StartGame()
@@ -131,8 +136,109 @@ public class ButtonManager : MonoBehaviour
         scoreCanvas.SetActive(false);
     }
 
-    private void Update()
+    public static bool GameIsPaused = false;
+
+    public GameObject pauseMenuUI;
+
+    // Update is called once per frame
+    void Update()
     {
-        
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            if (GameIsPaused)
+            {
+                Resume();
+            }
+            else
+            {
+                Pause();
+            }
+        }
+    }
+
+    public void Resume()
+    {
+        mainMenu.SetActive(false);
+        crafting.SetActive(false);
+        option.SetActive(false);
+        pause.SetActive(false);
+        inGameCanvas.SetActive(false);
+        gunStatCanvas.SetActive(false);
+        ammoCanvas.SetActive(true);
+        scoreCanvas.SetActive(true);
+
+        pauseMenuUI.SetActive(false);
+        TheMachine.fpc.enabled = true;
+        TheMachine.cc.enabled = true;
+        TheMachine.weapon.enabled = true;
+        Cursor.visible = false;
+        Time.timeScale = 1f;
+        GameIsPaused = false;
+    }
+
+    void Pause()
+    {
+        if (!TheMachine.atWorkBench)
+        {
+            mainMenu.SetActive(false);
+            crafting.SetActive(false);
+            option.SetActive(false);
+            pause.SetActive(true);
+            gunStatCanvas.SetActive(false);
+            ammoCanvas.SetActive(false);
+            scoreCanvas.SetActive(false);
+
+            pauseMenuUI.SetActive(true);
+            TheMachine.fpc.enabled = false;
+            TheMachine.cc.enabled = false;
+            TheMachine.weapon.enabled = false;
+            Cursor.visible = true;
+            mLook.SetCursorLock(false);
+
+            Time.timeScale = 0f;
+            GameIsPaused = true;
+        }
+    }
+    public void QuitGame()
+    {
+        Debug.Log("Quitting game...");
+        Application.Quit();
+    }
+    public void LoadMenu()
+    {
+        Time.timeScale = 1f;
+        SceneManager.LoadScene("MainMenu");
+    }
+
+    public static bool OptionIsEnabled = false;
+    public GameObject optionMenuUI;
+
+    // Update is called once per frame
+
+    public void Disable()
+    {
+        optionMenuUI.SetActive(false);
+        OptionIsEnabled = false;
+    }
+    public void Enable()
+    {
+        optionMenuUI.SetActive(true);
+        OptionIsEnabled = true;
+    }
+
+    public AudioMixer audioMixer;
+
+    public void SetVolume(float volume)
+    {
+        audioMixer.SetFloat("music", volume);
+        audioMixer.SetFloat("sfx", volume);
+    }
+    public void SetMusic(float volume)
+    {
+        audioMixer.SetFloat("music", volume);
+    }
+    public void SetSfx(float volume)
+    {
+        audioMixer.SetFloat("sfx", volume);
     }
 }
