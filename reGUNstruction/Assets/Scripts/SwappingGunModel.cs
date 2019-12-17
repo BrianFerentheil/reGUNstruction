@@ -32,7 +32,9 @@ public class SwappingGunModel : MonoBehaviour
     int currentGrip = 0;
     int currentAmmo = 0;
     int currentBarrel = 0;
-    
+    [SerializeField] Button lastButton;
+    [SerializeField] Button nextButton;
+
     public void SetGrip(int index)
     {
         currentGrip = index;
@@ -51,7 +53,11 @@ public class SwappingGunModel : MonoBehaviour
     void Start()
     {
         gunTransform = currWeapon.transform;
-
+        //if (nextButton == null)
+        //{
+        //    nextButton = GameObject.Find("Next_Gun_Button");
+        //    lastButton = GameObject.Find("Last_Gun_Button");
+        //}
     }
     void Update()
     {
@@ -213,9 +219,13 @@ public class SwappingGunModel : MonoBehaviour
 
     IEnumerator DelayUpdate()
     {
-        yield return new WaitForSeconds(.01f);
+        nextButton.enabled = false;
+        lastButton.enabled = false;
+        yield return new WaitForSeconds(.001f);
         update = true;
-        yield return new WaitForSeconds(0);
+        yield return new WaitForSeconds(0.005f);
+        nextButton.enabled = true;
+        lastButton.enabled = true;
     }
 
     void UpdateTheMachine()
@@ -264,7 +274,7 @@ public class SwappingGunModel : MonoBehaviour
                     Debug.Log("Switcher Doesn't Exist.");
             }
         }
-        foreach(SwitchModel comp in currWeapon.GetComponentsInChildren<SwitchModel>())
+        foreach (SwitchModel comp in currWeapon.GetComponentsInChildren<SwitchModel>())
         {
             GameObject component = comp.gameObject;
             switch (comp.GetComponentType())
