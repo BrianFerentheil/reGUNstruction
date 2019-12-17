@@ -98,6 +98,7 @@ MonoBehaviour:
   - {fileID: 3300000, guid: 7806c9724cab5b247a0b1ae42ef8ce08, type: 3}
   currentIndex: 0
   model: {fileID: 0}
+  swapper: {fileID: 0}
 --- !u!114 &4031916315880807532
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -118,18 +119,17 @@ MonoBehaviour:
   stability: 0
   extraStatOne: ' '
   extraStatTwo: ' '
-  myElementA: 6
-  myElementB: 6
-  myElementG: 6
+  myElementA: 7
+  myElementB: 7
+  myElementG: 7
   worldModel: 0
   weaponUI: {fileID: 0}
   myGun: {fileID: 0}
-  currentAmmo: 6
+  currentAmmo: 0
   indexLength: 0
-  curPos: 3
+  curPos: 0
   swiMod: {fileID: 1711875373116414393}
   modelSET: 1
-  preset: 1
 --- !u!1 &7659872117586339227
 GameObject:
   m_ObjectHideFlags: 0
@@ -228,6 +228,7 @@ MonoBehaviour:
   - {fileID: 3300002, guid: 9b82d6373e2325c468a37bd22a5efb5b, type: 3}
   currentIndex: 0
   model: {fileID: 0}
+  swapper: {fileID: 0}
 --- !u!114 &3757289287928255005
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -248,18 +249,17 @@ MonoBehaviour:
   stability: 0
   extraStatOne: ' '
   extraStatTwo: ' '
-  myElementA: 6
-  myElementB: 6
-  myElementG: 6
+  myElementA: 7
+  myElementB: 7
+  myElementG: 7
   worldModel: 0
   weaponUI: {fileID: 0}
   myGun: {fileID: 0}
-  currentGrip: 4
+  currentGrip: 3
   indexLength: 0
-  curPos: 3
+  curPos: 0
   swiMod: {fileID: 4694268991882263864}
   modelsSET: 1
-  preset: 1
 --- !u!1 &7659954262993407429
 GameObject:
   m_ObjectHideFlags: 0
@@ -357,6 +357,7 @@ MonoBehaviour:
   - {fileID: 3300000, guid: d11078ca112e0c04298fb3e84e1f95f9, type: 3}
   currentIndex: 0
   model: {fileID: 0}
+  swapper: {fileID: 0}
 --- !u!114 &5576684672489973346
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -377,18 +378,17 @@ MonoBehaviour:
   stability: 0
   extraStatOne: ' '
   extraStatTwo: ' '
-  myElementA: 6
-  myElementB: 6
-  myElementG: 6
+  myElementA: 7
+  myElementB: 7
+  myElementG: 7
   worldModel: 0
   weaponUI: {fileID: 0}
   myGun: {fileID: 0}
-  currentBarrel: 7
+  currentBarrel: 0
   indexLength: 0
-  curPos: 3
+  curPos: 0
   swiMod: {fileID: 3046731277342780856}
   modelsSET: 1
-  preset: 1
 --- !u!1 &7660524749840790121
 GameObject:
   m_ObjectHideFlags: 0
