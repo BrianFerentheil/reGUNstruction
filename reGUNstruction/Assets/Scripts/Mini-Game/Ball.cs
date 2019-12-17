@@ -51,7 +51,7 @@ public class Ball : MonoBehaviour
                 {
                     am.PlayAudio("BallBounce");
                 }
-                else
+                if(!wall.playerEnter)
                 {
                     //am.PlayAudio("BallBounce");
                 }
@@ -66,7 +66,7 @@ public class Ball : MonoBehaviour
                 {
                     am.PlayAudio("BallBounce");
                 }
-                else
+                if(!wall.playerEnter)
                 {
                     //am.PlayAudio("BallBounce");
                 }
