@@ -40,6 +40,11 @@ public class PauseMenu : MonoBehaviour
         GameIsPaused = true;
     }
 
+    public void QuitGame()
+    {
+        Debug.Log("Quitting game...");
+        Application.Quit();
+    }
     public void LoadMenu()
     {
         Time.timeScale = 1f;
@@ -54,12 +59,12 @@ public GameObject optionMenuUI;
     public void Enable()
     {
     optionMenuUI.SetActive(false);
-    OptionIsEnabled = false;
+    OptionIsEnabled = true;
     }
     public void Disable()
     {
     optionMenuUI.SetActive(true);
-    OptionIsEnabled = true;
+    OptionIsEnabled = false;
     }
 
 public AudioMixer audioMixer;
