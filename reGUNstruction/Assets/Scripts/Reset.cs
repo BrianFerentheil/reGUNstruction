@@ -11,8 +11,9 @@ public class Reset : MonoBehaviour
     {
         if (Input.GetKeyDown(KeyCode.R))
         {
-            
-            SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
+            SceneManager.LoadSceneAsync("Workshop");
+            Cursor.lockState = CursorLockMode.None;
+            //SceneManager.LoadSceneAsync(SceneManager.GetActiveScene().buildIndex);
         }
     }
 
