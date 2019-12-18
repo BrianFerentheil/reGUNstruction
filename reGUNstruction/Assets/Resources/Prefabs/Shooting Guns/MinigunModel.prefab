@@ -13,6 +13,7 @@ GameObject:
   - component: {fileID: 807244326500713462}
   - component: {fileID: 1444465376681538346}
   - component: {fileID: -724459086177654997}
+  - component: {fileID: -8673067830581573929}
   m_Layer: 0
   m_Name: MinigunModel
   m_TagString: Gun
@@ -191,6 +192,25 @@ MonoBehaviour:
   sliderTexts: []
   dRange: 5
   bSpeed: 5
+--- !u!114 &-8673067830581573929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 821033601920096332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7ad14fafe3e8324fa74e46aab616693, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RotateAmount: 1
+  RotateSpeed: 2
+  GUN: {fileID: 821033601920096332}
+  RotateOnX: 0
+  RotateOnY: 0
+  DefaultRot: {x: 0, y: 0, z: 0, w: 0}
+  NewGunRot: {x: 0, y: 0, z: 0, w: 0}
 --- !u!1 &821068148985703018
 GameObject:
   m_ObjectHideFlags: 0
@@ -286,7 +306,6 @@ MonoBehaviour:
   - {fileID: 33083152602430152, guid: 8bcf33c33fb10124c8902419aa0ce875, type: 3}
   - {fileID: 3300006, guid: 17b3a5ffae9cbc94ab8159837fb10dc6, type: 3}
   - {fileID: 33883012632819116, guid: 4c0470e789a5dfa449095ca1fe17000c, type: 3}
-  currentIndex: 0
   model: {fileID: 0}
   swapper: {fileID: 0}
 --- !u!114 &8252646578876598749
@@ -493,7 +512,6 @@ MonoBehaviour:
   - {fileID: 3300008, guid: 17b3a5ffae9cbc94ab8159837fb10dc6, type: 3}
   - {fileID: 3300000, guid: 0e13700d182ad2146bdaafa34ddafb82, type: 3}
   - {fileID: 3300000, guid: db794e0c9610f7948b500aa85045dbc4, type: 3}
-  currentIndex: 0
   model: {fileID: 0}
   swapper: {fileID: 0}
 --- !u!114 &9112898858418299152
@@ -623,7 +641,6 @@ MonoBehaviour:
   - {fileID: 33735081928884416, guid: 3b55e704427231a419aa6332d047928b, type: 3}
   - {fileID: 3300000, guid: da67c7e0a66055842b176fd21ad06262, type: 3}
   - {fileID: 33708538260321566, guid: dab15cb0f516d954994fcd5aef0a45e1, type: 3}
-  currentIndex: 0
   model: {fileID: 0}
   swapper: {fileID: 0}
 --- !u!114 &9134675839078072807

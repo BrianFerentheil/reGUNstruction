@@ -25,18 +25,22 @@ public class GunRotation : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        RotateOnX += Input.GetAxis("Mouse ScrollWheel") * Time.deltaTime * RotateAmount;
-        RotateOnY += Input.GetAxis("Mouse Y") * Time.deltaTime * RotateAmount;
-        //NewGunRot = new Quaternion(DefaultRot.x + RotateOnX, DefaultRot.y + RotateOnY, DefaultRot.z);
-        NewGunRot = Quaternion.Euler(DefaultRot.x + RotateOnX, DefaultRot.y + RotateOnY, DefaultRot.z);
-        GUN.transform.localRotation = Quaternion.Lerp(GUN.transform.localRotation, NewGunRot, RotateSpeed * Time.deltaTime);
+        if (Input.GetMouseButton(0))
+        {
+
+            RotateOnX += Input.GetAxis("Mouse ScrollWheel") * Time.deltaTime * RotateAmount;
+            RotateOnY += Input.GetAxis("Mouse Y") * Time.deltaTime * RotateAmount;
+            //NewGunRot = new Quaternion(DefaultRot.x + RotateOnX, DefaultRot.y + RotateOnY, DefaultRot.z);
+            NewGunRot = Quaternion.Euler(DefaultRot.x + RotateOnX, DefaultRot.y + RotateOnY, DefaultRot.z);
+            GUN.transform.localRotation = Quaternion.Lerp(GUN.transform.localRotation, NewGunRot, RotateSpeed * Time.deltaTime);
 
 
-        // Get the mouse delta. This is not in the range -1...1
-        float h = horizontalSpeed * Input.GetAxis("Mouse X");
-        float v = verticalSpeed * Input.GetAxis("Mouse Y");
+            // Get the mouse delta. This is not in the range -1...1
+            float h = horizontalSpeed * Input.GetAxis("Mouse X");
+            float v = verticalSpeed * Input.GetAxis("Mouse Y");
 
-        transform.Rotate(v, h, 0);
+            transform.Rotate(v, h, 0);
+        }
 
 
 

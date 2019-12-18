@@ -16,18 +16,39 @@ public class ButtonManager : MonoBehaviour
     public GameObject gunStatCanvas;
     public GameObject ammoCanvas;
     public GameObject scoreCanvas;
-
+    GunRotation[] rotators;
     TheMachine theMachine;
 
     UnityStandardAssets.Characters.FirstPerson.MouseLook mLook;
 
+    public void UpdateRotators()
+    {
+        rotators = Resources.FindObjectsOfTypeAll<GunRotation>();
+    }
 
     private void Start()
     {
         //Made public static reference to use state machine access instead, assigning a reference is no longer needed.
         //theMachine = FindObjectOfType<TheMachine>();
         mLook = FindObjectOfType<UnityStandardAssets.Characters.FirstPerson.FirstPersonController>().m_MouseLook;
+        rotators = Resources.FindObjectsOfTypeAll<GunRotation>();
+        TurnRotatorsOff();
+    }
 
+    void TurnRotatorsOn()
+    {
+        for (int i = 0; i < rotators.Length; i++)
+        {
+            rotators[i].enabled = true;
+        }
+    }
+
+    void TurnRotatorsOff()
+    {
+        for (int i = 0; i < rotators.Length; i++)
+        {
+            rotators[i].enabled = false;
+        }
     }
 
     public void StartGame()
@@ -54,6 +75,7 @@ public class ButtonManager : MonoBehaviour
         gunStatCanvas.SetActive(true);
         ammoCanvas.SetActive(false);
         scoreCanvas.SetActive(false);
+        TurnRotatorsOn();
         Cursor.lockState = CursorLockMode.None;
     }
 
@@ -67,7 +89,7 @@ public class ButtonManager : MonoBehaviour
         gunStatCanvas.SetActive(false);
         ammoCanvas.SetActive(true);
         scoreCanvas.SetActive(true);
-
+        TurnRotatorsOff();
         Cursor.lockState = CursorLockMode.Locked;
     }
 

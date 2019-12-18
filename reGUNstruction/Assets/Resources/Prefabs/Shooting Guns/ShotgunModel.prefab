@@ -96,7 +96,6 @@ MonoBehaviour:
   - {fileID: 3300000, guid: 2c2d5dccf304fe04a87e196c2a7ed69c, type: 3}
   - {fileID: 3300000, guid: 1f96faa5dba841645a5e03ffcaf8114a, type: 3}
   - {fileID: 3300000, guid: 7806c9724cab5b247a0b1ae42ef8ce08, type: 3}
-  currentIndex: 0
   model: {fileID: 0}
   swapper: {fileID: 0}
 --- !u!114 &4031916315880807532
@@ -226,7 +225,6 @@ MonoBehaviour:
   - {fileID: 3300004, guid: b1736d79a2fc9be4b88db1fafd3c0c1b, type: 3}
   - {fileID: 3300004, guid: e436f1c05d7495f4ba683b39f364552e, type: 3}
   - {fileID: 3300002, guid: 9b82d6373e2325c468a37bd22a5efb5b, type: 3}
-  currentIndex: 0
   model: {fileID: 0}
   swapper: {fileID: 0}
 --- !u!114 &3757289287928255005
@@ -355,7 +353,6 @@ MonoBehaviour:
   - {fileID: 3300004, guid: 0a139ed954ef18240a1f8afcab4ed2bb, type: 3}
   - {fileID: 3300000, guid: 3e6ce9aaa7d87244882a755e31ce65f2, type: 3}
   - {fileID: 3300000, guid: d11078ca112e0c04298fb3e84e1f95f9, type: 3}
-  currentIndex: 0
   model: {fileID: 0}
   swapper: {fileID: 0}
 --- !u!114 &5576684672489973346
@@ -402,6 +399,7 @@ GameObject:
   - component: {fileID: 7645713656876403033}
   - component: {fileID: 4485193432421281076}
   - component: {fileID: -2613361544912727565}
+  - component: {fileID: 2556175025168066848}
   m_Layer: 0
   m_Name: ShotgunModel
   m_TagString: Gun
@@ -580,3 +578,22 @@ MonoBehaviour:
   sliderTexts: []
   dRange: 5
   bSpeed: 5
+--- !u!114 &2556175025168066848
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 7660524749840790121}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: c7ad14fafe3e8324fa74e46aab616693, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  RotateAmount: 1
+  RotateSpeed: 2
+  GUN: {fileID: 7660524749840790121}
+  RotateOnX: 0
+  RotateOnY: 0
+  DefaultRot: {x: 0, y: 0, z: 0, w: 0}
+  NewGunRot: {x: 0, y: 0, z: 0, w: 0}
