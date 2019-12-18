@@ -47,6 +47,7 @@ public class ButtonManager : MonoBehaviour
     {
         for (int i = 0; i < rotators.Length; i++)
         {
+            rotators[i].ResetRotation();
             rotators[i].enabled = false;
         }
     }

@@ -41,8 +41,10 @@ public class GunRotation : MonoBehaviour
 
             transform.Rotate(v, h, 0);
         }
+    }
 
-
-
+    public void ResetRotation()
+    {
+        gameObject.transform.rotation = DefaultRot;
     }
 }

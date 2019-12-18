@@ -34,6 +34,7 @@ public class SwappingGunModel : MonoBehaviour
     int currentBarrel = 0;
     [SerializeField] Button lastButton;
     [SerializeField] Button nextButton;
+    ButtonManager btnMan;
 
     public void SetGrip(int index)
     {
@@ -53,6 +54,7 @@ public class SwappingGunModel : MonoBehaviour
     void Start()
     {
         gunTransform = currWeapon.transform;
+        btnMan = GameObject.Find("MenuManager").GetComponent<ButtonManager>();
         //if (nextButton == null)
         //{
         //    nextButton = GameObject.Find("Next_Gun_Button");
@@ -296,5 +298,6 @@ public class SwappingGunModel : MonoBehaviour
         }
 
         currWeapon.GetComponent<GunModel>().RunStats();
+        btnMan.UpdateRotators();
     }
 }
