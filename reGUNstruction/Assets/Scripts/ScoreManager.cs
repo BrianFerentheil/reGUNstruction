@@ -23,6 +23,14 @@ public class ScoreManager : MonoBehaviour
         multiplier = 0;
     }
 
+    private void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.Equals))
+        {
+            currentScore += 100000;
+        }
+    }
+
     public void ScoreCheck()
     {
         if(multiplier >= multiplierMax)

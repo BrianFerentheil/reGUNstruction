@@ -94,8 +94,15 @@ MonoBehaviour:
   models:
   - {fileID: 3300006, guid: 0a139ed954ef18240a1f8afcab4ed2bb, type: 3}
   - {fileID: 3300000, guid: 2c2d5dccf304fe04a87e196c2a7ed69c, type: 3}
-  - {fileID: 3300000, guid: 1f96faa5dba841645a5e03ffcaf8114a, type: 3}
   - {fileID: 3300000, guid: 7806c9724cab5b247a0b1ae42ef8ce08, type: 3}
+  - {fileID: 3300006, guid: 0a139ed954ef18240a1f8afcab4ed2bb, type: 3}
+  - {fileID: 3300000, guid: 2c2d5dccf304fe04a87e196c2a7ed69c, type: 3}
+  - {fileID: 3300000, guid: 7806c9724cab5b247a0b1ae42ef8ce08, type: 3}
+  - {fileID: 3300006, guid: 0a139ed954ef18240a1f8afcab4ed2bb, type: 3}
+  - {fileID: 3300000, guid: 2c2d5dccf304fe04a87e196c2a7ed69c, type: 3}
+  - {fileID: 3300000, guid: 7806c9724cab5b247a0b1ae42ef8ce08, type: 3}
+  - {fileID: 3300006, guid: 0a139ed954ef18240a1f8afcab4ed2bb, type: 3}
+  - {fileID: 3300000, guid: 2c2d5dccf304fe04a87e196c2a7ed69c, type: 3}
   model: {fileID: 0}
   swapper: {fileID: 0}
 --- !u!114 &4031916315880807532
@@ -353,6 +360,10 @@ MonoBehaviour:
   - {fileID: 3300004, guid: 0a139ed954ef18240a1f8afcab4ed2bb, type: 3}
   - {fileID: 3300000, guid: 3e6ce9aaa7d87244882a755e31ce65f2, type: 3}
   - {fileID: 3300000, guid: d11078ca112e0c04298fb3e84e1f95f9, type: 3}
+  - {fileID: 3300004, guid: 0a139ed954ef18240a1f8afcab4ed2bb, type: 3}
+  - {fileID: 3300000, guid: 3e6ce9aaa7d87244882a755e31ce65f2, type: 3}
+  - {fileID: 3300000, guid: d11078ca112e0c04298fb3e84e1f95f9, type: 3}
+  - {fileID: 3300004, guid: 0a139ed954ef18240a1f8afcab4ed2bb, type: 3}
   model: {fileID: 0}
   swapper: {fileID: 0}
 --- !u!114 &5576684672489973346
@@ -414,7 +425,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7660524749840790121}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 8.563, y: 4.25, z: 3.058}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
@@ -585,7 +596,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 7660524749840790121}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c7ad14fafe3e8324fa74e46aab616693, type: 3}
   m_Name: 

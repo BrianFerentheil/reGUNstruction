@@ -31,13 +31,19 @@ public class Ammo : GunStats
                 swiMod = GetComponent<SwitchModel>();
             }
 
-            swiMod.models = new MeshFilter[6];
+            swiMod.models = new MeshFilter[11];
             swiMod.models[0] = FindObjectOfType<AMONE>().GetComponent<MeshFilter>();
             swiMod.models[1] = FindObjectOfType<AMTWO>().GetComponent<MeshFilter>();
             swiMod.models[2] = FindObjectOfType<AMTHREE>().GetComponent<MeshFilter>();
             swiMod.models[3] = FindObjectOfType<AMFOUR>().GetComponent<MeshFilter>();
             swiMod.models[4] = FindObjectOfType<AMFIVE>().GetComponent<MeshFilter>();
             swiMod.models[5] = FindObjectOfType<AMSIX>().GetComponent<MeshFilter>();
+            swiMod.models[6] = FindObjectOfType<AMSEVEN>().GetComponent<MeshFilter>();
+            swiMod.models[7] = FindObjectOfType<AMEIGHT>().GetComponent<MeshFilter>();
+            swiMod.models[8] = FindObjectOfType<AMNINE>().GetComponent<MeshFilter>();
+            swiMod.models[9] = FindObjectOfType<AMTEN>().GetComponent<MeshFilter>();
+            swiMod.models[10] = FindObjectOfType<AMELEVEN>().GetComponent<MeshFilter>();
+
             modelSET = true;
         }
     }

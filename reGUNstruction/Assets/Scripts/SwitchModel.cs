@@ -22,31 +22,111 @@ public class SwitchModel : MonoBehaviour
         swapper = GameObject.Find("Gun Swapper").GetComponent<SwappingGunModel>();
     }
 
+    //public void SwapModelUp()
+    //{
+    //    if (models.Length != 0)
+    //    {
+    //        currentIndex++;
+    //        if (currentIndex >= models.Length)
+    //            currentIndex = 0;
+    //        gameObject.GetComponent<MeshFilter>().sharedMesh = models[currentIndex].sharedMesh;
+    //        if (ammo != null)
+    //        {
+    //            ammo.NextPart();
+    //            model.RunStats();
+    //        }
+    //        else if (grip != null)
+    //        {
+    //            grip.NextPart();
+    //            model.RunStats();
+    //        }
+    //        else if (barrel != null)
+    //        {
+    //            barrel.NextPart();
+    //            model.RunStats();
+    //        }
+    //    }
+    //}
+
     public void SwapModelUp()
     {
         if (models.Length != 0)
         {
             currentIndex++;
             if (currentIndex >= models.Length)
+            {
                 currentIndex = 0;
+            }
             gameObject.GetComponent<MeshFilter>().sharedMesh = models[currentIndex].sharedMesh;
+            
+
             if (ammo != null)
             {
-                ammo.NextPart();
-                model.RunStats();
+                if (InvItem.invAmmos[currentIndex])
+                {
+                    ammo.NextPart();
+                    model.RunStats();
+                }
+                else
+                {
+                    ammo.NextPart();
+                    SwapModelUp();
+                }
             }
             else if (grip != null)
             {
-                grip.NextPart();
-                model.RunStats();
+                if (InvItem.invGrips[currentIndex])
+                {
+                    grip.NextPart();
+                    model.RunStats();
+                }
+                else
+                {
+                    grip.NextPart();
+                    SwapModelUp();
+                }
             }
             else if (barrel != null)
             {
-                barrel.NextPart();
-                model.RunStats();
+                if (InvItem.invBarrels[currentIndex])
+                {
+                    barrel.NextPart();
+                    model.RunStats();
+                }
+                else
+                {
+                    barrel.NextPart();
+                    SwapModelUp();
+                }
             }
         }
     }
+
+    //public void SwapModelDown()
+    //{
+    //    if (models.Length != 0)
+    //    {
+    //        currentIndex--;
+    //        if (currentIndex < 0)
+    //            currentIndex = models.Length - 1;
+    //        gameObject.GetComponent<MeshFilter>().sharedMesh = models[currentIndex].sharedMesh;
+    //        if (ammo != null)
+    //        {
+    //            ammo.LastPart();
+    //            model.RunStats();
+    //        }
+    //        else if (grip != null)
+    //        {
+    //            grip.LastPart();
+    //            model.RunStats();
+    //        }
+    //        else if (barrel != null)
+    //        {
+    //            barrel.LastPart();
+    //            model.RunStats();
+    //        }
+    //    }
+    //}
 
     public void SwapModelDown()
     {
@@ -54,22 +134,49 @@ public class SwitchModel : MonoBehaviour
         {
             currentIndex--;
             if (currentIndex < 0)
+            {
                 currentIndex = models.Length - 1;
+            }
             gameObject.GetComponent<MeshFilter>().sharedMesh = models[currentIndex].sharedMesh;
+
             if (ammo != null)
             {
-                ammo.LastPart();
-                model.RunStats();
+                if (InvItem.invAmmos[currentIndex])
+                {
+                    ammo.LastPart();
+                    model.RunStats();
+                }
+                else
+                {
+                    ammo.LastPart();
+                    SwapModelDown();
+                }
             }
             else if (grip != null)
             {
-                grip.LastPart();
-                model.RunStats();
+                if (InvItem.invGrips[currentIndex])
+                {
+                    grip.LastPart();
+                    model.RunStats();
+                }
+                else
+                {
+                    grip.LastPart();
+                    SwapModelDown();
+                }
             }
             else if (barrel != null)
             {
-                barrel.LastPart();
-                model.RunStats();
+                if (InvItem.invBarrels[currentIndex])
+                {
+                    barrel.LastPart();
+                    model.RunStats();
+                }
+                else
+                {
+                    barrel.LastPart();
+                    SwapModelDown();
+                }
             }
         }
     }

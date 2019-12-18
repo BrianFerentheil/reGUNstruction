@@ -31,10 +31,15 @@ public class Barrel : GunStats
                 swiMod = GetComponent<SwitchModel>();
             }
 
-            swiMod.models = new MeshFilter[3];
+            swiMod.models = new MeshFilter[7];
             swiMod.models[0] = FindObjectOfType<BMONE>().GetComponent<MeshFilter>();
             swiMod.models[1] = FindObjectOfType<BMTWO>().GetComponent<MeshFilter>();
             swiMod.models[2] = FindObjectOfType<BMTHREE>().GetComponent<MeshFilter>();
+            swiMod.models[3] = FindObjectOfType<BMFOUR>().GetComponent<MeshFilter>();
+            swiMod.models[4] = FindObjectOfType<BMFIVE>().GetComponent<MeshFilter>();
+            swiMod.models[5] = FindObjectOfType<BMSIX>().GetComponent<MeshFilter>();
+            swiMod.models[6] = FindObjectOfType<BMSEVEN>().GetComponent<MeshFilter>();
+
             modelsSET = true;
         }
     }

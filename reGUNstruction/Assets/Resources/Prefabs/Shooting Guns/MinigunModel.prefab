@@ -28,7 +28,7 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 821033601920096332}
-  m_LocalRotation: {x: 0, y: 0.7071068, z: 0, w: 0.7071068}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: 7.923, y: 4.416, z: 3.937}
   m_LocalScale: {x: 2, y: 2, z: 2}
   m_Children:
@@ -199,7 +199,7 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 821033601920096332}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: c7ad14fafe3e8324fa74e46aab616693, type: 3}
   m_Name: 
@@ -306,6 +306,14 @@ MonoBehaviour:
   - {fileID: 33083152602430152, guid: 8bcf33c33fb10124c8902419aa0ce875, type: 3}
   - {fileID: 3300006, guid: 17b3a5ffae9cbc94ab8159837fb10dc6, type: 3}
   - {fileID: 33883012632819116, guid: 4c0470e789a5dfa449095ca1fe17000c, type: 3}
+  - {fileID: 33083152602430152, guid: 8bcf33c33fb10124c8902419aa0ce875, type: 3}
+  - {fileID: 3300006, guid: 17b3a5ffae9cbc94ab8159837fb10dc6, type: 3}
+  - {fileID: 33883012632819116, guid: 4c0470e789a5dfa449095ca1fe17000c, type: 3}
+  - {fileID: 33083152602430152, guid: 8bcf33c33fb10124c8902419aa0ce875, type: 3}
+  - {fileID: 3300006, guid: 17b3a5ffae9cbc94ab8159837fb10dc6, type: 3}
+  - {fileID: 33883012632819116, guid: 4c0470e789a5dfa449095ca1fe17000c, type: 3}
+  - {fileID: 33083152602430152, guid: 8bcf33c33fb10124c8902419aa0ce875, type: 3}
+  - {fileID: 3300006, guid: 17b3a5ffae9cbc94ab8159837fb10dc6, type: 3}
   model: {fileID: 0}
   swapper: {fileID: 0}
 --- !u!114 &8252646578876598749
@@ -641,6 +649,10 @@ MonoBehaviour:
   - {fileID: 33735081928884416, guid: 3b55e704427231a419aa6332d047928b, type: 3}
   - {fileID: 3300000, guid: da67c7e0a66055842b176fd21ad06262, type: 3}
   - {fileID: 33708538260321566, guid: dab15cb0f516d954994fcd5aef0a45e1, type: 3}
+  - {fileID: 33735081928884416, guid: 3b55e704427231a419aa6332d047928b, type: 3}
+  - {fileID: 3300000, guid: da67c7e0a66055842b176fd21ad06262, type: 3}
+  - {fileID: 33708538260321566, guid: dab15cb0f516d954994fcd5aef0a45e1, type: 3}
+  - {fileID: 33735081928884416, guid: 3b55e704427231a419aa6332d047928b, type: 3}
   model: {fileID: 0}
   swapper: {fileID: 0}
 --- !u!114 &9134675839078072807

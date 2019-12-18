@@ -30,10 +30,12 @@ public class Grip : GunStats
                 swiMod = GetComponent<SwitchModel>();
             }
 
-            swiMod.models = new MeshFilter[3];
+            swiMod.models = new MeshFilter[4];
             swiMod.models[0] = FindObjectOfType<GMONE>().GetComponent<MeshFilter>();
             swiMod.models[1] = FindObjectOfType<GMTWO>().GetComponent<MeshFilter>();
             swiMod.models[2] = FindObjectOfType<GMTHREE>().GetComponent<MeshFilter>();
+            swiMod.models[3] = FindObjectOfType<GMFOUR>().GetComponent<MeshFilter>();
+
             modelsSET = true;
         }
     }
