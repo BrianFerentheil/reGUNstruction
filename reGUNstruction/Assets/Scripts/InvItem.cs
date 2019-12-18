@@ -7,9 +7,11 @@ using TMPro;
 public class InvItem : MonoBehaviour
 {
 
-    public static List<GunStats> allParts = new List<GunStats>();
+    //public static List<GunStats> allParts = new List<GunStats>();
 
     GunStats me;
+
+    public int purchaseCost;
 
     public Grip.gripModel grip = Grip.gripModel.none;
     public Barrel.barrelModel barrel = Barrel.barrelModel.none;
@@ -35,6 +37,17 @@ public class InvItem : MonoBehaviour
     public TMP_Text frText;
     public TMP_Text dText;
 
+    public static bool arraysFilled;
+    public static bool[] invGrips;
+    public static bool[] invBarrels;
+    public static bool[] invAmmos;
+
+    int myPos;
+    string myType;
+
+    public bool owned;
+
+    public bool playerClose;
 
 
     // Start is called before the first frame update
@@ -47,211 +60,158 @@ public class InvItem : MonoBehaviour
         if(grip != Grip.gripModel.none)
         {
             myGrip = new Grip();
-            myGrip.RunStatMods(grip, me);
-
-            switch (grip)
-            {
-                case Grip.gripModel.pistol:
-                    break;
-                case Grip.gripModel.subMG:
-                    break;
-                case Grip.gripModel.assaultR:
-                    break;
-                case Grip.gripModel.shotG:
-                    break;
-                case Grip.gripModel.none:
-                    break;
-                default:
-                    break;
-            }
-            
+            myGrip.RunStatMods(grip, me);            
         }
         else if(barrel != Barrel.barrelModel.none)
         {
             myBarrel = new Barrel();
             myBarrel.RunStatMods(barrel, me);
-
-            switch (barrel)
-            {
-                case Barrel.barrelModel.one:
-                    break;
-                case Barrel.barrelModel.two:
-                    break;
-                case Barrel.barrelModel.three:
-                    break;
-                case Barrel.barrelModel.four:
-                    break;
-                case Barrel.barrelModel.five:
-                    break;
-                case Barrel.barrelModel.six:
-                    break;
-                case Barrel.barrelModel.seven:
-                    break;
-                case Barrel.barrelModel.none:
-                    break;
-                default:
-                    break;
-            }
         }
         else if(ammo != Ammo.ammoModel.none)
         {
             myAmmo = new Ammo();
             myAmmo.RunStatMods(ammo, me);
-
-            switch (ammo)
-            {
-                case Ammo.ammoModel.one:
-                    break;
-                case Ammo.ammoModel.two:
-                    break;
-                case Ammo.ammoModel.three:
-                    break;
-                case Ammo.ammoModel.four:
-                    break;
-                case Ammo.ammoModel.five:
-                    break;
-                case Ammo.ammoModel.six:
-                    break;
-                case Ammo.ammoModel.seven:
-                    break;
-                case Ammo.ammoModel.eight:
-                    break;
-                case Ammo.ammoModel.nine:
-                    break;
-                case Ammo.ammoModel.ten:
-                    break;
-                case Ammo.ammoModel.eleven:
-                    break;
-                case Ammo.ammoModel.none:
-                    break;
-                default:
-                    break;
-            }
         }
+
+        FillInvArrays();
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+        if(Input.GetKeyDown(KeyCode.E) && playerClose)
+        {
+            if(purchaseCost < PlayerScoreSystem.totalScore)
+            {
+                PurchaseInv();
+            }
+        }
     }
 
     void  WhichPartIsThis()
     {
         if (name.Contains("Grip"))
         {
+            myType = "grip";
             if (name.Contains("One"))
             {
                 grip = Grip.gripModel.pistol;
+                myPos = 0;                
             }
             else if (name.Contains("Two"))
             {
                 grip = Grip.gripModel.subMG;
-
+                myPos = 1;
             }
             else if (name.Contains("Three"))
             {
                 grip = Grip.gripModel.assaultR;
-
+                myPos = 2;
             }
             else if (name.Contains("Four"))
             {
                 grip = Grip.gripModel.shotG;
-
+                myPos = 3;
             }
         }
         else if (name.Contains("Barrel"))
         {
+            myType = "barrel";
+
             if (name.Contains("One"))
             {
                 barrel = Barrel.barrelModel.one;
+                myPos = 0;
             }
             else if (name.Contains("Two"))
             {
                 barrel = Barrel.barrelModel.two;
-
+                myPos = 1;
             }
             else if (name.Contains("Three"))
             {
                 barrel = Barrel.barrelModel.three;
-
+                myPos = 2;
             }
             else if (name.Contains("Four"))
             {
                 barrel = Barrel.barrelModel.four;
-
+                myPos = 3;
             }
             else if (name.Contains("Five"))
             {
                 barrel = Barrel.barrelModel.five;
-
+                myPos = 4;
             }
             else if (name.Contains("Six"))
             {
                 barrel = Barrel.barrelModel.six;
-
+                myPos = 5;
             }
             else if (name.Contains("Seven"))
             {
                 barrel = Barrel.barrelModel.seven;
-
+                myPos = 6;
             }
         }
         else if (name.Contains("Ammo"))
         {
+            myType = "ammo";
+
             if (name.Contains("One"))
             {
                 ammo = Ammo.ammoModel.one;
+                myPos = 0;
             }
             else if (name.Contains("Two"))
             {
                 ammo = Ammo.ammoModel.two;
-
+                myPos = 1;
             }
             else if (name.Contains("Three"))
             {
                 ammo = Ammo.ammoModel.three;
-
+                myPos = 2;
             }
             else if (name.Contains("Four"))
             {
                 ammo = Ammo.ammoModel.four;
-
+                myPos = 3;
             }
             else if (name.Contains("Five"))
             {
                 ammo = Ammo.ammoModel.five;
-
+                myPos = 4;
             }
             else if (name.Contains("Six"))
             {
                 ammo = Ammo.ammoModel.six;
-
+                myPos = 5;
             }
             else if (name.Contains("Seven"))
             {
                 ammo = Ammo.ammoModel.seven;
-
+                myPos = 6;
             }
             else if (name.Contains("Eight"))
             {
                 ammo = Ammo.ammoModel.eight;
-
+                myPos = 7;
             }
             else if (name.Contains("Nine"))
             {
                 ammo = Ammo.ammoModel.nine;
-
+                myPos = 8;
             }
             else if (name.Contains("Ten"))
             {
                 ammo = Ammo.ammoModel.ten;
-
+                myPos = 9;
             }
             else if (name.Contains("Eleven"))
             {
                 ammo = Ammo.ammoModel.eleven;
-
+                myPos = 10;
             }
         }
         else
@@ -271,6 +231,8 @@ public class InvItem : MonoBehaviour
         frText = fRObj.transform.GetChild(3).GetComponent<TMP_Text>();
         dText = dObj.transform.GetChild(3).GetComponent<TMP_Text>();
 
+        ownText = partUI.transform.GetChild(0).GetChild(0).GetComponent<TMP_Text>();
+
     }
 
     public void UpdateUI()
@@ -280,6 +242,15 @@ public class InvItem : MonoBehaviour
 
         frText.text = $"Fire Rate";
         dText.text = $"Damage";
+
+        if (owned)
+        {
+            ownText.text = "Owned";
+        }
+        else
+        {
+            ownText.text = $"{purchaseCost} Points";
+        }
     }
 
     public void OpenUI()
@@ -300,11 +271,15 @@ public class InvItem : MonoBehaviour
         {
             partUI.SetActive(true);
         }
+
+        playerClose = true;
     }
 
     public void CloseUI()
     {
         partUI.SetActive(false);
+
+        playerClose = false;
     }
 
     private void OnTriggerEnter(Collider other)
@@ -321,5 +296,66 @@ public class InvItem : MonoBehaviour
         {
             CloseUI();
         }
+    }
+
+    void FillInvArrays()
+    {
+        if (!arraysFilled)
+        {
+            arraysFilled = true;
+            invGrips = new bool[] { true, false, false, false };
+            invBarrels = new bool[] { true, true, true, false, false, false, false };
+            invAmmos = new bool[] { true, true, true, false, false, false, false, false, false, false, false };
+        }
+        InitialSetUp();
+    }
+
+    void InitialSetUp()
+    {
+        if (myType == "grip")
+        {
+            if (invGrips[myPos])
+            {
+                owned = true;
+            }
+        }
+        else if (myType == "barrel")
+        {
+            if (invBarrels[myPos])
+            {
+                owned = true;
+            }
+        }
+        else if (myType == "ammo")
+        {
+            if (invAmmos[myPos])
+            {
+                owned = true;
+            }
+        }
+    }
+
+
+    public void PurchaseInv()
+    {
+        if (!owned)
+        {
+            owned = true;
+            PlayerScoreSystem.pss.SubtractFromScore(purchaseCost);
+
+            if (myType == "grip")
+            {
+                invGrips[myPos] = true;
+            }
+            else if (myType == "barrel")
+            {
+                invBarrels[myPos] = true;
+            }
+            else if (myType == "ammo")
+            {
+                invAmmos[myPos] = true;
+            }
+        }
+        UpdateUI();
     }
 }
