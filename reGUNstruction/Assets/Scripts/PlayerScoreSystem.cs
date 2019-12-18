@@ -13,11 +13,16 @@ public class PlayerScoreSystem : MonoBehaviour
     TMP_Text totalScoreText;
     TMP_Text highScoreText;
 
+    public static PlayerScoreSystem pss;
+    public float timerDuration = 1f;
+
     // Start is called before the first frame update
     void Start()
     {
         totalScoreText = FindObjectOfType<TotalScoreUI>().GetComponent<TMP_Text>();
         highScoreText = FindObjectOfType<HighScoreUI>().GetComponent<TMP_Text>();
+
+        pss = this;
     }
 
     // Update is called once per frame
@@ -29,14 +34,16 @@ public class PlayerScoreSystem : MonoBehaviour
     public void AddToTotal(float score)
     {
         CheckHighScore(score);
-        totalScore += score;
-        totalScoreText.text = $"Total Score: {totalScore}";
+        //totalScore += score;
+        StartCoroutine("CountUpTotal", score + totalScore);
+        //totalScoreText.text = $"Total Score: {totalScore}";
     }
 
     public void SubtractFromScore(float cost)
     {
-        totalScore -= cost;
-        totalScoreText.text = $"Total Score: {totalScore}";
+        //totalScore -= cost;
+        //totalScoreText.text = $"Total Score: {totalScore}";
+        StartCoroutine("CountUpTotal", totalScore - cost);
 
     }
 
@@ -44,8 +51,37 @@ public class PlayerScoreSystem : MonoBehaviour
     {
         if(highScore < score)
         {
-            highScore = score;
-            highScoreText.text = $"High Score: {highScore}";
+            //highScore = score;
+            //highScoreText.text = $"High Score: {highScore}";
+            StartCoroutine("CountUpHigh", score);
         }
+    }
+
+    public IEnumerator CountUpTotal(float newScore)
+    {
+        float start = totalScore;
+        for(float timer = 0; timer < timerDuration; timer += Time.deltaTime)
+        {
+            float progress = timer / timerDuration;
+            totalScore = (int)Mathf.Lerp(start, newScore, progress);
+            totalScoreText.text = $"Total Score: {totalScore}";
+            yield return null;
+        }
+        totalScore = newScore;
+        totalScoreText.text = $"Total Score: {totalScore}";
+    }
+
+    public IEnumerator CountUpHigh(float newScore)
+    {
+        float start = highScore;
+        for (float timer = 0; timer < timerDuration; timer += Time.deltaTime)
+        {
+            float progress = timer / timerDuration;
+            highScore = (int)Mathf.Lerp(start, newScore, progress);
+            highScoreText.text = $"High Score: {highScore}";
+            yield return null;
+        }
+        highScore = newScore;
+        highScoreText.text = $"High Score: {highScore}";
     }
 }

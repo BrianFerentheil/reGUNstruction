@@ -359,6 +359,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b5708bf1af239429b6411b5019b5ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  purchaseCost: 50000
   grip: 4
   barrel: 7
   ammo: 11
@@ -376,6 +377,8 @@ MonoBehaviour:
   ownText: {fileID: 0}
   frText: {fileID: 0}
   dText: {fileID: 0}
+  owned: 0
+  playerClose: 0
 --- !u!65 &23579951
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -709,6 +712,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b5708bf1af239429b6411b5019b5ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  purchaseCost: 50000
   grip: 4
   barrel: 7
   ammo: 11
@@ -726,6 +730,8 @@ MonoBehaviour:
   ownText: {fileID: 0}
   frText: {fileID: 0}
   dText: {fileID: 0}
+  owned: 0
+  playerClose: 0
 --- !u!65 &89052133
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1094,6 +1100,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b5708bf1af239429b6411b5019b5ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  purchaseCost: 0
   grip: 4
   barrel: 7
   ammo: 11
@@ -1111,6 +1118,8 @@ MonoBehaviour:
   ownText: {fileID: 0}
   frText: {fileID: 0}
   dText: {fileID: 0}
+  owned: 0
+  playerClose: 0
 --- !u!65 &140704150
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1320,6 +1329,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b5708bf1af239429b6411b5019b5ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  purchaseCost: 50000
   grip: 4
   barrel: 7
   ammo: 11
@@ -1337,6 +1347,8 @@ MonoBehaviour:
   ownText: {fileID: 0}
   frText: {fileID: 0}
   dText: {fileID: 0}
+  owned: 0
+  playerClose: 0
 --- !u!65 &180690876
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -1455,6 +1467,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b5708bf1af239429b6411b5019b5ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  purchaseCost: 0
   grip: 4
   barrel: 7
   ammo: 11
@@ -1472,6 +1485,8 @@ MonoBehaviour:
   ownText: {fileID: 0}
   frText: {fileID: 0}
   dText: {fileID: 0}
+  owned: 0
+  playerClose: 0
 --- !u!65 &185015201
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2041,6 +2056,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b5708bf1af239429b6411b5019b5ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  purchaseCost: 100000
   grip: 4
   barrel: 7
   ammo: 11
@@ -2058,6 +2074,8 @@ MonoBehaviour:
   ownText: {fileID: 0}
   frText: {fileID: 0}
   dText: {fileID: 0}
+  owned: 0
+  playerClose: 0
 --- !u!65 &294312952
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -2261,6 +2279,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b5708bf1af239429b6411b5019b5ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  purchaseCost: 0
   grip: 4
   barrel: 7
   ammo: 11
@@ -2278,6 +2297,8 @@ MonoBehaviour:
   ownText: {fileID: 0}
   frText: {fileID: 0}
   dText: {fileID: 0}
+  owned: 0
+  playerClose: 0
 --- !u!65 &318660388
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3212,6 +3233,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b5708bf1af239429b6411b5019b5ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  purchaseCost: 50000000
   grip: 4
   barrel: 7
   ammo: 11
@@ -3229,6 +3251,8 @@ MonoBehaviour:
   ownText: {fileID: 0}
   frText: {fileID: 0}
   dText: {fileID: 0}
+  owned: 0
+  playerClose: 0
 --- !u!65 &561837044
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -3652,6 +3676,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b5708bf1af239429b6411b5019b5ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  purchaseCost: 100000
   grip: 4
   barrel: 7
   ammo: 11
@@ -3669,6 +3694,8 @@ MonoBehaviour:
   ownText: {fileID: 0}
   frText: {fileID: 0}
   dText: {fileID: 0}
+  owned: 0
+  playerClose: 0
 --- !u!65 &659244052
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4295,6 +4322,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b5708bf1af239429b6411b5019b5ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  purchaseCost: 50000000
   grip: 4
   barrel: 7
   ammo: 11
@@ -4312,6 +4340,8 @@ MonoBehaviour:
   ownText: {fileID: 0}
   frText: {fileID: 0}
   dText: {fileID: 0}
+  owned: 0
+  playerClose: 0
 --- !u!65 &835232356
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -4856,6 +4886,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b5708bf1af239429b6411b5019b5ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  purchaseCost: 1000000
   grip: 4
   barrel: 7
   ammo: 11
@@ -4873,6 +4904,8 @@ MonoBehaviour:
   ownText: {fileID: 0}
   frText: {fileID: 0}
   dText: {fileID: 0}
+  owned: 0
+  playerClose: 0
 --- !u!65 &942018522
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5214,6 +5247,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b5708bf1af239429b6411b5019b5ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  purchaseCost: 50000
   grip: 4
   barrel: 7
   ammo: 11
@@ -5231,6 +5265,8 @@ MonoBehaviour:
   ownText: {fileID: 0}
   frText: {fileID: 0}
   dText: {fileID: 0}
+  owned: 0
+  playerClose: 0
 --- !u!65 &954757317
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -5432,6 +5468,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b5708bf1af239429b6411b5019b5ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  purchaseCost: 500000
   grip: 4
   barrel: 7
   ammo: 11
@@ -5449,6 +5486,8 @@ MonoBehaviour:
   ownText: {fileID: 0}
   frText: {fileID: 0}
   dText: {fileID: 0}
+  owned: 0
+  playerClose: 0
 --- !u!65 &976438330
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -6358,6 +6397,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b5708bf1af239429b6411b5019b5ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  purchaseCost: 100000
   grip: 4
   barrel: 7
   ammo: 11
@@ -6375,6 +6415,8 @@ MonoBehaviour:
   ownText: {fileID: 0}
   frText: {fileID: 0}
   dText: {fileID: 0}
+  owned: 0
+  playerClose: 0
 --- !u!65 &1194093163
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -8213,6 +8255,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b5708bf1af239429b6411b5019b5ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  purchaseCost: 100000
   grip: 4
   barrel: 7
   ammo: 11
@@ -8230,6 +8273,8 @@ MonoBehaviour:
   ownText: {fileID: 0}
   frText: {fileID: 0}
   dText: {fileID: 0}
+  owned: 0
+  playerClose: 0
 --- !u!65 &1419508870
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -9323,6 +9368,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b5708bf1af239429b6411b5019b5ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  purchaseCost: 50000
   grip: 4
   barrel: 7
   ammo: 11
@@ -9340,6 +9386,8 @@ MonoBehaviour:
   ownText: {fileID: 0}
   frText: {fileID: 0}
   dText: {fileID: 0}
+  owned: 0
+  playerClose: 0
 --- !u!65 &1548269565
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10858,6 +10906,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b5708bf1af239429b6411b5019b5ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  purchaseCost: 1000000
   grip: 4
   barrel: 7
   ammo: 11
@@ -10875,6 +10924,8 @@ MonoBehaviour:
   ownText: {fileID: 0}
   frText: {fileID: 0}
   dText: {fileID: 0}
+  owned: 0
+  playerClose: 0
 --- !u!65 &1737325069
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -10993,6 +11044,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b5708bf1af239429b6411b5019b5ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  purchaseCost: 1000000
   grip: 4
   barrel: 7
   ammo: 11
@@ -11010,6 +11062,8 @@ MonoBehaviour:
   ownText: {fileID: 0}
   frText: {fileID: 0}
   dText: {fileID: 0}
+  owned: 0
+  playerClose: 0
 --- !u!65 &1739534467
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -11195,6 +11249,31 @@ PrefabInstance:
       propertyPath: m_Name
       value: Gun Swapper
       objectReference: {fileID: 0}
+    - target: {fileID: 3330854976571541728, guid: c2acb69517e2b624b8c9b47a2a7ca374,
+        type: 3}
+      propertyPath: currWeapon
+      value: 
+      objectReference: {fileID: 1536692214}
+    - target: {fileID: 3330854976571541728, guid: c2acb69517e2b624b8c9b47a2a7ca374,
+        type: 3}
+      propertyPath: craftingCanvas
+      value: 
+      objectReference: {fileID: 1845013046}
+    - target: {fileID: 3330854976571541728, guid: c2acb69517e2b624b8c9b47a2a7ca374,
+        type: 3}
+      propertyPath: statSlider
+      value: 
+      objectReference: {fileID: 2022774453}
+    - target: {fileID: 3330854976571541728, guid: c2acb69517e2b624b8c9b47a2a7ca374,
+        type: 3}
+      propertyPath: lastButton
+      value: 
+      objectReference: {fileID: 1943460600}
+    - target: {fileID: 3330854976571541728, guid: c2acb69517e2b624b8c9b47a2a7ca374,
+        type: 3}
+      propertyPath: nextButton
+      value: 
+      objectReference: {fileID: 1928643621}
     - target: {fileID: 3330854976571541731, guid: c2acb69517e2b624b8c9b47a2a7ca374,
         type: 3}
       propertyPath: m_LocalPosition.x
@@ -11260,31 +11339,6 @@ PrefabInstance:
       propertyPath: m_LocalScale.z
       value: 2
       objectReference: {fileID: 0}
-    - target: {fileID: 3330854976571541728, guid: c2acb69517e2b624b8c9b47a2a7ca374,
-        type: 3}
-      propertyPath: currWeapon
-      value: 
-      objectReference: {fileID: 1536692214}
-    - target: {fileID: 3330854976571541728, guid: c2acb69517e2b624b8c9b47a2a7ca374,
-        type: 3}
-      propertyPath: craftingCanvas
-      value: 
-      objectReference: {fileID: 1845013046}
-    - target: {fileID: 3330854976571541728, guid: c2acb69517e2b624b8c9b47a2a7ca374,
-        type: 3}
-      propertyPath: statSlider
-      value: 
-      objectReference: {fileID: 2022774453}
-    - target: {fileID: 3330854976571541728, guid: c2acb69517e2b624b8c9b47a2a7ca374,
-        type: 3}
-      propertyPath: lastButton
-      value: 
-      objectReference: {fileID: 1943460600}
-    - target: {fileID: 3330854976571541728, guid: c2acb69517e2b624b8c9b47a2a7ca374,
-        type: 3}
-      propertyPath: nextButton
-      value: 
-      objectReference: {fileID: 1928643621}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: c2acb69517e2b624b8c9b47a2a7ca374, type: 3}
 --- !u!114 &1776216858 stripped
@@ -12922,6 +12976,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b5708bf1af239429b6411b5019b5ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  purchaseCost: 10000000
   grip: 4
   barrel: 7
   ammo: 11
@@ -12939,6 +12994,8 @@ MonoBehaviour:
   ownText: {fileID: 0}
   frText: {fileID: 0}
   dText: {fileID: 0}
+  owned: 0
+  playerClose: 0
 --- !u!65 &1902922812
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13069,6 +13126,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b5708bf1af239429b6411b5019b5ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  purchaseCost: 0
   grip: 4
   barrel: 7
   ammo: 11
@@ -13086,6 +13144,8 @@ MonoBehaviour:
   ownText: {fileID: 0}
   frText: {fileID: 0}
   dText: {fileID: 0}
+  owned: 0
+  playerClose: 0
 --- !u!65 &1937222438
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -13617,6 +13677,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b5708bf1af239429b6411b5019b5ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  purchaseCost: 0
   grip: 4
   barrel: 7
   ammo: 11
@@ -13634,6 +13695,8 @@ MonoBehaviour:
   ownText: {fileID: 0}
   frText: {fileID: 0}
   dText: {fileID: 0}
+  owned: 0
+  playerClose: 0
 --- !u!65 &1991268149
 BoxCollider:
   m_ObjectHideFlags: 0
@@ -14723,6 +14786,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 64b5708bf1af239429b6411b5019b5ff, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  purchaseCost: 0
   grip: 4
   barrel: 7
   ammo: 11
@@ -14740,6 +14804,8 @@ MonoBehaviour:
   ownText: {fileID: 0}
   frText: {fileID: 0}
   dText: {fileID: 0}
+  owned: 0
+  playerClose: 0
 --- !u!65 &2115322611
 BoxCollider:
   m_ObjectHideFlags: 0
