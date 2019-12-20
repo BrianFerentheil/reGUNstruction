@@ -242,6 +242,10 @@ public class InvItem : MonoBehaviour
         damageSlider.value = me.damage;
         fireRateSlider.value = me.fireRate;
 
+        damSliFill.color = Color.Lerp(Color.yellow, Color.red, me.damage / 12);
+        firSliFill.color = Color.Lerp(Color.yellow, Color.red, me.fireRate / 12);
+
+
         frText.text = $"Fire Rate";
         dText.text = $"Damage";
 
