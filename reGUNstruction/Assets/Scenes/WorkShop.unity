@@ -9154,62 +9154,6 @@ PrefabInstance:
       propertyPath: swapper
       value: 
       objectReference: {fileID: 1776216858}
-    - target: {fileID: 4213802150662929, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-      propertyPath: currentBarrel
-      value: 7
-      objectReference: {fileID: 0}
-    - target: {fileID: 4213802150662929, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-      propertyPath: myElementG
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 4213802150662929, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-      propertyPath: myElementB
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 4213802150662929, guid: 5e9e851c0e142814dac026a256ba2ac0, type: 3}
-      propertyPath: myElementA
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 2898090477481477435, guid: 5e9e851c0e142814dac026a256ba2ac0,
-        type: 3}
-      propertyPath: myElementG
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 2898090477481477435, guid: 5e9e851c0e142814dac026a256ba2ac0,
-        type: 3}
-      propertyPath: myElementB
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 2898090477481477435, guid: 5e9e851c0e142814dac026a256ba2ac0,
-        type: 3}
-      propertyPath: myElementA
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 2898090477481477435, guid: 5e9e851c0e142814dac026a256ba2ac0,
-        type: 3}
-      propertyPath: currentGrip
-      value: 4
-      objectReference: {fileID: 0}
-    - target: {fileID: 8485783557696621385, guid: 5e9e851c0e142814dac026a256ba2ac0,
-        type: 3}
-      propertyPath: currentAmmo
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 8485783557696621385, guid: 5e9e851c0e142814dac026a256ba2ac0,
-        type: 3}
-      propertyPath: myElementG
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 8485783557696621385, guid: 5e9e851c0e142814dac026a256ba2ac0,
-        type: 3}
-      propertyPath: myElementB
-      value: 11
-      objectReference: {fileID: 0}
-    - target: {fileID: 8485783557696621385, guid: 5e9e851c0e142814dac026a256ba2ac0,
-        type: 3}
-      propertyPath: myElementA
-      value: 11
-      objectReference: {fileID: 0}
     - target: {fileID: 6669482873136300292, guid: 5e9e851c0e142814dac026a256ba2ac0,
         type: 3}
       propertyPath: swapper
@@ -10574,6 +10518,95 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 1687657988}
   m_CullTransparentMesh: 0
+--- !u!1001 &1698067798
+PrefabInstance:
+  m_ObjectHideFlags: 0
+  serializedVersion: 2
+  m_Modification:
+    m_TransformParent: {fileID: 0}
+    m_Modifications:
+    - target: {fileID: 4479557964631101005, guid: efb974cb2ab03f24fa3d83a20273a9ae,
+        type: 3}
+      propertyPath: m_Name
+      value: AudioManager
+      objectReference: {fileID: 0}
+    - target: {fileID: 4479557964631101007, guid: efb974cb2ab03f24fa3d83a20273a9ae,
+        type: 3}
+      propertyPath: m_LocalPosition.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4479557964631101007, guid: efb974cb2ab03f24fa3d83a20273a9ae,
+        type: 3}
+      propertyPath: m_LocalPosition.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4479557964631101007, guid: efb974cb2ab03f24fa3d83a20273a9ae,
+        type: 3}
+      propertyPath: m_LocalPosition.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4479557964631101007, guid: efb974cb2ab03f24fa3d83a20273a9ae,
+        type: 3}
+      propertyPath: m_LocalRotation.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4479557964631101007, guid: efb974cb2ab03f24fa3d83a20273a9ae,
+        type: 3}
+      propertyPath: m_LocalRotation.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4479557964631101007, guid: efb974cb2ab03f24fa3d83a20273a9ae,
+        type: 3}
+      propertyPath: m_LocalRotation.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4479557964631101007, guid: efb974cb2ab03f24fa3d83a20273a9ae,
+        type: 3}
+      propertyPath: m_LocalRotation.w
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 4479557964631101007, guid: efb974cb2ab03f24fa3d83a20273a9ae,
+        type: 3}
+      propertyPath: m_RootOrder
+      value: 22
+      objectReference: {fileID: 0}
+    - target: {fileID: 4479557964631101007, guid: efb974cb2ab03f24fa3d83a20273a9ae,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4479557964631101007, guid: efb974cb2ab03f24fa3d83a20273a9ae,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.y
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4479557964631101007, guid: efb974cb2ab03f24fa3d83a20273a9ae,
+        type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 4479557964631101004, guid: efb974cb2ab03f24fa3d83a20273a9ae,
+        type: 3}
+      propertyPath: clips.Array.size
+      value: 3
+      objectReference: {fileID: 0}
+    - target: {fileID: 4479557964631101004, guid: efb974cb2ab03f24fa3d83a20273a9ae,
+        type: 3}
+      propertyPath: clips.Array.data[1]
+      value: 
+      objectReference: {fileID: 8300000, guid: 8c90fc00a341f2e418a5d73cd416f9a4, type: 3}
+    - target: {fileID: 4479557964631101004, guid: efb974cb2ab03f24fa3d83a20273a9ae,
+        type: 3}
+      propertyPath: clips.Array.data[2]
+      value: 
+      objectReference: {fileID: 8300000, guid: aaf9118ab46c52e4bb67582228835170, type: 3}
+    - target: {fileID: 4479557964631101006, guid: efb974cb2ab03f24fa3d83a20273a9ae,
+        type: 3}
+      propertyPath: m_PlayOnAwake
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents: []
+  m_SourcePrefab: {fileID: 100100000, guid: efb974cb2ab03f24fa3d83a20273a9ae, type: 3}
 --- !u!224 &1700487921 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 904151927, guid: 6440440a29b64954f8be456484e2f26b,
@@ -10615,6 +10648,7 @@ MonoBehaviour:
   multiplierGap: 0.1
   multiplier: 0
   multiplierMax: 2
+  previousCurrent: 0
 --- !u!4 &1708238306
 Transform:
   m_ObjectHideFlags: 0
