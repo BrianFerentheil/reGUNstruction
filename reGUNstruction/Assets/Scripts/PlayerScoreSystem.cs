@@ -16,6 +16,9 @@ public class PlayerScoreSystem : MonoBehaviour
     public static PlayerScoreSystem pss;
     public float timerDuration = 1f;
 
+    bool counting;
+    float countingVar;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -31,9 +34,9 @@ public class PlayerScoreSystem : MonoBehaviour
         
     }
 
-    public void AddToTotal(float score)
+    public void AddToTotal(float score, float total)
     {
-        CheckHighScore(score);
+        CheckHighScore(total);
         //totalScore += score;
         StartCoroutine("CountUpTotal", score + totalScore);
         //totalScoreText.text = $"Total Score: {totalScore}";
@@ -53,14 +56,26 @@ public class PlayerScoreSystem : MonoBehaviour
         {
             //highScore = score;
             //highScoreText.text = $"High Score: {highScore}";
-            StartCoroutine("CountUpHigh", score);
+            StartCoroutine("CountUpHigh", score);            
         }
     }
 
     public IEnumerator CountUpTotal(float newScore)
     {
-        float start = totalScore;
-        for(float timer = 0; timer < timerDuration; timer += Time.deltaTime)
+        float start;
+        if (!counting)
+        {
+            start = totalScore;
+            countingVar = newScore;
+            counting = true;
+        }
+        else
+        {
+            start = totalScore;
+            newScore += countingVar - totalScore;
+            countingVar = newScore;
+        }
+        for (float timer = 0; timer < timerDuration; timer += Time.deltaTime*3)
         {
             float progress = timer / timerDuration;
             totalScore = (int)Mathf.Lerp(start, newScore, progress);
@@ -69,12 +84,13 @@ public class PlayerScoreSystem : MonoBehaviour
         }
         totalScore = newScore;
         totalScoreText.text = $"Total Score: {totalScore}";
+        counting = false;
     }
 
     public IEnumerator CountUpHigh(float newScore)
     {
         float start = highScore;
-        for (float timer = 0; timer < timerDuration; timer += Time.deltaTime)
+        for (float timer = 0; timer < timerDuration; timer += Time.deltaTime*3)
         {
             float progress = timer / timerDuration;
             highScore = (int)Mathf.Lerp(start, newScore, progress);
@@ -83,5 +99,6 @@ public class PlayerScoreSystem : MonoBehaviour
         }
         highScore = newScore;
         highScoreText.text = $"High Score: {highScore}";
+        counting = false;
     }
 }

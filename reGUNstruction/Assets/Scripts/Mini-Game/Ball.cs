@@ -32,17 +32,13 @@ public class Ball : MonoBehaviour
 
     private void OnCollisionEnter(Collision collision)
     {
-        if(basketball)
+        if (basketball)
         {
             foreach(BasketMinigameWall wall in basketWalls)
             {
                 if (wall.playerEnter)
                 {
                     am.PlayAudio("BallBounce");
-                }
-                if(!wall.playerEnter)
-                {
-                    return;
                 }
             }
         }
@@ -54,10 +50,6 @@ public class Ball : MonoBehaviour
                 if (wall.playerEnter)
                 {
                     am.PlayAudio("BallBounce");
-                }
-                if(!wall.playerEnter)
-                {
-                    return;
                 }
             }
         }

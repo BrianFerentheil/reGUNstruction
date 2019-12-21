@@ -12,15 +12,18 @@ public class ScoreManager : MonoBehaviour
     public float multiplierGap;
     public float multiplier;
     public float multiplierMax;
-    
 
+    public float previousCurrent;
 
     PlayerScoreSystem pSS;
+
+    public static ScoreManager scoreMan;
     
 
     void Start()
     {
         multiplier = 0;
+        scoreMan = this;
     }
 
     private void Update()
@@ -29,6 +32,8 @@ public class ScoreManager : MonoBehaviour
         {
             currentScore += 100000;
         }
+
+        CheckForUpdate();
     }
 
     public void ScoreCheck()
@@ -50,12 +55,32 @@ public class ScoreManager : MonoBehaviour
     //This function is called between rounds  to add the current total to the player's saved total - then will reset their current total.
     public void ResetScore()
     {
-        if(pSS == null)
+        if (currentScore > 0)
         {
-            pSS = FindObjectOfType<PlayerScoreSystem>();
-        }
+            //if (pSS == null)
+            //{
+            //    pSS = FindObjectOfType<PlayerScoreSystem>();
+            //}
 
-        pSS.AddToTotal(currentScore);
-        currentScore = 0;
+            //pSS.AddToTotal(currentScore);
+            currentScore = 0;
+            previousCurrent = 0;
+        }
+    }
+
+    public void CheckForUpdate()
+    {
+        if(previousCurrent != currentScore)
+        {
+            Mathf.RoundToInt(currentScore);
+
+            if (pSS == null)
+            {
+                pSS = FindObjectOfType<PlayerScoreSystem>();
+            }
+
+            pSS.AddToTotal(currentScore - previousCurrent, currentScore);
+            previousCurrent = currentScore;
+        }
     }
 }

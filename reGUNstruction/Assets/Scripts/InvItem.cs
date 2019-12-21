@@ -33,7 +33,8 @@ public class InvItem : MonoBehaviour
     public GameObject partUI;
     public bool uiSet;
 
-    public TMP_Text ownText;
+    public TMP_Text costText;
+    public TMP_Text pressEtoPurchaseText;
     public TMP_Text frText;
     public TMP_Text dText;
 
@@ -228,10 +229,11 @@ public class InvItem : MonoBehaviour
         firSliFill = fRObj.transform.GetChild(1).GetChild(0).GetComponent<Image>();
         damSliFill = dObj.transform.GetChild(1).GetChild(0).GetComponent<Image>();
 
-        frText = fRObj.transform.GetChild(3).GetComponent<TMP_Text>();
-        dText = dObj.transform.GetChild(3).GetComponent<TMP_Text>();
+        frText = fRObj.transform.GetChild(3).GetChild(0).GetComponent<TMP_Text>();
+        dText = dObj.transform.GetChild(3).GetChild(0).GetComponent<TMP_Text>();
 
-        ownText = partUI.transform.GetChild(0).GetChild(0).GetComponent<TMP_Text>();
+        costText = partUI.transform.GetChild(0).GetChild(0).GetComponent<TMP_Text>();
+        pressEtoPurchaseText = partUI.transform.GetChild(0).GetChild(1).GetComponent<TMP_Text>();
 
     }
 
@@ -240,16 +242,29 @@ public class InvItem : MonoBehaviour
         damageSlider.value = me.damage;
         fireRateSlider.value = me.fireRate;
 
+        damSliFill.color = Color.Lerp(Color.yellow, Color.red, me.damage / 12);
+        firSliFill.color = Color.Lerp(Color.yellow, Color.red, me.fireRate / 12);
+
+
         frText.text = $"Fire Rate";
         dText.text = $"Damage";
 
         if (owned)
         {
-            ownText.text = "Owned";
+            costText.text = "Owned";
+            pressEtoPurchaseText.text = "You Already Own This Equipment";
         }
         else
         {
-            ownText.text = $"{purchaseCost} Points";
+            costText.text = $"{purchaseCost} Points";
+            if(PlayerScoreSystem.totalScore > purchaseCost)
+            {
+                pressEtoPurchaseText.text = "Press 'E' to Purchase";
+            }
+            else
+            {
+                pressEtoPurchaseText.text = "Points Required To Purchase";
+            }
         }
     }
 
