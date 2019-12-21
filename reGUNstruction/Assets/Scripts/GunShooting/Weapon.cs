@@ -548,6 +548,10 @@ public class Weapon : MonoBehaviour
     public void ResetClips()
     {
         clips = 3;
+        curAmmo = maxAmmo;
+        clipText = $"Clips: { clips.ToString()}/ 3";
+        ammoText = $"Ammo: { curAmmo.ToString()}/ {maxAmmo.ToString()}";
+        reloading = false;
     }
 }
 
