@@ -10588,7 +10588,7 @@ PrefabInstance:
     - target: {fileID: 4479557964631101004, guid: efb974cb2ab03f24fa3d83a20273a9ae,
         type: 3}
       propertyPath: clips.Array.size
-      value: 3
+      value: 6
       objectReference: {fileID: 0}
     - target: {fileID: 4479557964631101004, guid: efb974cb2ab03f24fa3d83a20273a9ae,
         type: 3}
@@ -10600,6 +10600,21 @@ PrefabInstance:
       propertyPath: clips.Array.data[2]
       value: 
       objectReference: {fileID: 8300000, guid: aaf9118ab46c52e4bb67582228835170, type: 3}
+    - target: {fileID: 4479557964631101004, guid: efb974cb2ab03f24fa3d83a20273a9ae,
+        type: 3}
+      propertyPath: clips.Array.data[3]
+      value: 
+      objectReference: {fileID: 8300000, guid: 5976ece6416bd294cbe1439bb69f3557, type: 3}
+    - target: {fileID: 4479557964631101004, guid: efb974cb2ab03f24fa3d83a20273a9ae,
+        type: 3}
+      propertyPath: clips.Array.data[4]
+      value: 
+      objectReference: {fileID: 8300000, guid: 8121b26c7df0a004fb62d0540777c46d, type: 3}
+    - target: {fileID: 4479557964631101004, guid: efb974cb2ab03f24fa3d83a20273a9ae,
+        type: 3}
+      propertyPath: clips.Array.data[5]
+      value: 
+      objectReference: {fileID: 8300000, guid: 8cd0ff62ec9013846ba5befec54cbaff, type: 3}
     - target: {fileID: 4479557964631101006, guid: efb974cb2ab03f24fa3d83a20273a9ae,
         type: 3}
       propertyPath: m_PlayOnAwake
