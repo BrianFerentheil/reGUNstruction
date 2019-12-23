@@ -212,7 +212,10 @@ public class Weapon : MonoBehaviour
         }
         else
         {
-            if(timer >= fireRate && !reloading)
+            // Add an extra if statement here to check if the weapon
+            // is going to backfire before spawning the bullet
+
+            if (timer >= fireRate && !reloading)
             {
                 timer = 0;
 

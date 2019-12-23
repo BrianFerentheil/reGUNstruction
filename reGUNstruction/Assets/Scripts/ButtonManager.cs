@@ -77,6 +77,11 @@ public class ButtonManager : MonoBehaviour
         ammoCanvas.SetActive(false);
         scoreCanvas.SetActive(false);
         TurnRotatorsOn();
+        // Turns off any looping particle effects from backfires
+        foreach (ParticleSystem system in GameObject.FindWithTag("Gun").GetComponentsInChildren<ParticleSystem>())
+        {
+            system.Stop();
+        }
         Cursor.lockState = CursorLockMode.None;
     }
 

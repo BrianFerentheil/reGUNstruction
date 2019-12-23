@@ -95,6 +95,12 @@ public class Ammo : GunStats
 
     public void RunStatMods(ammoModel ammo, GunStats stats)
     {
+        // This switch case needs to be updated to actually take into account
+        // the Beta and Gamma elements of components. This will require talking
+        // to Brian for balancing and discussions to properly implement
+
+        // It would also have to be updated in the Barrel and Grip scripts
+
         switch (ammo)
         {
             case ammoModel.one:
